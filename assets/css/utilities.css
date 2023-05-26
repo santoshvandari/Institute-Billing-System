@@ -1,0 +1,6 @@
+@import url("colorvar.css");
+.primary-btn{
+    background-color: var(--primary-btn-color);
+    color:#fff;
+    width: 50px;
+}

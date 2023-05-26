@@ -1,0 +1,17 @@
+@import url("utilities.css");
+@import url("colorvar.css");
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wrapper form{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.wrapper form label{
+    padding: 10px;
+}
