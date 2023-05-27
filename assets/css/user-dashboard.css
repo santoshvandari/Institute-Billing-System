@@ -4,5 +4,54 @@
     box-sizing: border-box;
 }
 body{
-    background-color: red;
+    background-color: #f6f9ff;
+}
+header nav{
+    background: #fff;
+    height: 70px;
+    filter: drop-shadow(0px 0px 20px #0129701a);
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.opt{
+    position: absolute;
+    top:100px;
+    right: 0;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.opt:hover + .side-option{
+}
+
+
+
+
+
+
+main{
+    display: grid;
+    /* grid-template-columns:; */
+    grid-template-columns: auto auto;
+}
+.side-option{
+    width: 300px;
+    text-align: center;
+    background: #fff;
+    filter: drop-shadow(0px 0px 20px #0129701a);
+    min-height: calc(100vh - 70px);
+    top: 70px;
+    position: fixed;
+    padding: 20px;
+}
+.main-container{
+    height: 200vh;
+    margin: 70px 0 0 300px;
+    padding: 20px;
 }
