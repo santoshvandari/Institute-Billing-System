@@ -49,9 +49,16 @@ body{
     font-size: 20px;
     font-weight: 400;
     padding: 8px 20px;
-    border: none;
+    border: 1px solid #000;
     border-radius: 10px;
     cursor: pointer;
+}
+.btn:hover{
+    background:#41464b;
+}
+.btn:active{
+    background:transparent;
+    color:#000;
 }
 footer{
     min-height: 6vh;
