@@ -14,19 +14,25 @@ header nav{
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-
-
-.opt{
-    position: absolute;
-    top:100px;
-    right: 0;
-    padding: 20px;
-    font-size: 30px;
-    cursor: pointer;
+.user{
+    display: flex;
+    justify-content: space-between;
 }
+.user .user-img img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
 main{
     display: grid;
     /* grid-template-columns:; */
@@ -46,4 +52,8 @@ main{
     height: 200vh;
     margin: 70px 0 0 300px;
     padding: 20px;
+}
+.user.user-img img{
+    height: 50px;
+    width: 50px;
 }
