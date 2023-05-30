@@ -27,14 +27,6 @@ header nav{
     font-size: 30px;
     cursor: pointer;
 }
-.opt:hover + .side-option{
-}
-
-
-
-
-
-
 main{
     display: grid;
     /* grid-template-columns:; */
