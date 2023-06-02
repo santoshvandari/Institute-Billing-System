@@ -17,11 +17,11 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #012970;
 }
 nav .logo{
     font-size: 30px;
     text-transform: uppercase;
-    /* width: 35%; */
     font-weight: bold;
     box-sizing: border-box;
     animation: logoanimate 2s linear .5s infinite alternate;
@@ -34,11 +34,6 @@ nav .logo{
        padding-left: 50px;
     }
    }
-
-
-
-
-
 .user{
     display: flex;
     justify-content: space-between;
@@ -48,6 +43,7 @@ nav .logo{
     padding: 0px 20px;
     font-size: 20px;
     font-weight: 400;
+    word-spacing: -3px;
 }
 .user .user-img img{
     height: 50px;
@@ -67,7 +63,7 @@ main{
     grid-template-columns: auto auto;
 }
 .side-option{
-    width: 300px;
+    width: 250px;
     text-align: center;
     background: #fff;
     filter: drop-shadow(0px 0px 20px #0129701a);
@@ -76,9 +72,31 @@ main{
     position: fixed;
     padding: 20px;
 }
+.side-option-list{
+    color: #012970;
+}
+.side-option-list li{
+    list-style-type: none;
+    text-align: left;
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .main-container{
     height: 200vh;
-    margin: 70px 0 0 300px;
+    margin: 70px 0 0 260px;
     padding: 20px;
 }
 .user.user-img img{
