@@ -17,9 +17,10 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #012970;
+    color: #2c384e;
 }
 nav .logo{
+    color: #012970;
     font-size: 30px;
     text-transform: uppercase;
     font-weight: bold;
@@ -72,15 +73,30 @@ main{
     position: fixed;
     padding: 20px;
 }
+.side-option-container{
+    padding: 20px 5px;
+}
 .side-option-list{
     color: #012970;
+    /* color: #2c384e; */
 }
 .side-option-list li{
     list-style-type: none;
     text-align: left;
     font-size: 20px;
-    margin: 10px 0;
-    font-weight: bold;
+    font-weight: 550;
+    cursor: pointer;
+    padding: 10px 10px;
+    border: 5px;
+    transition: all .2s linear;
+}
+.side-option-list li:hover{
+    color:#4154f1;
+    /* background: rgba(170, 183, 207, 0.37); */
+    background: #f6f9ff;
+    /* background: #eceefe; */
+    /* background: #899bbd; */
+
 }
 
 
