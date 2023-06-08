@@ -78,7 +78,6 @@ main{
 }
 .side-option-list{
     color: #012970;
-    /* color: #2c384e; */
 }
 .side-option-list li{
     list-style-type: none;
@@ -92,11 +91,7 @@ main{
 }
 .side-option-list li:hover{
     color:#4154f1;
-    /* background: rgba(170, 183, 207, 0.37); */
     background: #f6f9ff;
-    /* background: #eceefe; */
-    /* background: #899bbd; */
-
 }
 
 
