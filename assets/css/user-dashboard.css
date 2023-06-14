@@ -77,7 +77,7 @@ main{
     padding: 20px 5px;
 }
 .side-option-list{
-    color: #012970;
+   color: #012970;;
 }
 .side-option-list li{
     list-style-type: none;
@@ -88,6 +88,10 @@ main{
     padding: 10px 10px;
     border: 5px;
     transition: all .2s linear;
+}
+.side-option-list li a{
+    text-decoration: none;
+    color: inherit;
 }
 .side-option-list li:hover{
     color:#4154f1;
