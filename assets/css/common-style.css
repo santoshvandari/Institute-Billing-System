@@ -53,7 +53,6 @@ nav .logo{
 }
 main{
     display: grid;
-    /* grid-template-columns:; */
     grid-template-columns: auto auto;
 }
 .side-option{
@@ -74,9 +73,9 @@ main{
 .side-option-container h4{
     color: inherit;
    text-align: left;
-   font-size:23px;
+   font-size:25px;
    text-decoration: underline;
-   padding: 10px 0px 10px 5px ;
+   padding: 10px 0px 20px 6px ;
    cursor: pointer;
    width: 100%;
 }
@@ -101,10 +100,6 @@ main{
     color:#4154f1;
     background: #f6f9ff;
 }
-
-
-
-
 .main-container{
     height: 200vh;
     margin: 70px 0 0 260px;
