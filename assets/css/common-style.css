@@ -73,9 +73,9 @@ main{
 .side-option-container h4{
     color: inherit;
    text-align: left;
-   font-size:25px;
+   font-size:21px;
    text-decoration: underline;
-   padding: 10px 0px 20px 6px ;
+   padding: 10px 0px 20px 5px ;
    cursor: pointer;
    width: 100%;
 }
@@ -101,7 +101,7 @@ main{
     background: #f6f9ff;
 }
 .main-container{
-    height: 200vh;
+    min-height: 100vh;
     margin: 70px 0 0 260px;
     padding: 20px;
 }

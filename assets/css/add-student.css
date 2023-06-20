@@ -2,3 +2,29 @@
     margin: 0;
     padding: 0;
 } */
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-wrapper form{
+    display: flex;
+    flex-direction: column;
+}
+.form h3{
+    margin: 10px 0;
+    font-size: 22px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.form label, .gender-wrapper{
+    font-size: 18px;
+    margin: 20px 0 3px;
+}
+.form input:not(input[type='radio']){
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    padding: 0px 5px;
+    font-size: 18px;
+}
