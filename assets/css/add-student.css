@@ -28,3 +28,34 @@
     padding: 0px 5px;
     font-size: 18px;
 }
+.gender-wrapper label{
+    display: block;
+    margin: 10px 0;
+}
+.gender-wrapper input{
+    font-size: 18px;
+    margin: 5px;
+}
+
+.btn-wrapper{
+    margin: 20px 0;
+}
+.btn-wrapper button,.btn-wrapper button:nth-child(1):hover{
+    margin-right:20px;
+    background: #0d6efd;
+    color:#fff;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+.btn-wrapper button:hover,.btn-wrapper button:nth-child(1){
+    background:#41464b;
+}
+.btn-wrapper button:active{
+    background:transparent;
+    color:#000;
+}
