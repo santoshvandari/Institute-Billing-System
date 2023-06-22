@@ -1,0 +1,15 @@
+.student-list-container{
+    display: flex;
+    justify-content: center;
+}
+.student-list table{
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+.student-list table tr{
+   margin: 10px;
+}
+.student-list table tr td,th{
+    padding: 5px;
+}
