@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .form-wrapper form{
     display: flex;
@@ -27,6 +28,11 @@
     outline: none;
     padding: 0px 5px;
     font-size: 18px;
+    border: 1px solid #000;
+}
+.gender-wrapper{
+    margin: 10px 0;
+    padding: 0;
 }
 .gender-wrapper label{
     display: block;
@@ -36,7 +42,6 @@
     font-size: 18px;
     margin: 5px;
 }
-
 .btn-wrapper{
     margin: 20px 0;
 }
