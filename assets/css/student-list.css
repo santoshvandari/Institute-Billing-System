@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
 }
+.student-list{
+    overflow-x: scroll;
+}
 .student-list table{
     border-collapse: collapse;
     padding: 10px;
