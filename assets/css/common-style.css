@@ -104,4 +104,5 @@ main{
     min-height: 100vh;
     margin: 70px 0 0 260px;
     padding: 20px;
+    /* width: 100%; */
 }

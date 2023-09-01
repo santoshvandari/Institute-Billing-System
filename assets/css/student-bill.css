@@ -1,0 +1,10 @@
+.main-container{
+    width: 100%;
+}
+.search-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: red;
+}
