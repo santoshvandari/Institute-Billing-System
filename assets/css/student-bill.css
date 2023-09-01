@@ -12,9 +12,26 @@
 }
 .search-option form input{
     font-size: 16px;
-    padding: 0 5px;
+    padding: 2px 5px;
     width: 150px;
+    border-radius: 5px;
+    outline: none;
 }
 .search-option form button{
-    
+    margin: 0 5px;
+    background: #0d6efd;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+.search-option form button:Hover{
+        background:#41464b;
+    }
+.search-option form button:active{
+        background:transparent;
+        color:#000;
 }
