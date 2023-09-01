@@ -6,5 +6,15 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: red;
+}
+.search-option form label{
+    font-size: 18px;
+}
+.search-option form input{
+    font-size: 16px;
+    padding: 0 5px;
+    width: 150px;
+}
+.search-option form button{
+    
 }
