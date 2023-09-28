@@ -56,6 +56,7 @@ table thead tr th:last-child {
 .billoptions {
   display: flex;
   justify-content: space-between;
+  margin: 20px 0;
   
 }
 .billoptions button,.billoptions button:last-child:hover{
