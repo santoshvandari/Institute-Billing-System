@@ -1,7 +1,4 @@
-/* *{
-    margin: 0;
-    padding: 0;
-} */
+
 .form-container{
     display: flex;
     justify-content: center;
@@ -18,29 +15,17 @@
     text-decoration: underline;
     text-transform: uppercase;
 }
-.form label, .gender-wrapper{
+.form label{
     font-size: 18px;
     margin: 20px 0 3px;
 }
-.form input:not(input[type='radio']){
+.form input{
     height: 30px;
     border-radius: 5px;
     outline: none;
     padding: 0px 5px;
     font-size: 18px;
     border: 1px solid #000;
-}
-.gender-wrapper{
-    margin: 10px 0;
-    padding: 0;
-}
-.gender-wrapper label{
-    display: block;
-    margin: 10px 0;
-}
-.gender-wrapper input{
-    font-size: 18px;
-    margin: 5px;
 }
 .btn-wrapper{
     margin: 20px 0;
