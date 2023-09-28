@@ -1,7 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
 body{
-
-
-
+    margin: 100px;
 }
 .bill-wrapper{
     display: flex;
@@ -13,4 +16,10 @@ body{
 .bill-container{
     width: 50%;
     /* text-align: center; */
+}
+.company-name p{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
 }
