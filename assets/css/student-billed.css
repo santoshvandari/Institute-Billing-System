@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  body {
+    margin: 100px;
+  }
+  .bill-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .bill-container {
+    width: 50%;
+    /* text-align: center; */
+  }
+  .company-name p {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 18px;
+  }
+  .billtable {
+    padding: 20px 0;
+  }
+  .billtable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table tr th,
+  td {
+    padding: 5px;
+    text-align: left;
+  }
+  table thead tr th:first-child {
+    width: 50px;
+  }
+  table thead tr th:last-child {
+    width: 100px;
+  }
+  .subtotal td,
+  .discount td,
+  .total td {
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #000;
+  }
+  .billoptions {
+    margin: 20px 0;
+    text-align: right;  
+  }
+  .billoptions button{
+      background: #0d6efd;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+      padding: 8px 25px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+  
+  .billoptions button:hover{
+      margin-right: 20px;
+      background: #41464b;
+  }
+  
+  
+  
+  
+  
+  .billMessage div{
+    margin: 20px  0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  .successful{
+    background: lightgreen;
+  }
+  .failure{
+    background: lightcoral;
+  }
+  .billMessage p{
+    color: #fff;
+  }
+  
