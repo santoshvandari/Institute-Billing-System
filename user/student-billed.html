@@ -7,7 +7,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/user-dashboard.css"/>
-    <link rel="stylesheet" href="../assets/css/generate-bill.css">
+    <link rel="stylesheet" href="../assets/css/student-billed.css">
 </head>
 <body>
    <header>
@@ -109,7 +109,7 @@
                         </tbody>
                     </table>
                     <div class="billoptions">
-                        <button>Print</button>
+                        <button onclick="BillPrint()">Print</button>
                     </div>
                 </div>
             </div>
@@ -118,5 +118,10 @@
    </main>
    <footer>
    </footer>
+   <script>
+    let BillPrint= ()=>{
+        print()
+    }
+   </script>
 </body>
 </html>
