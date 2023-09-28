@@ -23,3 +23,8 @@ body{
     text-align: center;
     padding: 20px 0;
 }
+.details-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
