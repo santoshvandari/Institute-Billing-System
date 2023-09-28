@@ -1,11 +1,18 @@
-.bill-wrapper {
+.main-bill-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.bill-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
   .bill-container {
-    width: 50%;
+    width: 60%;
+    /* width: 100%/; */
     /* text-align: center; */
   }
   .company-name p {
