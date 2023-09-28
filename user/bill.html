@@ -82,11 +82,17 @@
                     </tbody>
                 </table>
                 <div class="billoptions">
-                    <button>Print</button>
+                    <button id="print">Print</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    document.getElementById("print").addEventListener('click',function(e){
+        e.target.style.display='None'
+        print()
+    })
+</script>
 
 </html>
