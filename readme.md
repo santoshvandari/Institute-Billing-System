@@ -1,1 +1,0 @@
-[![An image of @santoshvandari's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/santoshvandari)](https://holopin.io/@santoshvandari)
