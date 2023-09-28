@@ -27,7 +27,7 @@
                     <p class="time">Time: 10:45 AM</p>
                 </div>
             </div>
-            <div class="table">
+            <div class="billtable">
                 <table border="1">
                     <thead>
                         <th>S.N.</th>
@@ -55,12 +55,25 @@
                             <td>Computer Hardware</td>
                             <td>9000</td>
                         </tr>
-                        <tr>
-                            <td colspan="2">Total Amount</td>
-                            <td>50000</td>
+                        <tr class="subtotal">
+                                <td colspan="2">Subtotal</td>
+                                <td colspan="2">52000</td>
+                        </tr>  
+                        <tr class="discount">
+                                <td colspan="2">Discount</td>
+                                <td colspan="2">2000</td>
                         </tr>
+                        <tr class="total">
+                                <td colspan="2">Total Amount</td>
+                                <td>50000</td>
+                            </tr>
+                        </div>
                         </tbody>
                 </table>
+            </div>
+            <div class="billoptions">
+                <button>Bill</button>
+                <button>Cancel</button>
             </div>
         </div>
     </div>
