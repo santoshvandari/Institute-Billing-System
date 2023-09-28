@@ -3,14 +3,14 @@ body{
 
 
 }
-.bill-container{
+.bill-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 
 }
-.bill-wrapper{
+.bill-container{
     width: 50%;
     /* text-align: center; */
 }
