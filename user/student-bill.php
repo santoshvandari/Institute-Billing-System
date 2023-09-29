@@ -49,10 +49,20 @@
           
                     <?php
                                 if($_SERVER['REQUEST_METHOD']=='POST' || $_SERVER['REQUEST_METHOD']=='GET'){
-                                    if($_SERVER['REQUEST_METHOD']=='GET')
-                                        $phone=trim($_GET["phone"]);
+                
+                                    if($_SERVER['REQUEST_METHOD']=='GET'){
+                                        $url = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+                                        if (strpos($url, '?') !== false) {
+                                            $phone=trim($_GET["phone"]);
+                                        }else{
+                                            $phone=null;
+                                        }
+                                    }
+
                                     if($_SERVER['REQUEST_METHOD']=='POST')
                                         $phone=trim($_POST["phone"]);
+                                    if (empty($phone))
+                                        $phone=Null;
                                     $read="SELECT * FROM StudentInfo, BillInfo WHERE StudentInfo.phone = BillInfo.phone AND StudentInfo.phone ='$phone';";
                                     // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
                                     // var_dump($read);
@@ -99,30 +109,66 @@
                                                         </div>
                                                         </div>
                                                         <div class="btn">
-                                                            <button>Bill</button>
+                                                            <button><a href="studentbillform.php?phone='.$phone.'">Add Bill</a></button>
                                                             </div>
                                                         </div>';
                                                 echo $disp1."".$disp2."".$disp3;
 
-                                        }else{
-                                            echo ' <div class="userinfo-container">
-                                                     <div class="userinfo-wrapper">
-                                                            <div class="userinfo">
-                                                            <p> Soryy! No Record Found</p>
+                                        } else{
+                                            $read="SELECT * FROM StudentInfo WHERE StudentInfo.phone ='$phone';";
+                                            if($result=$con->query($read)){
+                                                if($result->num_rows>0){
+                                                    $desctemp="";
+                                                    $amount=null;
+                                                    while($row=$result->fetch_assoc()){
+                                                        $name=$row["name"];
+                                                        $address=$row["address"];
+                                                        $phone=$row['phone'];
+                                                        $disp=' <div class="userinfo-container">
+                                                            <div class="userinfo-wrapper">
+                                                                            <div class="userinfo">
+                                                                            
+                                                                 <p>Name: '.$name.'</p>
+                                                            <p>Name: '.$name.'</p>
+                                                            <p>Address: '.$address.'</p>
+                                                            <p>Number: '.$phone.'</p>
+                                                        </div>
+                                                        <div class="billinfo">
+                                                            <table border="1">
+                                                                <tr>
+                                                                    <th>S.N.</th>
+                                                                    <th>Description</th>
+                                                                </tr>
+                                                                </table>
                                                         </div>
                                                         </div>
-                                                        </div>';
+                                                        <div class="btn">
+                                                            <button><a href="studentbillform.php?phone='.$phone.'">Add Bill</a></button>
+                                                            </div>
+                                                        </div>
+                                                                ';
+                                                    
+                                                    }
+                                                    echo $disp;
+                                                }else{     
+                                                    echo ' <div class="userinfo-container">
+                                                    <div class="userinfo-wrapper">
+                                                    <div class="userinfo">
+                                                    <p> Soryy! No Record Found</p>
+                                                    </div>
+                                                    </div>
+                                                    </div>';
+                                                }
                                         }
                                         // while($row=$result->fetch_assoc()){
                                         // echo $row["name"];
                                         // }
                                     }
-
+                                }
                                 }
                             ?>
                        
         </section>
     </main>
 </body>
-
 </html>
