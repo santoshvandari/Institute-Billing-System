@@ -50,7 +50,7 @@
                 <input type="text" name="address" hidden value="kanakai-07">
                 <input type="phone" name="phone" hidden value="9824988945">
                 <label for="desc">Description</label>
-                <input type="text" id="desc" name="desc0" placeholder="Enter a Bill title"/>
+                <input type="text" id="desc" name="desc0" required placeholder="Enter a Bill title"/>
                 <div class="addbtn">
                     <button id="add">+</button>
                 </div>
