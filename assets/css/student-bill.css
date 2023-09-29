@@ -35,3 +35,31 @@
         background:transparent;
         color:#000;
 }
+.userinfo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50;
+    width: 100%;
+    padding: 50px;
+    text-align: left;
+}
+.userinfo-wrapper{
+    width: 50%;
+}
+.userinfo{
+    margin: 10px 0;
+    
+}
+.userinfo p{
+    font-size: 20px;
+    text-align: left;
+}
+.billinfo{
+    width: 80%;
+}
+.billinfo table{
+    border-collapse: collapse;
+    width: 80%;
+}
