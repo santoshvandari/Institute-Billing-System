@@ -72,39 +72,26 @@
                         <thead>
                             <th>S.N.</th>
                             <th>Description</th>
-                            <th>Amount</th>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
                                 <td>Computer Basic</td>
-                                <td>5000</td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Computer Programming</td>
-                                <td>11000</td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Computer Networking</td>
-                                <td>10000</td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>Computer Hardware</td>
-                                <td>9000</td>
-                            </tr>
-                            <tr class="subtotal">
-                                <td colspan="2">Subtotal</td>
-                                <td colspan="2">52000</td>
-                            </tr>
-                            <tr class="discount">
-                                <td colspan="2">Discount</td>
-                                <td colspan="2">2000</td>
                             </tr>
                             <tr class="total">
-                                <td colspan="2">Total Amount</td>
+                                <td>Total Amount</td>
                                 <td>50000</td>
                             </tr>
                         </tbody>
@@ -120,6 +107,9 @@
    <footer>
    </footer>
    <script>
+    function BillPrint(){
+        print();
+    }
    </script>
 </body>
 </html>

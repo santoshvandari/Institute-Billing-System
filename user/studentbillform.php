@@ -64,16 +64,16 @@
                 }
                 ?>
             </div>
-            <form class="form" method="post">
+            <form class="form" action="generate-bill.php" method="post">
                 <h3>Fill the Bill Information</h3>
-                <input type="phone" name="phone" hidden value="<?=$name;?>">
+                <input type="phone" name="phone" hidden value="<?=$phone;?>">
                 <label for="desc">Description</label>
                 <input type="text" id="desc" name="desc0" required placeholder="Enter a Bill title"/>
                 <div class="addbtn">
                     <button id="add">+</button>
                 </div>
                 <label for="amt">Amount</label>
-                <input type="number" id="amt" name="address" placeholder="Enter a Amount"/>
+                <input type="number" id="amt" name="amount" placeholder="Enter a Amount" required/>
                 <input type="number" name="counter" id="counter" value="0" hidden>
                 <div class="btn-wrapper">
                     <button type="reset">Clear</button>

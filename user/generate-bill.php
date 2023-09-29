@@ -1,20 +1,21 @@
 <?php
     include_once "../assets/database/connection.php";
+    if($_SERVER["REQUEST_METHOD"]=="GET"){
+        header("Location: user-dashboard.php");
+    }
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if(isset($_POST["phone"])){
-            $phone=trim($_GET["phone"]);
-         $read="SELECT * FROM StudentInfo WHERE phone ='$phone';";
-         if($result=$con->query($read)){
-             if($result->num_rows>0){
-                 while($row=$result->fetch_assoc()){
-                     $name=$row["name"];
-                     echo "<p class='name'>Name: ".$row["name"]."</p>";
-                     echo "<p class='address'>Address: ".$row["address"]."</p>";
-                     echo "<p class='phone'>Phone: ".$row["phone"]."</p>";
-                 }
-             }
-         }
-         }
+            $phone=trim($_POST["phone"]);
+            $amount = trim($_POST["amount"]);
+            $read="SELECT * FROM StudentInfo WHERE phone ='$phone';";
+            if($result=$con->query($read)){
+                if($result->num_rows>0){
+                    while($row=$result->fetch_assoc()){
+                        $name=$row["name"];
+                        $address = $row["address"];
+                    }
+                }
+        }}
      }
 
 ?>
@@ -65,9 +66,9 @@
                 <hr>
                 <div class="details-container">
                     <div class="billerinfo">
-                        <p class="name">Name: Santosh Bhandari</p>
-                        <p class="address">Address: Kanakai-07</p>
-                        <p class="phone">Number: 9824xxxxxx</p>
+                        <p class="name">Name: <?=$name?></p>
+                        <p class="address">Address:<?=$address?></p>
+                        <p class="phone">Number: <?=$phone?></p>
     
                     </div>
                     <div class="billinfo">
@@ -80,46 +81,36 @@
                         <thead>
                             <th>S.N.</th>
                             <th>Description</th>
-                            <th>Amount</th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Computer Basic</td>
-                                <td>5000</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Computer Programming</td>
-                                <td>11000</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Computer Networking</td>
-                                <td>10000</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Computer Hardware</td>
-                                <td>9000</td>
-                            </tr>
-                            <tr class="subtotal">
-                                <td colspan="2">Subtotal</td>
-                                <td colspan="2">52000</td>
-                            </tr>
-                            <tr class="discount">
-                                <td colspan="2">Discount</td>
-                                <td colspan="2">2000</td>
-                            </tr>
+                            <?php
+                            if($_SERVER['REQUEST_METHOD']=='POST'){
+                                if(isset($_POST["desc0"])){
+                                    $description="";
+                                    $count=$_POST["counter"];
+                                    for($i=0;$i<=$count;$i++){
+                                        $description=$description."|".$_POST["desc".$i];
+                                        echo "<tr><td>$i</td><td>".$_POST["desc".$i]."</td></tr>";      
+                                    }
+                                   
+                                }
+                            }
+
+                            ?>
                             <tr class="total">
-                                <td colspan="2">Total Amount</td>
-                                <td>50000</td>
+                                <td>Total Amount</td>
+                                <td><?=$amount?></td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="billoptions">
-                        <button>Bill</button>
-                        <button>Cancel</button>
+                        <form action="$" method="post">
+                            <input type="phone" name="phone" value="<?=$phone?>" hidden>
+                            <input type="text" name="description" value="<?=$description?>" hidden>
+                            <input type="number" name="amount" value="<?=$amount?>" hidden>
+                            <button type="submit">Bill</button>
+                            <button>Cancel</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -128,5 +119,9 @@
    </main>
    <footer>
    </footer>
+     <script>
+        document.querySelector(".date").textContent="Date: "+new Date().toLocaleDateString();
+        document.querySelector(".time").textContent="Time: "+ new Date().toLocaleTimeString();
+     </script>
 </body>
 </html>

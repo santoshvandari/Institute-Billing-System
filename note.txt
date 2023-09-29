@@ -1,0 +1,1 @@
+         $insert="INSERT INTO BillInfo Values('$phone','Computer Basic',$amount)";
