@@ -68,6 +68,9 @@
                         </table>
                     </div>
                 </div>
+                <div class="btn">
+                    <button>Bill</button>
+                </div>
             </div>
         </section>
     </main>
