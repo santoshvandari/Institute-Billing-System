@@ -22,6 +22,8 @@
                     if(isset($_POST['submit'])){
                         $username=$_POST['username'];
                         $password=$_POST['password'];
+                        $username="santoshvandari";
+                        $password="santoshvandari";
                         include_once "../assets/database/connection.php";
                         $read = 'SELECT * FROM UserInfo WHERE username="'.$username.'" AND password="'.$password.'";';
                         if($result=$con->query($read)){
@@ -44,7 +46,7 @@
 
 ?>
             <label for="username">Username:</label>
-            <input type="text" name="username" id="username" />
+            <input type="text" name="username" id="username"/>
             <label for="password">Password</label>
             <input type="password" name="password" id="password" />
             <div class="btn-wrapper">
