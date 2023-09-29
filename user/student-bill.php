@@ -49,6 +49,14 @@
             <div class="userinfo-container">
                 <div class="userinfo-wrapper">
                     <div class="userinfo">
+                    <?php
+                                if($_SERVER['REQUEST_METHOD']=='POST'){
+                                    $phone=trim($_POST["phone"]);
+                                    $read="SELECT * FROM "
+                                    // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
+
+                                }
+                            ?>
                         <p>Name: Santosh Bhandari</p>
                         <p>Address: Kanakai-07</p>
                         <p>Number: 9824988945</p>
@@ -60,6 +68,16 @@
                                 <th>Description</th>
                                 <th>Paid Amount</th>
                             </tr>
+                            <?php
+                                // if($_SERVER['REQUEST_METHOD']=='POST'){
+                                //     $phone=trim($_POST["phone"]);
+                                //     $read="SELECT * "
+
+                                // }
+                            ?>
+
+
+
                             <tr>
                                 <td>1</td>
                                 <td>Computer Basic</td>

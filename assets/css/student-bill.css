@@ -66,12 +66,13 @@
 }
 .billinfo table tr td,th{
     padding: 2px 5px;
+    font-size: 20px;
 }
 .billinfo table td:first-child{
     width: 50px;
 }
 .billinfo table td:last-child{
-    width: 110px;
+    width: 150px;
 }
 .btn button{
     margin: 0 5px;
