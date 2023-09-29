@@ -1,3 +1,6 @@
+<?php
+    include_once "../assets/database/connection.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
