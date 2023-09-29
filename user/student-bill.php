@@ -52,8 +52,20 @@
                     <?php
                                 if($_SERVER['REQUEST_METHOD']=='POST'){
                                     $phone=trim($_POST["phone"]);
-                                    $read="SELECT * FROM "
+                                    $read="SELECT * FROM StudentInfo, BillInfo WHERE StudentInfo.phone = BillInfo.phone AND StudentInfo.phone ='$phone';";
                                     // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
+                                    var_dump($read);
+                                    $data=false;
+                                    if($result=$con->query($read)){
+                                        if($result->num_rows>0){
+                                            $data=true;
+                                        }else{
+                                            $data=false;
+                                        }
+                                        // while($row=$result->fetch_assoc()){
+                                        // echo $row["name"];
+                                        // }
+                                    }
 
                                 }
                             ?>
