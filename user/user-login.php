@@ -23,6 +23,14 @@
                         $username=$_POST['username'];
                         $password=$_POST['password'];
                         include_once "../assets/database/connection.php";
+                        $read = 'SELECT * FROM UserInfo WHERE username="'.$username.'" AND password="'.$password.'";';
+                        if($result=$con->query($read)){
+                            var_dump($result);
+                        }else{
+                            echo "error.";
+                        }
+
+
                         // if($username=='admin' && $password=='admin'){
                         //     header('location:admin.html');
                         // }
