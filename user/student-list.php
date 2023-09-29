@@ -76,7 +76,7 @@
                                     <td>".$row['email']."</td>
                                     <td>".$row['phone']."</td>
                                     <td>".$row['parentname']."</td>
-                                    <td>NULL</td>"; 
+                                    <td><a href='student-bill.php?phone=".$row['phone']."'>Bill</a></td>"; 
                                     echo $disp;
                                 }
                             }else{

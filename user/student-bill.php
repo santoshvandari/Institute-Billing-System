@@ -46,21 +46,72 @@
                     <button type="submit" name='search'>Search</button>
                 </form>
             </div>
-            <div class="userinfo-container">
-                <div class="userinfo-wrapper">
-                    <div class="userinfo">
+          
                     <?php
-                                if($_SERVER['REQUEST_METHOD']=='POST'){
-                                    $phone=trim($_POST["phone"]);
+                                if($_SERVER['REQUEST_METHOD']=='POST' || $_SERVER['REQUEST_METHOD']=='GET'){
+                                    if($_SERVER['REQUEST_METHOD']=='GET')
+                                        $phone=trim($_GET["phone"]);
+                                    if($_SERVER['REQUEST_METHOD']=='POST')
+                                        $phone=trim($_POST["phone"]);
                                     $read="SELECT * FROM StudentInfo, BillInfo WHERE StudentInfo.phone = BillInfo.phone AND StudentInfo.phone ='$phone';";
                                     // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
-                                    var_dump($read);
-                                    $data=false;
+                                    // var_dump($read);
                                     if($result=$con->query($read)){
                                         if($result->num_rows>0){
-                                            $data=true;
+                                            $desctemp="";
+                                            $amount=null;
+                                            while($row=$result->fetch_assoc()){
+                                                $name=$row["name"];
+                                                $address=$row["address"];
+                                                $phone=$row['phone'];
+                                                $desctemp=$desctemp.$row["description"]."|";
+                                                $amount+=(int)$row["amount"];
+                                            }
+                                            $desc=explode("|",$desctemp);
+                                            $disp1=' <div class="userinfo-container">
+                                            <div class="userinfo-wrapper">
+                                                            <div class="userinfo">
+                                                            
+                                                            <p>Name: '.$name.'</p>
+                                                            <p>Address: '.$address.'</p>
+                                                            <p>Number: '.$phone.'</p>
+                                                        </div>
+                                                        <div class="billinfo">
+                                                            <table border="1">
+                                                                <tr>
+                                                                    <th>S.N.</th>
+                                                                    <th>Description</th>
+                                                                </tr>';
+                                                $counter=0;
+                                                $rows="";
+                                               
+                                                    
+                                                    foreach($desc as $value){
+                                                        $counter++;
+                                                        if (!empty($value)){
+                                                            $rows = $rows. '<tr><td>'.$counter.'</td><td>'.$value.'</td></tr>';
+
+                                                        }
+                                                    }
+                                                $disp2=$rows.'<tr><td><strong>Amount</strong></td><td><strong>'.$amount.'</strong></td></tr>';
+                                                  
+                                                $disp3='</table>
+                                                        </div>
+                                                        </div>
+                                                        <div class="btn">
+                                                            <button>Bill</button>
+                                                            </div>
+                                                        </div>';
+                                                echo $disp1."".$disp2."".$disp3;
+
                                         }else{
-                                            $data=false;
+                                            echo ' <div class="userinfo-container">
+                                                     <div class="userinfo-wrapper">
+                                                            <div class="userinfo">
+                                                            <p> Soryy! No Record Found</p>
+                                                        </div>
+                                                        </div>
+                                                        </div>';
                                         }
                                         // while($row=$result->fetch_assoc()){
                                         // echo $row["name"];
@@ -69,39 +120,7 @@
 
                                 }
                             ?>
-                        <p>Name: Santosh Bhandari</p>
-                        <p>Address: Kanakai-07</p>
-                        <p>Number: 9824988945</p>
-                    </div>
-                    <div class="billinfo">
-                        <table border='1'>
-                            <tr>
-                                <th>S.N.</th>
-                                <th>Description</th>
-                                <th>Paid Amount</th>
-                            </tr>
-                            <?php
-                                // if($_SERVER['REQUEST_METHOD']=='POST'){
-                                //     $phone=trim($_POST["phone"]);
-                                //     $read="SELECT * "
-
-                                // }
-                            ?>
-
-
-
-                            <tr>
-                                <td>1</td>
-                                <td>Computer Basic</td>
-                                <td>5000</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="btn">
-                    <button>Bill</button>
-                </div>
-            </div>
+                       
         </section>
     </main>
 </body>
