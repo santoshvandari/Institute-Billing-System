@@ -1,3 +1,8 @@
+<?php
+    include_once "../assets/database/connection.php";
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,15 +45,28 @@
         <div class="form-wrapper">
             <div class="studentinfo">
                 <h3>Student Information</h3>
-                <p class="name">Name: Santosh Bhandari</p>
-                <p class="address">Address: Kanakai-07 </p>
-                <p class="phone">Phone: 98060221</p>
+                <?php
+                if($_SERVER['REQUEST_METHOD']=='POST' || $_SERVER['REQUEST_METHOD']=='GET'){
+                   if(isset($_GET["phone"])){
+                       $phone=trim($_GET["phone"]);
+                    $read="SELECT * FROM StudentInfo WHERE phone ='$phone';";
+                    if($result=$con->query($read)){
+                        if($result->num_rows>0){
+                            while($row=$result->fetch_assoc()){
+                                $name=$row["name"];
+                                echo "<p class='name'>Name: ".$row["name"]."</p>";
+                                echo "<p class='address'>Address: ".$row["address"]."</p>";
+                                echo "<p class='phone'>Phone: ".$row["phone"]."</p>";
+                            }
+                        }
+                    }
+                    }
+                }
+                ?>
             </div>
-            <form class="form" action="#" method="post">
+            <form class="form" method="post">
                 <h3>Fill the Bill Information</h3>
-                <input type="text" name="name" hidden value="santosh vandari">
-                <input type="text" name="address" hidden value="kanakai-07">
-                <input type="phone" name="phone" hidden value="9824988945">
+                <input type="phone" name="phone" hidden value="<?=$name;?>">
                 <label for="desc">Description</label>
                 <input type="text" id="desc" name="desc0" required placeholder="Enter a Bill title"/>
                 <div class="addbtn">

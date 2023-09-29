@@ -51,8 +51,7 @@
                                 if($_SERVER['REQUEST_METHOD']=='POST' || $_SERVER['REQUEST_METHOD']=='GET'){
                 
                                     if($_SERVER['REQUEST_METHOD']=='GET'){
-                                        $url = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-                                        if (strpos($url, '?') !== false) {
+                                        if(isset($_GET["phone"])){
                                             $phone=trim($_GET["phone"]);
                                         }else{
                                             $phone=null;

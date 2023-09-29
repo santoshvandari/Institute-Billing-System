@@ -24,6 +24,10 @@
         <form method="post">
             <?php
                 session_start();
+                if(!empty($_SESSION['username'])){
+                    // echo "sesson not set yet";
+                    header("Location: user-dashboard.php");
+                }
                 include_once "../assets/database/connection.php";
                     if ($_SERVER['REQUEST_METHOD']=='POST'){
                             if(isset($_POST['submit'])){

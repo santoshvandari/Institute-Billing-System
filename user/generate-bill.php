@@ -1,3 +1,23 @@
+<?php
+    include_once "../assets/database/connection.php";
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        if(isset($_POST["phone"])){
+            $phone=trim($_GET["phone"]);
+         $read="SELECT * FROM StudentInfo WHERE phone ='$phone';";
+         if($result=$con->query($read)){
+             if($result->num_rows>0){
+                 while($row=$result->fetch_assoc()){
+                     $name=$row["name"];
+                     echo "<p class='name'>Name: ".$row["name"]."</p>";
+                     echo "<p class='address'>Address: ".$row["address"]."</p>";
+                     echo "<p class='phone'>Phone: ".$row["phone"]."</p>";
+                 }
+             }
+         }
+         }
+     }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
