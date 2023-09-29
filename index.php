@@ -1,7 +1,8 @@
 
-<!-- <?php
+<?php
 header("Location:user/user-login.php");
-?> -->
+?>
+
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
