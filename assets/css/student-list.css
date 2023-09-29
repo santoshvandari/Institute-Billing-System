@@ -5,6 +5,13 @@
 .student-list{
     overflow-x: scroll;
 }
+.student-list h3{
+    margin: 10px 0 20px;
+    font-size: 22px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+}
 .student-list table{
     border-collapse: collapse;
     padding: 10px;

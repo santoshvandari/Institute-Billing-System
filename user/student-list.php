@@ -1,3 +1,10 @@
+<?php
+    include_once "../assets/database/connection.php";
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,38 +45,59 @@
 
         <section class="student-list-container main-container">
             <div class="student-list">
+                <h3>Total Students</h3>
                 <table border="1">
                     <thead>
                         <tr>
 
                             <th>S.N.</th>
                             <th>Name</th>
-                            <th>Gender</th>
                             <th>Address</th>
+                            <th>Gender</th>
+                            <th>Email</th>
                             <th>Phone</th>
+                            <th>Parent Name</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        
+                        
+                        
+                        
+                        ?>
                         <tr>
                             <td>1</td>
                             <td>Santosh Bhandari</td>
-                            <td>Male</td>
                             <td>Kanakai-07</td>
+                            <td>Male</td>
+                            <td>santoshvandari100@gmail.com</td>
                             <td>9824988945</td>
+                            <td>Namda Kumar Bhandari</td>
+                            <td>NULL</td>
                         </tr> 
                              <tr>
-                            <td>1</td>
+                             <td>1</td>
                             <td>Santosh Bhandari</td>
-                            <td>Male</td>
                             <td>Kanakai-07</td>
+                            <td>Male</td>
+                            <td>santoshvandari100@gmail.com</td>
                             <td>9824988945</td>
+                            <td>Namda Kumar Bhandari</td>
+                            <td>NULL</td>
+
                         </tr>    
                            <tr>
-                            <td>1</td>
+                           <td>1</td>
                             <td>Santosh Bhandari</td>
-                            <td>Male</td>
                             <td>Kanakai-07</td>
+                            <td>Male</td>
+                            <td>santoshvandari100@gmail.com</td>
                             <td>9824988945</td>
+                            <td>Namda Kumar Bhandari</td>
+                            <td>NULL</td>
+
                         </tr>      
                     </tbody>
                 </table>
