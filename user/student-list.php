@@ -62,7 +62,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $read= "SELECT * FROM StudentInfo;";
+                            $read= "SELECT * FROM StudentInfo ORDER BY name;";
                             // $result=$con->query($read)
                             if ($result=$con->query($read)) {
                                 $num=0;
