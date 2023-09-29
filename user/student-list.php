@@ -62,43 +62,30 @@
                     </thead>
                     <tbody>
                         <?php
-                        
+                            $read= "SELECT * FROM StudentInfo;";
+                            // $result=$con->query($read)
+                            if ($result=$con->query($read)) {
+                                $num=0;
+                                while ($row=$result->fetch_assoc()){
+                                    $num++;
+                                    // var_dump($row);
+                                    $disp="<tr><td>$num</td>
+                                    <td>Santosh Bhandari</td>
+                                    <td>Kanakai-07</td>
+                                    <td>Male</td>
+                                    <td>santoshvandari100@gmail.com</td>
+                                    <td>9824988945</td>
+                                    <td>Namda Kumar Bhandari</td>
+                                    <td>NULL</td>"; 
+                                    echo $disp;
+                                }
+                            }else{
+                                echo "Error";
+                            }
                         
                         
                         
                         ?>
-                        <tr>
-                            <td>1</td>
-                            <td>Santosh Bhandari</td>
-                            <td>Kanakai-07</td>
-                            <td>Male</td>
-                            <td>santoshvandari100@gmail.com</td>
-                            <td>9824988945</td>
-                            <td>Namda Kumar Bhandari</td>
-                            <td>NULL</td>
-                        </tr> 
-                             <tr>
-                             <td>1</td>
-                            <td>Santosh Bhandari</td>
-                            <td>Kanakai-07</td>
-                            <td>Male</td>
-                            <td>santoshvandari100@gmail.com</td>
-                            <td>9824988945</td>
-                            <td>Namda Kumar Bhandari</td>
-                            <td>NULL</td>
-
-                        </tr>    
-                           <tr>
-                           <td>1</td>
-                            <td>Santosh Bhandari</td>
-                            <td>Kanakai-07</td>
-                            <td>Male</td>
-                            <td>santoshvandari100@gmail.com</td>
-                            <td>9824988945</td>
-                            <td>Namda Kumar Bhandari</td>
-                            <td>NULL</td>
-
-                        </tr>      
                     </tbody>
                 </table>
             </div>
