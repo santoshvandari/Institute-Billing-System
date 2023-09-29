@@ -70,12 +70,12 @@
                                     $num++;
                                     // var_dump($row);
                                     $disp="<tr><td>$num</td>
-                                    <td>Santosh Bhandari</td>
-                                    <td>Kanakai-07</td>
-                                    <td>Male</td>
-                                    <td>santoshvandari100@gmail.com</td>
-                                    <td>9824988945</td>
-                                    <td>Namda Kumar Bhandari</td>
+                                    <td>".$row['name']."</td>
+                                    <td>".$row['address']."</td>
+                                    <td>".$row['gender']."</td>
+                                    <td>".$row['email']."</td>
+                                    <td>".$row['phone']."</td>
+                                    <td>".$row['parentname']."</td>
                                     <td>NULL</td>"; 
                                     echo $disp;
                                 }
