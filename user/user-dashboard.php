@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="../assets/css/user-dashboard.css"/>
 </head>
 <body>
+    <?php
+        session_start();
+        if(!$_SESSION['username']){
+            // echo "sesson not set yet";
+            header("Location: user-login.php");
+        }
+    ?>
    <header>
     <nav>
         <div class="logo">Billing System</div>
         <div class="user-info">
             <div class="user">
-                <div class="username">Santosh Bhandari</div>
+                <div class="username"><?=$_SESSION['username'] ?></div>
                 <div class="user-img"><img src="../img/img.jpg" alt="" srcset=""></div>
             </div>
         </div>
@@ -29,7 +36,7 @@
             <li><a href="student-bill.html">Bill</a></li>
             <li><a href="student-list.html">Student</a></li>
             <li><a href="add-student.html">Add Student</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
         </div>
            

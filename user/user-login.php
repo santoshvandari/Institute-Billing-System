@@ -27,27 +27,28 @@
                 include_once "../assets/database/connection.php";
                     if ($_SERVER['REQUEST_METHOD']=='POST'){
                             if(isset($_POST['submit'])){
-                            $username=$_POST['username'];
-                            $password=$_POST['password'];
-                            if (!$username){
-                                echo "<p>* Please enter username</p>";
-                            }
-                            if (!$password){
-                                echo "<p>* Please enter password</p>";
-                            }
-                            if($username && $password){
-                            $read = 'select * from UserInfo WHERE username ="'.$username.'" and userpwd="'.$password.'";';
-                            if($result=$con->query($read)){
-                                if($result->num_rows>0){
-                                    $_SESSION["username"] = $username;
-                                    header("Location: user-dashboard.php");
-                                }else{
-                                    echo "<p>* Invalid username or password.</p>";
+                                $username=trim($_POST['username']);
+                                $password=trim($_POST['password']);
+                                if (!$username){
+                                    echo "<p>* Please enter username</p>";
                                 }
-                            }else{
-                                echo "error.";
-                            }
-                        }
+                                if (!$password){
+                                    echo "<p>* Please enter password</p>";
+                                }
+                                if($username && $password){
+                                    $read = 'select * from UserInfo WHERE username ="'.$username.'" and userpwd="'.$password.'";';
+                                    if($result=$con->query($read)){
+                                        if($result->num_rows>0){
+                                            $_SESSION["username"] = $username;
+                                            echo $_SESSION["username"];
+                                            header("Location: user-dashboard.php");
+                                        }else{
+                                            echo "<p>* Invalid username or password.</p>";
+                                        }
+                                    }else{
+                                        echo "error.";
+                                    }
+                                }
 
 
                             // if($username=='admin' && $password=='admin'){
@@ -56,7 +57,7 @@
                             // else{
                             //     echo 'Invalid username or password';
                             // }
-                        }
+                            }
                     }
 
 
