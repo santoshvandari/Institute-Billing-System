@@ -68,6 +68,10 @@
       border-radius: 10px;
       cursor: pointer;
   }
+  .billoptions button a{
+    text-decoration: none;
+    color: #fff;
+  }
   
   .billoptions button:last-child,.billoptions button:first-child:hover{
       margin-right: 20px;

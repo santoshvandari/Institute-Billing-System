@@ -105,11 +105,13 @@
                     </table>
                     <div class="billoptions">
                         <form action="#" method="post">
+                            <input type="text" name="name" value="<?=$name?>" hidden>
+                            <input type="text" name="address" value="<?=$address?>" hidden>
                             <input type="phone" name="phone" value="<?=$phone?>" hidden>
                             <input type="text" name="description" value="<?=$description?>" hidden>
                             <input type="number" name="amount" value="<?=$amount?>" hidden>
                             <button type="submit">Bill</button>
-                            <button>Cancel</button>
+                            <button><a href="student-bill.php">Cancel</a></button>
                         </form>
                     </div>
                 </div>
