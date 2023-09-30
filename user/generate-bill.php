@@ -108,7 +108,7 @@
                             <input type="text" name="name" value="<?=$name?>" hidden>
                             <input type="text" name="address" value="<?=$address?>" hidden>
                             <input type="phone" name="phone" value="<?=$phone?>" hidden>
-                            <input type="text" name="description" value="<?=$description?>" hidden>
+                            <input type="text" name="description" value="<?=$description?>" hidden/>
                             <input type="number" name="amount" value="<?=$amount?>" hidden>
                             <button type="submit">Bill</button>
                             <button><a href="student-bill.php">Cancel</a></button>

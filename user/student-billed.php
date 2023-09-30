@@ -9,20 +9,28 @@
             $address=trim($_POST["address"]);
             $phone=trim($_POST["phone"]);
             $desc=trim($_POST["description"]);
+            // $desc="NULL";
             $amount = trim($_POST["amount"]);
             // $read="SELECT * FROM StudentInfo WHERE phone ='$phone';";
             // INSERT  INTO BillInfo Values("9806073122","Computer Basic",50000)
 
-            $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'
-            if($result=$con->query($read)){
-                if($result->num_rows>0){
-                    while($row=$result->fetch_assoc()){
-                        $name=$row["name"];
-                        $address = $row["address"];
-                    }
-                }
+            $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
+            echo $insert;
+            $flag=false;
+            if($con->query($insert)){
+                $flag=true;
+            }else{
+                $flag=false;
+            }
+            // if($result=$con->query($read)){
+            //     if($result->num_rows>0){
+            //         while($row=$result->fetch_assoc()){
+            //             $name=$row["name"];
+            //             $address = $row["address"];
+            //         }
+            //     }
         }}
-     }
+    //  }
 
 ?>
 
@@ -69,6 +77,16 @@
             <div class="bill-container">
                 <div class="billMessage">
                     
+                <?php
+                    if($flag){
+                        echo '<div class="successful"><p>Billing Process is Successful</p></div> ';
+                    }else if($flag==false){
+                        echo '<div class="failure"><p>Billing Process Failed!!!</p></div> ';
+                    }else{
+                        echo '<div class="failure"><p>Internal Server Issue!!!</p></div>';
+                    }
+
+                ?>
                     <!-- <div class="successful">
                         <p>Billing Process is Successful</p>
                         
@@ -79,55 +97,78 @@
                     </div> -->
                 </div>
                 <hr>
-                <div class="company-name">
-                    <p>ABC Institute</p>
-                </div>
-                <hr>
-                <div class="details-container">
-                    <div class="billerinfo">
-                        <p class="name">Name: Santosh Bhandari</p>
-                        <p class="address">Address: Kanakai-07</p>
-                        <p class="phone">Number: 9824xxxxxx</p>
-    
+                <?php
+                    if($flag){
+                        $disp1=' <div class="company-name">
+                        <p>ABC Institute</p>
                     </div>
-                    <div class="billinfo">
-                        <p class="date">Date: 2023-10-23</p>
-                        <p class="time">Time: 10:45 AM</p>
+                    <hr>
+                    <div class="details-container">
+                        <div class="billerinfo">
+                            <p class="name">Name: Santosh Bhandari</p>
+                            <p class="address">Address: Kanakai-07</p>
+                            <p class="phone">Number: 9824xxxxxx</p>
+        
+                        </div>
+                        <div class="billinfo">
+                            <p class="date">Date: 2023-10-23</p>
+                            <p class="time">Time: 10:45 AM</p>
+                        </div>
                     </div>
-                </div>
-                <div class="billtable">
-                    <table border="1">
-                        <thead>
-                            <th>S.N.</th>
-                            <th>Description</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Computer Basic</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Computer Programming</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Computer Networking</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Computer Hardware</td>
-                            </tr>
-                            <tr class="total">
-                                <td>Total Amount</td>
-                                <td>50000</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="billoptions">
-                        <button onclick="BillPrint()">Print</button>
-                    </div>
-                </div>
+                    <div class="billtable">
+                        <table border="1">
+                            <thead>
+                                <th>S.N.</th>
+                                <th>Description</th>
+                            </thead>
+                            <tbody>';
+                        
+                            $desc=explode("|",$desc);
+                            $rows="";
+                            foreach($desc as $value){
+                                $counter++;
+                                if (!empty($value)){
+                                    $rows = $rows. '<tr><td>'.$counter.'</td><td>'.$value.'</td></tr>';
+
+                                }
+                            }
+                            $disp2=$rows.'<tr><td><strong>Amount</strong></td><td><strong>'.$amount.'</strong></td></tr></table>';
+
+                            '<div class="billoptions">
+                                <button><a href="bill.php?phone='.$phone.'">Print</a></button>
+                                </div>';
+
+
+                    //             '<tr>
+                    //                 <td>1</td>
+                    //                 <td>Computer Basic</td>
+                    //             </tr>
+                    //             <tr>
+                    //                 <td>2</td>
+                    //                 <td>Computer Programming</td>
+                    //             </tr>
+                    //             <tr>
+                    //                 <td>3</td>
+                    //                 <td>Computer Networking</td>
+                    //             </tr>
+                    //             <tr>
+                    //                 <td>4</td>
+                    //                 <td>Computer Hardware</td>
+                    //             </tr>
+                    //             <tr class="total">
+                    //                 <td>Total Amount</td>
+                    //                 <td>50000</td>
+                    //             </tr>
+                    //         </tbody>
+                    //     </table>
+                    //     <div class="billoptions">
+                    //         <button onclick="BillPrint()">Print</button>
+                    //     </div>
+                    // </div>';
+                    }
+
+                ?>
+               
             </div>
         </div>
     </section>
