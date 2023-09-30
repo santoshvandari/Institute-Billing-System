@@ -90,7 +90,7 @@
                                     $count=$_POST["counter"];
                                     for($i=0;$i<=$count;$i++){
                                         $description=$description."|".$_POST["desc".$i];
-                                        echo "<tr><td>$i</td><td>".$_POST["desc".$i]."</td></tr>";      
+                                        echo "<tr><td>".($i+1)."</td><td>".$_POST["desc".$i]."</td></tr>";      
                                     }
                                    
                                 }

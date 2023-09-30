@@ -127,7 +127,6 @@
                                                             <div class="userinfo-wrapper">
                                                                             <div class="userinfo">
                                                                             
-                                                                 <p>Name: '.$name.'</p>
                                                             <p>Name: '.$name.'</p>
                                                             <p>Address: '.$address.'</p>
                                                             <p>Number: '.$phone.'</p>

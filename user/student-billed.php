@@ -15,10 +15,10 @@
             // INSERT  INTO BillInfo Values("9806073122","Computer Basic",50000)
 
             $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
-            echo $insert;
+            // echo $insert;
             $flag=false;
-            // if($con->query($insert)){
-            if($insert){
+            if($con->query($insert)){
+            // if($insert){
                 $flag=true;
             }else{
                 $flag=false;

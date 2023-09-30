@@ -21,8 +21,7 @@
             <hr>
             
             <?php            
-            if($_SERVER['REQUEST_METHOD']=='GET'){
-                if(isset($_GET["phone"])){
+                 if(isset($_GET["phone"])){
                     $phone=trim($_GET["phone"]);
                     $read="SELECT * FROM StudentInfo, BillInfo WHERE StudentInfo.phone = BillInfo.phone AND StudentInfo.phone ='$phone';";
                     // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
@@ -44,8 +43,6 @@
                         }
                     }
                 }
-            }
-            
             ?>
             
             <div class="details-container">
