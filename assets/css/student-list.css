@@ -23,3 +23,6 @@
 .student-list table tr td,th{
     padding: 5px;
 }
+.student-list table tr td a{
+    text-decoration: none;
+}
