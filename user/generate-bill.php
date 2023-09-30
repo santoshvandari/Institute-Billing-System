@@ -104,7 +104,7 @@
                         </tbody>
                     </table>
                     <div class="billoptions">
-                        <form action="$" method="post">
+                        <form action="#" method="post">
                             <input type="phone" name="phone" value="<?=$phone?>" hidden>
                             <input type="text" name="description" value="<?=$description?>" hidden>
                             <input type="number" name="amount" value="<?=$amount?>" hidden>
