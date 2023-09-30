@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login</title>
-    <link rel="stylesheet" href="../assets/css/user/user-login.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
 </head>
 <style>
     form p {
@@ -16,12 +16,8 @@
 
 <body>
     <div class="form-wrapper">
-        <?php
-            
-
-
-        ?>
         <form method="post">
+            <h3>User Login</h3>
             <?php
                 session_start();
                 if(!empty($_SESSION['username'])){
@@ -77,7 +73,7 @@
         </form>
     </div>
     <footer>
-        <a href="admin.html">Admin</a>
+        <a href="../admin/admin-login.html">Admin</a>
         <a href="admin.html">Developers Info</a>
         <a href="mailto:test@gmail.com">FeedBack</a>
     </footer>
