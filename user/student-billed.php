@@ -140,34 +140,6 @@
                                 <button><a href="bill.php?phone='.$phone.'">Print</a></button>
                                 </div>';
                                 echo $disp1."".$disp2."".$disp3;
-
-
-                    //             '<tr>
-                    //                 <td>1</td>
-                    //                 <td>Computer Basic</td>
-                    //             </tr>
-                    //             <tr>
-                    //                 <td>2</td>
-                    //                 <td>Computer Programming</td>
-                    //             </tr>
-                    //             <tr>
-                    //                 <td>3</td>
-                    //                 <td>Computer Networking</td>
-                    //             </tr>
-                    //             <tr>
-                    //                 <td>4</td>
-                    //                 <td>Computer Hardware</td>
-                    //             </tr>
-                    //             <tr class="total">
-                    //                 <td>Total Amount</td>
-                    //                 <td>50000</td>
-                    //             </tr>
-                    //         </tbody>
-                    //     </table>
-                    //     <div class="billoptions">
-                    //         <button onclick="BillPrint()">Print</button>
-                    //     </div>
-                    // </div>';
                     }
 
                 ?>

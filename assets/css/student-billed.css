@@ -81,7 +81,10 @@
       border-radius: 10px;
       cursor: pointer;
   }
-  
+  .billoptions button a{
+    text-decoration: none;
+    color: #fff;
+  }
   .billoptions button:hover{
       background: #41464b;
   }
