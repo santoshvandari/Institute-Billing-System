@@ -17,7 +17,8 @@
             $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
             echo $insert;
             $flag=false;
-            if($con->query($insert)){
+            // if($con->query($insert)){
+            if($insert){
                 $flag=true;
             }else{
                 $flag=false;
@@ -105,9 +106,9 @@
                     <hr>
                     <div class="details-container">
                         <div class="billerinfo">
-                            <p class="name">Name: Santosh Bhandari</p>
-                            <p class="address">Address: Kanakai-07</p>
-                            <p class="phone">Number: 9824xxxxxx</p>
+                            <p class="name">Name:'.$name.'</p>
+                            <p class="address">Address: '.$address.'</p>
+                            <p class="phone">Number: '.$phone.'</p>
         
                         </div>
                         <div class="billinfo">
@@ -124,6 +125,7 @@
                             <tbody>';
                         
                             $desc=explode("|",$desc);
+                            $counter=0;
                             $rows="";
                             foreach($desc as $value){
                                 $counter++;
@@ -134,9 +136,10 @@
                             }
                             $disp2=$rows.'<tr><td><strong>Amount</strong></td><td><strong>'.$amount.'</strong></td></tr></table>';
 
-                            '<div class="billoptions">
+                            $disp3='<div class="billoptions">
                                 <button><a href="bill.php?phone='.$phone.'">Print</a></button>
                                 </div>';
+                                echo $disp1."".$disp2."".$disp3;
 
 
                     //             '<tr>
@@ -179,6 +182,8 @@
     function BillPrint(){
         print();
     }
+        document.querySelector(".date").textContent="Date: "+new Date().toLocaleDateString();
+        document.querySelector(".time").textContent="Time: "+ new Date().toLocaleTimeString();
    </script>
 </body>
 </html>
