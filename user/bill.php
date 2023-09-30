@@ -1,3 +1,6 @@
+<?php
+    include_once "../assets/database/connection.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,27 +14,45 @@
 <body>
     <div class="bill-wrapper">
         <div class="bill-container">
-            <div class="billMessage">
-                
-                <!-- <div class="successful">
-                    <p>Billing Process is Successful</p>
-                    
-                </div> -->
-                <!-- <div class="failure">
-                    <p>Billing Process Failed!!!</p>
-
-                </div> -->
-            </div>
             <hr>
             <div class="company-name">
                 <p>ABC Institute</p>
             </div>
             <hr>
+            
+            <?php            
+            if($_SERVER['REQUEST_METHOD']=='GET'){
+                if(isset($_GET["phone"])){
+                    $phone=trim($_GET["phone"]);
+                    $read="SELECT * FROM StudentInfo, BillInfo WHERE StudentInfo.phone = BillInfo.phone AND StudentInfo.phone ='$phone';";
+                    // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
+                    // var_dump($read);
+                    if($result=$con->query($read)){
+                    if($result->num_rows>0){
+                        $desctemp="";
+                        $amount=null;
+                        while($row=$result->fetch_assoc()){
+                            $name=$row["name"];
+                            $address=$row["address"];
+                            $phone=$row['phone'];
+                            $desctemp=$desctemp.$row["description"]."|";
+                            $amount+=(int)$row["amount"];
+                        }
+                        $desc=explode("|",$desctemp);
+                        $desc=array_filter($desc);
+                        $desc = array_values($desc);
+                        }
+                    }
+                }
+            }
+            
+            ?>
+            
             <div class="details-container">
                 <div class="billerinfo">
-                    <p class="name">Name: Santosh Bhandari</p>
-                    <p class="address">Address: Kanakai-07</p>
-                    <p class="phone">Number: 9824xxxxxx</p>
+                    <p class="name">Name: <?=$name?></p>
+                    <p class="address">Address: <?=$address?></p>
+                    <p class="phone">Number: <?=$phone?></p>
 
                 </div>
                 <div class="billinfo">
@@ -45,43 +66,54 @@
                         <th>S.N.</th>
                         <th>Description</th>
                         <th>Amount</th>
+                        <!-- <td colspan='4'>colspan</td> -->
+                      
                     </thead>
                     <tbody>
-                        <tr>
+                        <?php
+                        $rows="";
+                             $count=count($desc);
+                             for($i=0;$i<$count;$i++){
+                                if($i==0){
+                                    $rows = $rows. '<tr><td>'.($i+1).'</td><td>'.$desc[$i].'</td><td rowspan="'.$count.'">'.$amount.'</td></tr>';
+
+                                }else{
+                                    $rows = $rows. '<tr><td>'.($i+1).'</td><td>'.$desc[$i].'</td></tr>';
+                                }
+                             }
+
+                             echo $rows.'</tr>
+                             <tr class="total">
+                                 <td colspan="2">Total Amount</td>
+                                 <td>'.$amount.'</td>
+                             </tr>';
+
+                        ?>
+                        <!-- <tr>
                             <td>1</td>
                             <td>Computer Basic</td>
-                            <td>5000</td>
+                            <td rowspan='4'>50000</td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Computer Programming</td>
-                            <td>11000</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Computer Networking</td>
-                            <td>10000</td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>Computer Hardware</td>
-                            <td>9000</td>
-                        </tr>
-                        <tr class="subtotal">
-                            <td colspan="2">Subtotal</td>
-                            <td colspan="2">52000</td>
-                        </tr>
-                        <tr class="discount">
-                            <td colspan="2">Discount</td>
-                            <td colspan="2">2000</td>
                         </tr>
                         <tr class="total">
                             <td colspan="2">Total Amount</td>
                             <td>50000</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
                 <div class="billoptions">
+                    <button id='home'><a href="user-dashboard.php">Home</a></button>
                     <button id="print">Print</button>
                 </div>
             </div>
@@ -89,10 +121,19 @@
     </div>
 </body>
 <script>
-    document.getElementById("print").addEventListener('click',function(e){
-        e.target.style.display='None'
-        print()
+    document.querySelector(".date").textContent="Date: "+new Date().toLocaleDateString();
+    document.querySelector(".time").textContent="Time: "+ new Date().toLocaleTimeString();
+    let printbtn=document.getElementById("print");
+    let btndiv = document.querySelector(".billoptions");
+    printbtn.addEventListener('click',function(e){
+        btndiv.style.display="none";
+        window.print()
+        btndiv.style.display="block";
+        // btndiv.style.opacity='1'
     })
+    setTimeout(() => {
+        printbtn.click();
+    }, 100);
 </script>
 
 </html>
