@@ -1,3 +1,11 @@
+<?php
+        session_start();
+        if(!$_SESSION['username']){
+            // echo "sesson not set yet";
+            header("Location: user-login.php");
+        }
+        include_once "../assets/database/connection.php";
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +19,6 @@
 </head>
 
 <body>
-    <?php
-        session_start();
-        if(!$_SESSION['username']){
-            // echo "sesson not set yet";
-            header("Location: user-login.php");
-        }
-    ?>
    <header>
     <nav>
         <div class="logo">Billing System</div>

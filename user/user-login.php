@@ -25,7 +25,6 @@
             <?php
                 session_start();
                 if(!empty($_SESSION['username'])){
-                    // echo "sesson not set yet";
                     header("Location: user-dashboard.php");
                 }
                 include_once "../assets/database/connection.php";

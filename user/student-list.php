@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    if(!$_SESSION['username']){
+        // echo "sesson not set yet";
+        header("Location: user-login.php");
+    }
     include_once "../assets/database/connection.php";
 
 ?>

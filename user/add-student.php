@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    if(!$_SESSION['username']){
+        // echo "sesson not set yet";
+        header("Location: user-login.php");
+    }
     include_once "../assets/database/connection.php";
 ?>
 <!DOCTYPE html>
@@ -50,7 +55,7 @@
                 <li><a href="student-bill.php">Bill</a></li>
                 <li><a href="student-list.php">Student</a></li>
                 <li><a href="add-student.php">Add Student</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
             </div> 
         </section>
