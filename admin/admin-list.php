@@ -122,6 +122,9 @@ button a{
                         ?>
                     </tbody>
                 </table>
+                <div class="btn-wrapper">
+                    <button><a href="add-admin.php">Add Admin</a></button>
+                </div>
             </div>
         </section>
     </main>
