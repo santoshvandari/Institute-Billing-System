@@ -36,7 +36,7 @@
        <div class="side-option-container">
         <h4>User</h4>
         <ul class="side-option-list">
-            <li><a href="user-dashboard.php">Home</a></li>
+            <li><a href="admin-dashboard.php">Home</a></li>
             <li><a href="student-bill.php">Bill</a></li>
             <li><a href="student-list.php">Student</a></li>
             <li><a href="add-student.php">Add Student</a></li>
