@@ -18,7 +18,7 @@
         <?php
                 include_once "../assets/database/connection.php";
                 session_start();
-                        if(!empty($_SESSION['username'])){
+                        if(!empty($_SESSION['adminname'])){
                             header("Location: admin-dashboard.html");
                         }
                           
@@ -40,12 +40,12 @@
                             echo "<p>* Please enter password</p>";
                         }
                         if($username && $password){
-                            $read = 'select * from AdminInfo WHERE username ="'.$username.'" and userpwd="'.$password.'";';
+                            $read = 'select * from AdminInfo WHERE username ="'.$username.'" and adminpwd="'.$password.'";';
                             if($result=$con->query($read)){
                                 if($result->num_rows>0){
-                                    $_SESSION["username"] = $username;
+                                    $_SESSION["adminname"] = $username;
                                     echo $_SESSION["username"];
-                                    header("Location: user-dashboard.php");
+                                    header("Location: admin-dashboard.html");
                                 }else{
                                     echo "<p>* Invalid username or password.</p>";
                                 }

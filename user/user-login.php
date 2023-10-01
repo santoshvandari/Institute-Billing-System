@@ -20,10 +20,13 @@
             <h3>User Login</h3>
             <?php
                 session_start();
+                include_once "../assets/database/connection.php";
                 if(!empty($_SESSION['username'])){
                     header("Location: user-dashboard.php");
                 }
-                include_once "../assets/database/connection.php";
+                if(!empty($_SESSION['adminname'])){
+                    header("Location: ../admin/admin-login.php");
+                }
                     if ($_SERVER['REQUEST_METHOD']=='POST'){
                             if(isset($_POST['submit'])){
                                 $username=trim($_POST['username']);
@@ -73,7 +76,7 @@
         </form>
     </div>
     <footer>
-        <a href="../admin/admin-login.html">Admin</a>
+        <a href="../admin/admin-login.php">Admin</a>
         <a href="admin.html">Developers Info</a>
         <a href="mailto:test@gmail.com">FeedBack</a>
     </footer>
