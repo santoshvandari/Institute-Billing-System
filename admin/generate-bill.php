@@ -1,7 +1,7 @@
 <?php
     include_once "../assets/database/connection.php";
     if($_SERVER["REQUEST_METHOD"]=="GET"){
-        header("Location: user-dashboard.php");
+        header("Location: admin-dashboard.php");
     }
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if(isset($_POST["phone"])){
