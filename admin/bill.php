@@ -110,7 +110,7 @@
                     </tbody>
                 </table>
                 <div class="billoptions">
-                    <button id='home'><a href="user-dashboard.php">Home</a></button>
+                    <button id='home'><a href="admin-dashboard.php">Home</a></button>
                     <button id="print">Print</button>
                 </div>
             </div>
