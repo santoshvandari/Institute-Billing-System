@@ -37,8 +37,40 @@
            
     </section>
     <section class="main-container">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos aperiam reprehenderit dignissimos repellendus omnis quod iure ad, neque optio facere inventore blanditiis autem temporibus nisi sapiente minus animi laborum velit nostrum atque magnam possimus doloribus harum tenetur? Quaerat dolorem laboriosam eveniet non. Sapiente eius, aut voluptatem ab quisquam vel dolorem eos velit est maxime ex obcaecati at ea molestiae repellendus doloribus eveniet vero esse illo dolores veniam labore! Eveniet magnam accusamus eos at ratione sint quaerat nobis officiis asperiores iure unde dolore repudiandae, voluptatem modi aliquam earum. Omnis tempore dolores sequi accusantium ducimus pariatur exercitationem, nisi velit vero eius veniam!
+        <?php
+            $studentread="SELECT * FROM StudentInfo;";
+            $billread="SELECT * FROM BillInfo;";
+            $studentnumber=0;
+            $totalamount=0;
+            if($result=$con->query($studentread)){
+                $studentnumber=$result->num_rows;
+                $result->free();
+            }
+            if($result=$con->query($billread)){
+                while($row=$result->fetch_assoc()){
+                    $totalamount+=(int)$row['amount'];
+                }
+            }
+            
 
+
+        ?>
+
+
+    <section class="main-container">
+    <div class="card-wrapper">
+        <div class="card">
+            <h2>Total Students</h2>
+            <hr>
+            <p><?=$studentnumber?></p>
+        </div>
+        <div class="card">
+            <h2>Total Amount Paid</h2>
+            <hr>
+            <p><?=$totalamount?></p>
+        </div>
+    </div>
+    </section>
 
 
     </section>
