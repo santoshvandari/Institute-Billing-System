@@ -52,7 +52,7 @@
 
         <section class="student-list-container main-container">
             <div class="student-list">
-                <h3>Total Users</h3>
+                <h3>Total Admins</h3>
                 <table border="1">
                     <thead>
                         <tr>
@@ -67,7 +67,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $read= "SELECT * FROM UserInfo ORDER BY name;";
+                            $read= "SELECT * FROM AdminInfo ORDER BY name;";
                             // $result=$con->query($read)
                             if ($result=$con->query($read)) {
                                 $num=0;
