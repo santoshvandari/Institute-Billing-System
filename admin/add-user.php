@@ -33,6 +33,8 @@
     .billMessage p{
         color: #fff;
     }
+
+
 </style>
 <body>
     <header>
@@ -68,19 +70,16 @@
                  if ($_SERVER['REQUEST_METHOD']=='POST'){
                     if(isset($_POST['submit'])){
                         $name=trim($_POST['name']);
-                        $address=trim($_POST['address']);
                         $phone=trim($_POST['phone']);
                         $email=trim($_POST['email']);
-                        $gender=trim($_POST['gender']);
-                        $parent=trim($_POST['parent']);
-                        if(!$email){
-                            $email = "NULL";
-                        }
-                        $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
+                        $username=trim($_POST['username']);
+                        $password=trim($_POST['password']);
+                        
+                        $insert = "INSERT  INTO UserInfo values('$username','$name','$email','$phone','$userpwd';";
                         if($con->query($insert)){
-                            echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
+                            echo '<div class="message"><p class="success">User Added Successfully!!</p></div>';
                         }else{
-                            echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
+                            echo '<div class="message"><p class="failure">Failed To Add User !!</p></div>';
                         }
                     }
                 }
@@ -90,22 +89,17 @@
 
             ?>
         <form class="form" method="post">
-            <h3>Fill the Student Information</h3>
+            <h3>Fill the User Information</h3>
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
-            <label for="add">Address</label>
-            <input type="text" id="add" name="address" placeholder="Enter a Address" required/>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter a Email" required/>
             <label for="phone">Mobile Number</label>
             <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Enter a Email"/>
-            <div class="gender-wrapper">
-                <label>Gender</label>
-                <input type="radio" name="gender" value="male" checked/>Male
-                <input type="radio" name="gender" value="female"/>Female
-            </div>
-            <label for="parent">Parent Name</label>
-            <input type="text" name="parent" id="parent" placeholder="Enter a Parent Name" required/> 
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter a Username" required/> 
+            <label for="userpassword">Password</label>
+            <input type="text" name="password" id="userpassword" placeholder="Enter a Password"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Submit</button>
