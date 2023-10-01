@@ -24,6 +24,7 @@
 <style>
 .btn-wrapper{
     margin: 20px 0;
+    text-align:right;
 }
 .btn-wrapper button{
     margin-right:20px;

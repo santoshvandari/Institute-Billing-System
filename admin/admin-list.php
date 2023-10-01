@@ -22,6 +22,37 @@
     <link rel="stylesheet" href="../assets//css/user/student-list.css">
 </head>
 
+<style>
+.btn-wrapper{
+    margin: 20px 0;
+    text-align:right;
+}
+.btn-wrapper button{
+    margin-right:20px;
+    background: #0d6efd;
+    color:#fff;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+.btn-wrapper button:hover{
+    background:#41464b;
+}
+.btn-wrapper button:active{
+    background:transparent;
+    color:#000;
+}
+button a{
+    text-decoration:none;
+    color:#fff;
+}
+</style>
+
+
 <body>
     <header>
         <nav>

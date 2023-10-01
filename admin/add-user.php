@@ -75,7 +75,7 @@
                         $username=trim($_POST['username']);
                         $password=trim($_POST['password']);
                         
-                        $insert = "INSERT  INTO UserInfo values('$username','$name','$email','$phone','$userpwd';";
+                        $insert = "INSERT  INTO UserInfo values('$username','$name','$email','$phone','$password');";
                         if($con->query($insert)){
                             echo '<div class="message"><p class="success">User Added Successfully!!</p></div>';
                         }else{
