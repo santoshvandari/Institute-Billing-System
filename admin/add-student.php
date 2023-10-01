@@ -51,10 +51,12 @@
            <div class="side-option-container">
             <h4>User Dashboard</h4>
             <ul class="side-option-list">
-                <li><a href="user-dashboard.php">Home</a></li>
+                <li><a href="admin-dashboard.php">Home</a></li>
                 <li><a href="student-bill.php">Bill</a></li>
                 <li><a href="student-list.php">Student</a></li>
                 <li><a href="add-student.php">Add Student</a></li>
+                <li><a href="add-user.php">Add User</a></li>
+                <li><a href="add-admin.php">Add Admin</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
             </div> 
