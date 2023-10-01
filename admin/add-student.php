@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!$_SESSION['username']){
+    if(!$_SESSION['adminname']){
         // echo "sesson not set yet";
         header("Location: admin-login.php");
     }
