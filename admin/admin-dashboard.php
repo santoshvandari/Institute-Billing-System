@@ -39,9 +39,10 @@
     <section class="main-container">
         <?php
             $studentread="SELECT * FROM StudentInfo;";
+            $userread="SELECT * FROM UserInfo;"
+            $adminread="SELECT * FROM AdminInfo;"
             $billread="SELECT * FROM BillInfo;";
-            $studentnumber=0;
-            $totalamount=0;
+            $studentnumber=$totalamount=$totalamdin=$totaluser=0;
             if($result=$con->query($studentread)){
                 $studentnumber=$result->num_rows;
                 $result->free();
@@ -50,6 +51,11 @@
                 while($row=$result->fetch_assoc()){
                     $totalamount+=(int)$row['amount'];
                 }
+                $result->free();
+            }
+            if($result=$con->query($studentread)){
+                $studentnumber=$result->num_rows;
+                $result->free();
             }
             
 
