@@ -39,6 +39,8 @@
                     <li><a href="student-bill.php">Bill</a></li>
                     <li><a href="student-list.php">Student</a></li>
                     <li><a href="add-student.php">Add Student</a></li>
+                    <li><a href="add-users.html">Add Users</a></li>
+                    <li><a href="add-admin.html">Add Admin`</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
