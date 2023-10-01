@@ -19,7 +19,7 @@
                 include_once "../assets/database/connection.php";
                 session_start();
                         if(!empty($_SESSION['adminname'])){
-                            header("Location: admin-dashboard.html");
+                            header("Location: admin-dashboard.php");
                         }
                           
 
@@ -44,8 +44,8 @@
                             if($result=$con->query($read)){
                                 if($result->num_rows>0){
                                     $_SESSION["adminname"] = $username;
-                                    echo $_SESSION["username"];
-                                    header("Location: admin-dashboard.html");
+                                    // echo $_SESSION["username"];
+                                    header("Location: admin-dashboard.php");
                                 }else{
                                     echo "<p>* Invalid username or password.</p>";
                                 }
