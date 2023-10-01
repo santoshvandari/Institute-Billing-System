@@ -8,6 +8,11 @@
     <title>Admin Login</title>
     <link rel="stylesheet" href="../assets/css/login.css" />
 </head>
+<style>
+     form p {
+        color: red;
+    }
+</style>
 <body>
 
         <?php
@@ -35,7 +40,7 @@
                             echo "<p>* Please enter password</p>";
                         }
                         if($username && $password){
-                            $read = 'select * from UserInfo WHERE username ="'.$username.'" and userpwd="'.$password.'";';
+                            $read = 'select * from AdminInfo WHERE username ="'.$username.'" and userpwd="'.$password.'";';
                             if($result=$con->query($read)){
                                 if($result->num_rows>0){
                                     $_SESSION["username"] = $username;
