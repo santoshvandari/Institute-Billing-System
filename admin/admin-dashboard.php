@@ -53,13 +53,15 @@
                 }
                 $result->free();
             }
-            if($result=$con->query($studentread)){
-                $studentnumber=$result->num_rows;
+            if($result=$con->query($userread)){
+                $totaluser=$result->num_rows;
+                $result->free();
+            }
+            if($result=$con->query($adminread)){
+                $totalamdin=$result->num_rows;
                 $result->free();
             }
             
-
-
         ?>
 
 
@@ -74,6 +76,16 @@
             <h2>Total Amount Paid</h2>
             <hr>
             <p><?=$totalamount?></p>
+        </div>
+        <div class="card">
+            <h2>Total Users</h2>
+            <hr>
+            <p><?=$totaluser?></p>
+        </div>
+        <div class="card">
+            <h2>Total Admin</h2>
+            <hr>
+            <p><?=$totaladmin?></p>
         </div>
     </div>
     </section>
