@@ -50,7 +50,7 @@
             $userread="SELECT * FROM UserInfo;";
             $adminread="SELECT * FROM AdminInfo;";
             $billread="SELECT * FROM BillInfo;";
-            $studentnumber=$totalamount=$totalamdin=$totaluser=0;
+            $studentnumber=$totalamount=$totaladmin=$totaluser=0;
             if($result=$con->query($studentread)){
                 $studentnumber=$result->num_rows;
                 $result->free();
