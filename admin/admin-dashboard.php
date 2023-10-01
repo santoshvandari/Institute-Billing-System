@@ -66,7 +66,7 @@
                 $result->free();
             }
             if($result=$con->query($adminread)){
-                $totalamdin=$result->num_rows;
+                $totaladmin=$result->num_rows;
                 $result->free();
             }
             
