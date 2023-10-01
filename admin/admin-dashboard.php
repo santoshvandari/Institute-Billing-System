@@ -1,3 +1,12 @@
+<?php
+        session_start();
+        if(!$_SESSION['adminname']){
+            // echo "sesson not set yet";
+            header("Location: admin-login.php");
+        }
+        include_once "../assets/database/connection.php";
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +45,10 @@
         </div>
            
     </section>
-    <section class="main-container">
         <?php
             $studentread="SELECT * FROM StudentInfo;";
-            $userread="SELECT * FROM UserInfo;"
-            $adminread="SELECT * FROM AdminInfo;"
+            $userread="SELECT * FROM UserInfo;";
+            $adminread="SELECT * FROM AdminInfo;";
             $billread="SELECT * FROM BillInfo;";
             $studentnumber=$totalamount=$totalamdin=$totaluser=0;
             if($result=$con->query($studentread)){
@@ -91,7 +99,6 @@
     </section>
 
 
-    </section>
    </main>
    <footer>
    </footer>
