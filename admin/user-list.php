@@ -107,7 +107,7 @@ button a{
                                     <td>".$row['email']."</td>
                                     <td>".$row['phone']."</td>
                                     <td>".$row['username']."</td>
-                                    <td><a href='admin-dashboard.php?phone=".$row['phone']."'>Test</a></td>"; 
+                                    <td><a href='edit-user.php?username=".$row['username']."'>Edit</a> | <a href='delete-user.php?username=".$row['username']."'>Delete</a></td>"; 
                                     echo $disp;
                                 }
                             }else{
