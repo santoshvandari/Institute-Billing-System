@@ -107,11 +107,11 @@ div.message p{
                 <h3>Total Admins</h3>
                 <?php
                        if($_SERVER["REQUEST_METHOD"]=="GET"){
-                        if(isset($_GET["success"])){
-                            echo '<div class="message"><p class="success">User Added Successfully!!</p></div>';
+                        if(isset($_GET["adminsuccess"])){
+                            echo '<div class="message"><p class="success">Admin Deleted Successfully!!</p></div>';
                         }
-                        if(isset($_GET["failure"])){
-                            echo '<div class="message"><p class="failure">Failed To Add User !!</p></div>';
+                        if(isset($_GET["adminfailure"])){
+                            echo '<div class="message"><p class="failure">Failed To Delete Admin !!</p></div>';
                         }
                     }
 
