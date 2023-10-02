@@ -6,13 +6,13 @@
             $delete="DELETE FROM UserInfo WHERE username='$username';";
             if($con->query($delete)){
                 echo "Success";
-                header("Location: admin-list.php?usersuccess=success");
+                header("Location: user-list.php?usersuccess=success");
             }else{
                 echo "Error";
-                header("Location: admin-list.php?userfailure=failure");
+                header("Location: user-list.php?userfailure=failure");
             }
         }else{
-            header("Location: admin-list.php?userfailure=failure");
+            header("Location: user-list.php?userfailure=failure");
         }
     }
 ?>
