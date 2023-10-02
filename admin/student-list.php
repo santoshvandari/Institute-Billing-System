@@ -83,7 +83,7 @@
                                     <td>".$row['email']."</td>
                                     <td>".$row['phone']."</td>
                                     <td>".$row['parentname']."</td>
-                                    <td><a href='student-bill.php?phone=".$row['phone']."'>Bill</a></td>"; 
+                                    <td><a href='student-bill.php?phone=".$row['phone']."'>Bill</a> | <a href='student-delete.php?phone=".$row['phone']."'>Delete</a> | <a href='student-edit.php?phone=".$row['phone']."'>Edit</a> </td>"; 
                                     echo $disp;
                                 }
                             }else{
