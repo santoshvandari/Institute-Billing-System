@@ -105,6 +105,17 @@ div.message p{
         <section class="student-list-container main-container">
             <div class="student-list">
                 <h3>Total Admins</h3>
+                <?php
+                       if($_SERVER["REQUEST_METHOD"]=="GET"){
+                        if(isset($_GET["success"])){
+                            echo '<div class="message"><p class="success">User Added Successfully!!</p></div>';
+                        }
+                        if(isset($_GET["failure"])){
+                            echo '<div class="message"><p class="failure">Failed To Add User !!</p></div>';
+                        }
+                    }
+
+                ?>
                 <table border="1">
                     <thead>
                         <tr>
