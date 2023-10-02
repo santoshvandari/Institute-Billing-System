@@ -25,4 +25,10 @@
 }
 .student-list table tr td a{
     text-decoration: none;
+    background: #0d6efd;
+      color: #fff;
+      font-weight: 400;
+      padding: 8px 25px;
+      border: 1px solid #000;
+      border-radius: 10px;
 }
