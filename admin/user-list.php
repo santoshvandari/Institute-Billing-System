@@ -99,7 +99,17 @@ div.message p{
         <section class="student-list-container main-container">
             <div class="student-list">
                 <h3>Total Users</h3>
+                <?php
+                       if($_SERVER["REQUEST_METHOD"]=="GET"){
+                        if(isset($_GET["usersuccess"])){
+                            echo '<div class="message"><p class="success">User Deleted Successfully!!</p></div>';
+                        }
+                        if(isset($_GET["userfailure"])){
+                            echo '<div class="message"><p class="failure">Failed To Delete User !!</p></div>';
+                        }
+                    }
 
+                ?>
                 <table border="1">
                     <thead>
                         <tr>
