@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student List</title>
+    <title>Admin List</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets//css/user/student-list.css">
 </head>
@@ -50,6 +50,27 @@ button a{
     text-decoration:none;
     color:#fff;
 }
+
+
+div.message p{
+    margin: 20px  0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    }
+    .success{
+        background: lightgreen;
+    }
+    .failure{
+        background: lightcoral;
+    }
+    .billMessage p{
+        color: #fff;
+    }
+
+
+
 </style>
 
 
@@ -98,6 +119,7 @@ button a{
                     </thead>
                     <tbody>
                         <?php
+                            
                             $read= "SELECT * FROM AdminInfo ORDER BY name;";
                             // $result=$con->query($read)
                             if ($result=$con->query($read)) {
@@ -129,5 +151,9 @@ button a{
         </section>
     </main>
 </body>
-</script>
+<script>
+        setTimeout(() => {
+            const message = document.querySelector('.message').style.display="none";
+        }, 5000);
+    </script>
 </html>
