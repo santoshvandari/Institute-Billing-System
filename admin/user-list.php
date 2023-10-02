@@ -49,6 +49,24 @@ button a{
     text-decoration:none;
     color:#fff;
 }
+
+div.message p{
+    margin: 20px  0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    }
+    .success{
+        background: lightgreen;
+    }
+    .failure{
+        background: lightcoral;
+    }
+    .billMessage p{
+        color: #fff;
+    }
+
 </style>
 <body>
     <header>
@@ -81,6 +99,7 @@ button a{
         <section class="student-list-container main-container">
             <div class="student-list">
                 <h3>Total Users</h3>
+
                 <table border="1">
                     <thead>
                         <tr>
