@@ -102,6 +102,7 @@
                         // echo $update;
                         if($con->query($update)){
                             echo '<div class="message"><p class="success">Student Record Updated Successfully!!</p></div>';
+                            header("refresh:5; url=student-list.php");
                         }else{
                             echo '<div class="message"><p class="failure">Failed To Updated Student Record!!</p></div>';
                         }

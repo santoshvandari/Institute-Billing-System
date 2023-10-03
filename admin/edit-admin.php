@@ -95,6 +95,7 @@
                         
                         if($con->query($update)){
                             echo '<div class="message"><p class="success">Admin Updated Successfully!!</p></div>';
+                            header("refresh:5; url=admin-list.php");
                         }else{
                             echo '<div class="message"><p class="failure">Failed To Update  Admin !!</p></div>';
                         }
