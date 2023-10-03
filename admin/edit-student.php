@@ -68,7 +68,6 @@
     <section class="form-container main-container">
         <div class="form-wrapper">
             <?php
-                $phone="hello";
                 if($_SERVER['REQUEST_METHOD']=='GET'){
                     if(isset($_GET["phone"])){
                         $phone = trim($_GET['phone']);
@@ -88,24 +87,24 @@
                         };
                     }
                 }
-                 if ($_SERVER['REQUEST_METHOD']=='POST'){
+                if ($_SERVER['REQUEST_METHOD']=='POST'){
                     if(isset($_POST['submit'])){
                         $name=trim($_POST['name']);
                         $address=trim($_POST['address']);
                         $email=trim($_POST['email']);
-                        $phone=trim($_POST['phone']);
+                        $phone=trim($_GET['phone']);
                         $gender=trim($_POST['gender']);
                         $parent=trim($_POST['parent']);
                         if(!$email){
                             $email = "NULL";
                         }
-                        $update = "UPDATE  StudentInfo SET name = '$name', address = '$address', email = '$email', gender = '$gender', parent = '$parent' WHERE phone = '$phone';";
-                        echo $update;
-                        // if($con->query($update)){
+                        $update = "UPDATE  StudentInfo SET name = '$name', address = '$address', email = '$email', gender = '$gender', parentname = '$parent' WHERE phone = '$phone';";
+                        // echo $update;
+                        if($con->query($update)){
                             echo '<div class="message"><p class="success">Student Record Updated Successfully!!</p></div>';
                         }else{
                             echo '<div class="message"><p class="failure">Failed To Updated Student Record!!</p></div>';
-                        // }
+                        }
                     }
                 }
 
