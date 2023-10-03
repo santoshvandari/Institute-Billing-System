@@ -94,9 +94,10 @@
                         $update= "UPDATE UserInfo SET name = '$name', email = '$email', phone = '$phone', userpwd = '$password' WHERE username = '$username';";
                         
                         if($con->query($update)){
-                            echo '<div class="message"><p class="success">Admin Updated Successfully!!</p></div>';
+                            echo '<div class="message"><p class="success">User Updated Successfully!!</p></div>';
+                            header("refresh:5; url=user-list.php");
                         }else{
-                            echo '<div class="message"><p class="failure">Failed To Update  Admin !!</p></div>';
+                            echo '<div class="message"><p class="failure">Failed To Update  User !!</p></div>';
                         }
                     }
                 }
@@ -119,7 +120,7 @@
             <input type="text" name="password" id="userpassword" value="<?=$password?>"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
-                <button type="submit" name="submit">Submit</button>
+                <button type="submit" name="submit">Update</button>
             </div>
         </form>
         </div>
