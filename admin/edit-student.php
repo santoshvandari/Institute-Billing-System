@@ -113,7 +113,7 @@
 
             ?>
         <form class="form" method="post">
-            <h3>Fill the Student Information</h3>
+            <h3>Update the Student Information</h3>
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" value="<?=$name?>" required/>
             <label for="add">Address</label>
