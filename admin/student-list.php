@@ -72,6 +72,18 @@
         <section class="student-list-container main-container">
             <div class="student-list">
                 <h3>Total Students</h3>
+                <?php
+                       if($_SERVER["REQUEST_METHOD"]=="GET"){
+                        if(isset($_GET["adminsuccess"])){
+                            echo '<div class="message"><p class="success">Admin Deleted Successfully!!</p></div>';
+                        }
+                        if(isset($_GET["adminfailure"])){
+                            echo '<div class="message"><p class="failure">Failed To Delete Admin !!</p></div>';
+                        }
+                    }
+
+                ?>
+
                 <table border="1">
                     <thead>
                         <tr>
