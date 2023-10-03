@@ -6,13 +6,13 @@
             $delete="DELETE FROM StudentInfo WHERE phone='$username';";
             if($con->query($delete)){
                 echo "Success";
-                header("Location: admin-list.php?adminsuccess=success");
+                header("Location: student-list.php?adminsuccess=success");
             }else{
                 echo "Error";
-                header("Location: admin-list.php?adminfailure=failure");
+                header("Location: student-list.php?adminfailure=failure");
             }
         }else{
-            header("Location: admin-list.php?adminfailure=failure");
+            header("Location: student-list.php?adminfailure=failure");
         }
     }
 ?>
