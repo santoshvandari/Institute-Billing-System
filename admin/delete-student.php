@@ -1,9 +1,9 @@
 <?php
     include_once "../assets/database/connection.php";
     if($_SERVER["REQUEST_METHOD"]=="GET"){
-        if(isset($_GET["username"])){
-            $username=trim($_GET["username"]);
-            $delete="DELETE FROM AdminInfo WHERE username='$username';";
+        if(isset($_GET["phone"])){
+            $username=trim($_GET["phone"]);
+            $delete="DELETE FROM StudentInfo WHERE phone='$username';";
             if($con->query($delete)){
                 echo "Success";
                 header("Location: admin-list.php?adminsuccess=success");
