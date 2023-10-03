@@ -77,7 +77,7 @@
                                 $name=trim($row['name']);
                                 $email=trim($row['email']);
                                 $phone=trim($row['phone']);
-                                $password=trim($row['adminpwd']);
+                                $password=trim($row['userpwd']);
                             };
                             
                         };
@@ -91,7 +91,7 @@
                         $email=trim($_POST['email']);
                         $username=trim($_GET['username']);
                         $password=trim($_POST['password']);
-                        $update= "UPDATE UserInfo SET name = '$name', email = '$email', phone = '$phone', adminpwd = '$password' WHERE username = '$username';";
+                        $update= "UPDATE UserInfo SET name = '$name', email = '$email', phone = '$phone', userpwd = '$password' WHERE username = '$username';";
                         
                         if($con->query($update)){
                             echo '<div class="message"><p class="success">Admin Updated Successfully!!</p></div>';
@@ -115,8 +115,8 @@
             <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" value="<?=$phone?>" required/>
             <label for="username">Username</label>
             <input type="text" name="username" id="username" value="<?=$username?>" disabled required/> 
-            <label for="adminpassword">Password</label>
-            <input type="text" name="password" id="adminpassword" value="<?=$password?>"/>
+            <label for="userpassword">Password</label>
+            <input type="text" name="password" id="userpassword" value="<?=$password?>"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Submit</button>
