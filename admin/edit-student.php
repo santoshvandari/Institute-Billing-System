@@ -70,11 +70,10 @@
             <?php
                 if($_SERVER['REQUEST_METHOD']=='GET'){
                     if(isset($_GET["phone"])){
-
                         $phone = trim($_GET['phone']);
                         $select = "SELECT * FROM StudentInfo WHERE phone = '$phone';";
                         if($result = $con->query($select)){
-                            $row = $result->fetch_assoc(){
+                            while($row = $result->fetch_assoc()){
                                 $name=trim($row['name']);
                                 $address=trim($row['address']);
                                 $email=trim($row['email']);
