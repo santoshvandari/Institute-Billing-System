@@ -148,6 +148,8 @@
                                                         </div>
                                                         </div>
                                                         <div class="btn">
+                                                            <p>Edit Bill Function is not working in current Situation
+                                                            <button><a href="#">Edit Bill</a></button>
                                                             <button><a href="studentbillform.php?phone='.$phone.'">Add Bill</a></button>
                                                             </div>
                                                         </div>
