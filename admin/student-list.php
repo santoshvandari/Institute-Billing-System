@@ -74,11 +74,11 @@
                 <h3>Total Students</h3>
                 <?php
                        if($_SERVER["REQUEST_METHOD"]=="GET"){
-                        if(isset($_GET["adminsuccess"])){
-                            echo '<div class="message"><p class="success">Admin Deleted Successfully!!</p></div>';
+                        if(isset($_GET["studentsuccess"])){
+                            echo '<div class="message"><p class="success">Student Deleted Successfully!!</p></div>';
                         }
-                        if(isset($_GET["adminfailure"])){
-                            echo '<div class="message"><p class="failure">Failed To Delete Admin !!</p></div>';
+                        if(isset($_GET["studentfailure"])){
+                            echo '<div class="message"><p class="failure">Failed To Delete Student !!</p></div>';
                         }
                     }
 
