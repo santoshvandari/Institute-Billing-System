@@ -120,7 +120,7 @@
             <input type="text" name="password" id="adminpassword" value="<?=$password?>"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
-                <button type="submit" name="submit">Submit</button>
+                <button type="submit" name="submit">Update</button>
             </div>
         </form>
         </div>
