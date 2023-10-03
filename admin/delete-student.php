@@ -3,8 +3,9 @@
     if($_SERVER["REQUEST_METHOD"]=="GET"){
         if(isset($_GET["phone"])){
             $phone=trim($_GET["phone"]);
-            $delete="DELETE FROM StudentInfo WHERE phone='$phone';";
-            if($con->query($delete)){
+            $deleteBill="DELETE FROM BillInfo WHERE phone='$phone';";
+            $deleteStudent="DELETE FROM StudentInfo WHERE phone='$phone';";
+            if($con->query($deleteBill) && $con->query($deleteStudent)){
                 echo "Success";
                 header("Location: student-list.php?studentsuccess=success");
             }else{
