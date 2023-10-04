@@ -85,7 +85,7 @@
                 }
                 ?>
             </div>
-            <form class="form" action="generate-bill.php" method="post">
+            <form class="form" action="generate-updatebill.php" method="post">
                 <h3>Fill the Bill Information</h3>
                 <input type="phone" name="phone" hidden value="<?=$phone;?>">
                 <label for="desc">Description</label>
