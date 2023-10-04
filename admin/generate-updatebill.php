@@ -107,7 +107,7 @@
                         </tbody>
                     </table>
                     <div class="billoptions">
-                        <form action="updatestudent-billed.php" method="post">
+                        <form action="student-updatebilled.php" method="post">
                             <input type="text" name="name" value="<?=$name?>" hidden>
                             <input type="text" name="address" value="<?=$address?>" hidden>
                             <input type="phone" name="phone" value="<?=$phone?>" hidden>
