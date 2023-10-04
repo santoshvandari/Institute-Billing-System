@@ -52,7 +52,7 @@
             <div class="studentinfo">
                 <h3>Student Information</h3>
                 <?php
-                    if$_SERVER['REQUEST_METHOD']=='GET'){
+                    if($_SERVER['REQUEST_METHOD']=='GET'){
                         if(isset($_GET["phone"])){
                         $phone=trim($_GET["phone"]);
                          $read="SELECT * FROM StudentInfo WHERE phone ='$phone';";
@@ -66,7 +66,7 @@
                                  }
                              }
                          }
-                    $read="SELECT * FROM BillInfo WHERE StudentInfo.phone ='$phone';";
+                    $read="SELECT * FROM BillInfo WHERE phone ='$phone';";
                         if($result=$con->query($read)){
                             if($result->num_rows>0){
                                 $desctemp="";
@@ -81,6 +81,8 @@
                                 $count=count($desc);
                     }
                 }
+            }
+                }
                 ?>
             </div>
             <form class="form" action="generate-bill.php" method="post">
@@ -93,7 +95,7 @@
                 }
 
                 ?>
-                <input type="text" id="desc" name="desc0" required placeholder="Enter a Bill title"/>
+                <input type="text" id="desc" name="desc<?=$count?>" placeholder="Enter a Bill title"/>
                 <div class="addbtn">
                     <button id="add">+</button>
                 </div>
