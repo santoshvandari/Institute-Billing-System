@@ -88,8 +88,10 @@
                 <input type="phone" name="phone" hidden value="<?=$phone;?>">
                 <label for="desc">Description</label>
                 <?php
-                
-                
+                for($i=0;$i<$count;$i++){
+                    echo "<input type='text' name='desc$i' value='".$desc[$i]."'/>";
+                }
+
                 ?>
                 <input type="text" id="desc" name="desc0" required placeholder="Enter a Bill title"/>
                 <div class="addbtn">
