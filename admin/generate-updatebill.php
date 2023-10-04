@@ -90,8 +90,10 @@
                                     $description="";
                                     $count=$_POST["counter"];
                                     for($i=0;$i<=$count;$i++){
-                                        $description=$description."|".$_POST["desc".$i];
-                                        echo "<tr><td>".($i+1)."</td><td>".$_POST["desc".$i]."</td></tr>";      
+                                        if(!empty($_POST["desc".$i])){
+                                            $description=$description."|".$_POST["desc".$i];
+                                            echo "<tr><td>".($i+1)."</td><td>".$_POST["desc".$i]."</td></tr>";      
+                                        }
                                     }
                                    
                                 }
@@ -105,13 +107,13 @@
                         </tbody>
                     </table>
                     <div class="billoptions">
-                        <form action="student-billed.php" method="post">
+                        <form action="updatestudent-billed.php" method="post">
                             <input type="text" name="name" value="<?=$name?>" hidden>
                             <input type="text" name="address" value="<?=$address?>" hidden>
                             <input type="phone" name="phone" value="<?=$phone?>" hidden>
                             <input type="text" name="description" value="<?=$description?>" hidden/>
                             <input type="number" name="amount" value="<?=$amount?>" hidden>
-                            <button type="submit">Bill</button>
+                            <button type="submit">Update Bill</button>
                             <button><a href="student-bill.php">Cancel</a></button>
                         </form>
                     </div>
