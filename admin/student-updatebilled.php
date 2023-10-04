@@ -12,17 +12,18 @@
             $amount = trim($_POST["amount"]);
 
 
-            // $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
-            $update= 'UPDATE BillInfo SET description="'.$desc.'", amount='.$amount.' WHERE phone="'.$phone.'";';
+            $delete = 'DELETE FROM BillInfo WHERE phone="'.$phone.'";';
+            $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
             $flag=false;
-            if($con->query($insert)){
-                $flag=true;
+            if($con->query($delete)){
+                if($con->query($insert)){
+                    $flag=true;
+                }
             }else{
                 $flag=false;
             }
 
         }}
-    //  }
 
 ?>
 
