@@ -5,8 +5,7 @@
         <div class="logo">Billing System</div>
         <div class="user-info">
             <div class="user">
-                <div class="username">Santosh Bhandari</div>
-                <div class="user-img"><img src="../img/img.jpg" alt="" srcset=""></div>
+                <div class="username"><?=$_SESSION['adminname']?></div>
             </div>
         </div>
     </nav>

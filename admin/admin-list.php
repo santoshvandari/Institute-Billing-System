@@ -65,7 +65,7 @@ div.message p{
     .failure{
         background: lightcoral;
     }
-    .billMessage p{
+    .message p{
         color: #fff;
     }
 
