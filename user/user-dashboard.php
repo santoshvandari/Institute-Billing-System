@@ -25,7 +25,7 @@
         <div class="user-info">
             <div class="user">
                 <div class="username"><?=$_SESSION['username'] ?></div>
-                <div class="user-img"><img src="../img/img.jpg" alt="" srcset=""></div>
+                <!-- <div class="user-img"><img src="../img/img.jpg" alt="" srcset=""></div> -->
             </div>
         </div>
     </nav>
