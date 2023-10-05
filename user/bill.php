@@ -79,27 +79,6 @@
                              </tr>';
 
                         ?>
-                        <!-- <tr>
-                            <td>1</td>
-                            <td>Computer Basic</td>
-                            <td rowspan='4'>50000</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Computer Programming</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Computer Networking</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Computer Hardware</td>
-                        </tr>
-                        <tr class="total">
-                            <td colspan="2">Total Amount</td>
-                            <td>50000</td>
-                        </tr> -->
                     </tbody>
                 </table>
                 <div class="billoptions">
@@ -119,7 +98,6 @@
         btndiv.style.display="none";
         window.print()
         btndiv.style.display="block";
-        // btndiv.style.opacity='1'
     })
     setTimeout(() => {
         printbtn.click();
