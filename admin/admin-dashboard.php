@@ -1,6 +1,12 @@
-    <title>Dashboard</title>
+<?php 
+    include_once "head.php";
+?>
+   <title>Dashboard</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/dashboard.css"/>
+<?php
+    include_once "sidebar.php";
+?>
 
         <?php
             $studentread="SELECT * FROM StudentInfo;";
