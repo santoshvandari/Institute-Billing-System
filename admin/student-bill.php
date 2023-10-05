@@ -27,14 +27,12 @@
                                             $phone=null;
                                         }
                                     }
-
                                     if($_SERVER['REQUEST_METHOD']=='POST')
                                         $phone=trim($_POST["phone"]);
                                     if (empty($phone))
                                         $phone=Null;
                                     $read="SELECT * FROM StudentInfo, BillInfo WHERE StudentInfo.phone = BillInfo.phone AND StudentInfo.phone ='$phone';";
-                                    // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
-                                    // var_dump($read);
+                                
                                     if($result=$con->query($read)){
                                         if($result->num_rows>0){
                                             $desctemp="";
