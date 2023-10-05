@@ -54,10 +54,6 @@
         </div>
     </div>
     </section>
-
-
-   </main>
-   <footer>
-   </footer>
+    </main>
 </body>
 </html>
