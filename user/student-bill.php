@@ -96,10 +96,10 @@
                                                                     <th>S.N.</th>
                                                                     <th>Description</th>
                                                                 </tr>';
-                                                $counter=0;
-                                                $rows="";
-                                               
                                                     
+                                                    
+                                                    $rows="";
+                                                    $counter=0;
                                                     foreach($desc as $value){
                                                         $counter++;
                                                         if (!empty($value)){
