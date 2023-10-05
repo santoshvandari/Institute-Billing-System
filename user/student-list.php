@@ -4,7 +4,6 @@
     <title>Student List</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets//css/user/student-list.css">
-</head>
 <?php
     include_once "sidebar.php";
 ?>
