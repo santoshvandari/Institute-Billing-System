@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,14 +50,6 @@
                                         echo "error.";
                                     }
                                 }
-
-
-                            // if($username=='admin' && $password=='admin'){
-                            //     header('location:admin.html');
-                            // }
-                            // else{
-                            //     echo 'Invalid username or password';
-                            // }
                             }
                     }
 
@@ -77,8 +68,8 @@
     </div>
     <footer>
         <a href="../admin/admin-login.php">Admin</a>
-        <a href="admin.html">Developers Info</a>
-        <a href="mailto:test@gmail.com">FeedBack</a>
+        <a href="#">Developers Info</a>
+        <a href="#">FeedBack</a>
     </footer>
 </body>
 
