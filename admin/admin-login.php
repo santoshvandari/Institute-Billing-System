@@ -53,14 +53,6 @@
                                 echo "error.";
                             }
                         }
-
-
-                    // if($username=='admin' && $password=='admin'){
-                    //     header('location:admin.html');
-                    // }
-                    // else{
-                    //     echo 'Invalid username or password';
-                    // }
                     }
             }
             ?>
