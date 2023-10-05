@@ -1,50 +1,14 @@
 <?php
-    session_start();
-    if(!$_SESSION['adminname']){
-        // echo "sesson not set yet";
-        header("Location: admin-login.php");
-    }
-    include_once "../assets/database/connection.php";
+    include_once "head.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Student</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/user/add-student.css">
     <link rel="stylesheet" href="../assets/css/message.css"/>
     <script src="../assets/js/HideMessage.js"></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">Billing System</div>
-            <div class="user-info">
-                <div class="user">
-                    <div class="username">Santosh Bhandari</div>
-                    <div class="user-img"><img src="../img/img.jpg" alt="" srcset=""></div>
-                </div>
-            </div>
-        </nav>
-       </header>
-       <main>
-        <section class="side-option">
-           <div class="side-option-container">
-            <h4>Admin</h4>
-            <ul class="side-option-list">
-                <li><a href="admin-dashboard.php">Home</a></li>
-                <li><a href="student-bill.php">Bill</a></li>
-                <li><a href="student-list.php">Student</a></li>
-                <li><a href="add-student.php">Add Student</a></li>
-                <li><a href="user-list.php">Users</a></li>
-                <li><a href="admin-list.php">Admins</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-            </div> 
-        </section>
+<?php
+
+?>
 
     <section class="form-container main-container">
         <div class="form-wrapper">
