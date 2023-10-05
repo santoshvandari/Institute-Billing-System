@@ -1,7 +1,6 @@
 <?php
         session_start();
         if(!$_SESSION['username']){
-            // echo "sesson not set yet";
             header("Location: user-login.php");
         }
         include_once "../assets/database/connection.php";
@@ -25,7 +24,6 @@
         <div class="user-info">
             <div class="user">
                 <div class="username"><?=$_SESSION['username'] ?></div>
-                <!-- <div class="user-img"><img src="../img/img.jpg" alt="" srcset=""></div> -->
             </div>
         </div>
     </nav>
