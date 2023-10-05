@@ -48,9 +48,6 @@
                             }else{
                                 echo "Error";
                             }
-                        
-                        
-                        
                         ?>
                     </tbody>
                 </table>
