@@ -2,6 +2,7 @@
     include_once "head.php";
 ?>
     <link rel="stylesheet" href="../assets/css/user/bill.css">
+    <script defer src="../assets/js/user/DateTime.js"></script>
     <title>Student Bill</title>
 </head>
 <body>
@@ -90,8 +91,6 @@
     </div>
 </body>
 <script>
-    document.querySelector(".date").textContent="Date: "+new Date().toLocaleDateString();
-    document.querySelector(".time").textContent="Time: "+ new Date().toLocaleTimeString();
     let printbtn=document.getElementById("print");
     let btndiv = document.querySelector(".billoptions");
     printbtn.addEventListener('click',function(e){
