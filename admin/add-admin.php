@@ -15,27 +15,9 @@
     <title>Add Student</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/user/add-student.css">
+    <link rel="stylesheet" href="../assets/css/message.css"/>
+    <script src="../assets/js/HideMessage.js"></script>
 </head>
-<style>
-    div.message p{
-    margin: 20px  0;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;
-    }
-    .success{
-        background: lightgreen;
-    }
-    .failure{
-        background: lightcoral;
-    }
-    .billMessage p{
-        color: #fff;
-    }
-
-
-</style>
 <body>
     <header>
         <nav>
@@ -108,10 +90,5 @@
         </div>
     </section>
     </main>
-    <script>
-        setTimeout(() => {
-            const message = document.querySelector('.message').style.display="none";
-        }, 5000);
-    </script>
 </body>
 </html>
