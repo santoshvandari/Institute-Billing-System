@@ -1,3 +1,4 @@
+<head>
 <body>
    <header>
     <nav>

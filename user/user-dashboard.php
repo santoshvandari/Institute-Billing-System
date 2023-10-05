@@ -4,7 +4,6 @@
 <title>Dashboard</title>
 <link rel="stylesheet" href="../assets/css/common-style.css">
 <link rel="stylesheet" href="../assets/css/dashboard.css" />
-</head>
 <?php
     include_once "sidebar.php";
 ?>
