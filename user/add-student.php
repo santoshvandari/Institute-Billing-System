@@ -57,10 +57,6 @@
         </div>
     </section>
     </main>
-    <script>
-        setTimeout(() => {
-            const message = document.querySelector('.message').style.display="none";
-        }, 5000);
-    </script>
+
 </body>
 </html>
