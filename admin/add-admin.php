@@ -29,10 +29,6 @@
                         }
                     }
                 }
-
-
-
-
             ?>
         <form class="form" method="post">
             <h3>Fill the Admin Information</h3>
