@@ -61,17 +61,13 @@
                                                                 </tr>';
                                                 $counter=0;
                                                 $rows="";
-                                               
-                                                    
                                                     foreach($desc as $value){
                                                         if (!empty($value)){
                                                             $counter++;
                                                             $rows = $rows. '<tr><td>'.$counter.'</td><td>'.$value.'</td></tr>';
-
                                                         }
                                                     }
                                                 $disp2=$rows.'<tr><td><strong>Amount</strong></td><td><strong>'.$amount.'</strong></td></tr>';
-                                                  
                                                 $disp3='</table>
                                                         </div>
                                                         </div>
@@ -82,7 +78,6 @@
                                                             </div>
                                                         </div>';
                                                 echo $disp1."".$disp2."".$disp3;
-
                                         } else{
                                             $read="SELECT * FROM StudentInfo WHERE StudentInfo.phone ='$phone';";
                                             if($result=$con->query($read)){
@@ -115,7 +110,6 @@
                                                             </div>
                                                         </div>
                                                                 ';
-                                                    
                                                     }
                                                     echo $disp;
                                                 }else{     
@@ -128,14 +122,10 @@
                                                     </div>';
                                                 }
                                         }
-                                        // while($row=$result->fetch_assoc()){
-                                        // echo $row["name"];
-                                        // }
                                     }
                                 }
                                 }
                             ?>
-                       
         </section>
     </main>
 </body>
