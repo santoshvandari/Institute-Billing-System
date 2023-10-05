@@ -55,5 +55,4 @@
         </section>
     </main>
 </body>
-</script>
 </html>
