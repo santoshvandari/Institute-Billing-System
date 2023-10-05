@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="../assets/css/user/student-billed.css">
 <link rel="stylesheet" href="../assets/css/message.css" />
 <script defer src="../assets/js/user/DateTime.js"></script>
+<script defer src="../assets/js/user/HideMessage.js"></script>
 </head>
 <?php
     include_once "sidebar.php";
