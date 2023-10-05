@@ -57,14 +57,6 @@
                     }
 
                 ?>
-                    <!-- <div class="successful">
-                        <p>Billing Process is Successful</p>
-                        
-                    </div> -->
-                    <!-- <div class="failure">
-                        <p>Billing Process Failed!!!</p>
-    
-                    </div> -->
                 </div>
                 <hr>
                 <?php
