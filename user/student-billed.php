@@ -34,7 +34,7 @@
     <title>Student Bill</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/user/student-billed.css">
-
+    <link rel="stylesheet" href="../assets/css/message.css"/>
 </head>
 <?php
     include_once "sidebar.php";
