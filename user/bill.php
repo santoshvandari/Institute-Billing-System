@@ -1,16 +1,9 @@
 <?php
-    include_once "../assets/database/connection.php";
+    include_once "head.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/user/bill.css">
     <title>Student Bill</title>
 </head>
-
 <body>
     <div class="bill-wrapper">
         <div class="bill-container">
