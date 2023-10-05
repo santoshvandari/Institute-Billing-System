@@ -41,8 +41,8 @@
     
                     </div>
                     <div class="billinfo">
-                        <p class="date">Date: 2023-10-23</p>
-                        <p class="time">Time: 10:45 AM</p>
+                        <p class="date">Date: 0000-00-00</p>
+                        <p class="time">Time: 00:00 </p>
                     </div>
                 </div>
                 <div class="billtable">
