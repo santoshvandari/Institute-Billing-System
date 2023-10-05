@@ -1,16 +1,15 @@
 <?php
     include_once "head.php";
 ?>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/dashboard.css"/>
-
+<title>Dashboard</title>
+<link rel="stylesheet" href="../assets/css/common-style.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css" />
 </head>
 <?php
     include_once "sidebar.php";
 ?>
 
-        <?php
+<?php
             $studentread="SELECT * FROM StudentInfo;";
             $billread="SELECT * FROM BillInfo;";
             $studentnumber=0;
@@ -24,29 +23,28 @@
                     $totalamount+=(int)$row['amount'];
                 }
             }
-            
-
-
         ?>
 
 
-    <section class="main-container">
+<section class="main-container">
     <div class="card-wrapper">
         <div class="card">
             <h2>Total Students</h2>
             <hr>
-            <p><?=$studentnumber?></p>
+            <p>
+                <?=$studentnumber?>
+            </p>
         </div>
         <div class="card">
             <h2>Total Amount Paid</h2>
             <hr>
-            <p><?=$totalamount?></p>
+            <p>
+                <?=$totalamount?>
+            </p>
         </div>
     </div>
-    </section>
-   </main>
-   <footer>
-   </footer>
-   </script>
+</section>
+</main>
 </body>
+
 </html>
