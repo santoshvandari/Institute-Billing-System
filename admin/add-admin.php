@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/message.css"/>
     <script src="../assets/js/HideMessage.js"></script>
 <?php
-
+    include_once "sidebar.php";
 ?>
 
     <section class="form-container main-container">
