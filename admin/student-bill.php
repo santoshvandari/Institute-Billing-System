@@ -103,8 +103,8 @@
                                                
                                                     
                                                     foreach($desc as $value){
-                                                        $counter++;
                                                         if (!empty($value)){
+                                                            $counter++;
                                                             $rows = $rows. '<tr><td>'.$counter.'</td><td>'.$value.'</td></tr>';
 
                                                         }
