@@ -61,7 +61,6 @@
                         <th>S.N.</th>
                         <th>Description</th>
                         <th>Amount</th>
-                        <!-- <td colspan='4'>colspan</td> -->
                       
                     </thead>
                     <tbody>
