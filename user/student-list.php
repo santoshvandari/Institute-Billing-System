@@ -4,15 +4,10 @@
     <title>Student List</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets//css/student-list.css">
-<style>
-
-</style>
 <?php
     include_once "sidebar.php";
 ?>
-
         <section class="student-list-container main-container">
-            
             <div class="student-list">
                 <h3>Total Students</h3>
                 <div class="search-option">
