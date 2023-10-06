@@ -43,7 +43,7 @@
                     
                 <?php
                     if($flag){
-                        echo '<div class="successful"><p>Bill Updated is Successful</p></div> ';
+                        echo '<div class="success"><p>Bill Updated is Successful</p></div> ';
                     }else if($flag==false){
                         echo '<div class="failure"><p>Failed To Update Bill!!!</p></div> ';
                     }else{
