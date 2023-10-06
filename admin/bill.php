@@ -1,7 +1,7 @@
 <?php
     include_once "head.php"
 ?>
-    <link rel="stylesheet" href="../assets/css/user/bill.css">
+    <link rel="stylesheet" href="../assets/css/bill.css">
     <title>Student Bill</title>
 </head>
 
