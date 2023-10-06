@@ -1,20 +1,10 @@
 <?php
-    session_start();
-    if(!$_SESSION['adminname']){
-        // echo "sesson not set yet";
-        header("Location: admin-login.php");
-    }
-    include_once "../assets/database/connection.php";
+    include_once "head.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Student</title>
+    <title>Edit Admin</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/user/add-student.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
     div.message p{
