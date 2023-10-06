@@ -96,7 +96,7 @@
                             $disp2=$rows.'<tr><td><strong>Amount</strong></td><td><strong>'.$amount.'</strong></td></tr></table>';
 
                             $disp3='<div class="billoptions">
-                                <button><a href="bill.php?phone='.$phone.'">Print</a></button>
+                                <button><a href="updatedbill.php?phone='.$phone.'">Print</a></button>
                                 </div>';
                                 echo $disp1."".$disp2."".$disp3;
                     }
