@@ -22,13 +22,13 @@ SET time_zone = "+00:00";
 --
 
 -- Creating Database: BillingSystem
-CREATE DATABASE BillingSystem;
+-- CREATE DATABASE BillingSystem;
 
 -- Creating Users
-CREATE  USER 'user'@'localhost' IDENTIFIED BY "user";
+-- CREATE  USER 'user'@'localhost' IDENTIFIED BY "user";
 
 -- Granting All Permission to User on Databse BillingSystem
-GRANT ALL PRIVILEGES ON BillingSystem.* TO 'user'@'localhost';
+-- GRANT ALL PRIVILEGES ON BillingSystem.* TO 'user'@'localhost';
 
 
 -- --------------------------------------------------------
