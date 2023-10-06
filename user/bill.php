@@ -2,7 +2,8 @@
     include_once "head.php";
 ?>
     <link rel="stylesheet" href="../assets/css/user/bill.css">
-    <script defer src="../assets/js/user/DateTime.js"></script>
+    <script defer src="../assets/js/DateTime.js"></script>
+    <script src="../assets/js/BillPrintFunction.js"></script>
     <title>Student Bill</title>
 </head>
 <body>
