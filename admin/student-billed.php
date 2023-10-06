@@ -89,7 +89,7 @@
                                 <th>Description</th>
                             </thead>
                             <tbody>';
-                        
+                            $desctemp=$desc;
                             $desc=explode("|",$desc);
                             $counter=0;
                             $rows="";
