@@ -101,9 +101,4 @@ button a{
         </section>
     </main>
 </body>
-<script>
-        setTimeout(() => {
-            const message = document.querySelector('.message').style.display="none";
-        }, 5000);
-    </script>
 </html>
