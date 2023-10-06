@@ -16,4 +16,8 @@ GRANT ALL PRIVILEGES ON BillingSystem.* TO 'user'@'localhost';
 - Execute all the Command of `assets/database/BillingSystem.sql` from `localhost/phpmyadmin`
 - Now Open the project in your local system. 
 
-##
+## Login Details
+- Normal User
+  - Username: `user`, Password: `user`
+- Admin User/Super User
+  - Username: `admin`, Password: `admin`
