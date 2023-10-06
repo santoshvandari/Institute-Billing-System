@@ -21,7 +21,7 @@
                         $phone=trim($_POST['phone']);
                         $email=trim($_POST['email']);
                         $username=trim($_POST['username']);
-                        $password=trim($_POST['password']);
+                        $password=md5(trim($_POST['password']));
                         
                         $insert = "INSERT  INTO UserInfo values('$username','$name','$email','$phone','$password');";
                         if($con->query($insert)){

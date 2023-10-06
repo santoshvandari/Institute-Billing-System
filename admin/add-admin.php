@@ -19,13 +19,13 @@
                         $phone=trim($_POST['phone']);
                         $email=trim($_POST['email']);
                         $username=trim($_POST['username']);
-                        $password=trim($_POST['password']);
+                        $password=md5(trim($_POST['password']));
                         
                         $insert = "INSERT  INTO AdminInfo values('$username','$name','$email','$phone','$password');";
                         if($con->query($insert)){
-                            echo '<div class="message"><p class="success">User Added Successfully!!</p></div>';
+                            echo '<div class="message"><p class="success">Admin Added Successfully!!</p></div>';
                         }else{
-                            echo '<div class="message"><p class="failure">Failed To Add User !!</p></div>';
+                            echo '<div class="message"><p class="failure">Failed To Add Admin !!</p></div>';
                         }
                     }
                 }
