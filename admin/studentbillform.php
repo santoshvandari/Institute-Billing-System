@@ -4,6 +4,7 @@
     <title>Student Bill Form</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/studentbillform.css">
+    <script defer src="../assets/js/user/addFieldOnClick.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -51,16 +52,5 @@
    </main>
    <footer>
    </footer>
-   <script>
-    counter=0
-    document.getElementById("add").addEventListener("click",function(e){
-        e.preventDefault();
-        counter++;
-        document.getElementById("counter").value=counter
-        let element = `<input type='text' name='desc${counter}' placeholder='Enter a Bill Title'/>`
-        document.querySelector('.addbtn').insertAdjacentHTML("beforebegin",element)
-        console.log(document.getElementById("counter").value)
-    })
-   </script>
 </body>
 </html>
