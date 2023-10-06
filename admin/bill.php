@@ -92,20 +92,4 @@
         </div>
     </div>
 </body>
-<script>
-    document.querySelector(".date").textContent="Date: "+new Date().toLocaleDateString();
-    document.querySelector(".time").textContent="Time: "+ new Date().toLocaleTimeString();
-    let printbtn=document.getElementById("print");
-    let btndiv = document.querySelector(".billoptions");
-    printbtn.addEventListener('click',function(e){
-        btndiv.style.display="none";
-        window.print()
-        btndiv.style.display="block";
-        // btndiv.style.opacity='1'
-    })
-    setTimeout(() => {
-        printbtn.click();
-    }, 100);
-</script>
-
 </html>
