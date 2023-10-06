@@ -42,7 +42,7 @@
     <section class="main-container main-bill-container">
         <div class="bill-wrapper">
             <div class="bill-container">
-                <div class="Message">
+                <div class="message">
                     
                 <?php
                     if($flag){
