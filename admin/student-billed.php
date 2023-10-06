@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="../assets/css/student-billed.css">
     <link rel="stylesheet" href="../assets/css/message.css">
     <script defer src="../assets/js/HideMessage.js"></script>
+    <script defer src="../assets/js/DateTime.js"></script>
 
 
 <?php
@@ -115,10 +116,5 @@
    </main>
    <footer>
    </footer>
-   <script>
-   
-        document.querySelector(".date").textContent="Date: "+new Date().toLocaleDateString();
-        document.querySelector(".time").textContent="Time: "+ new Date().toLocaleTimeString();
-   </script>
 </body>
 </html>
