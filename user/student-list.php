@@ -37,7 +37,6 @@
                                 $num=0;
                                 while ($row=$result->fetch_assoc()){
                                     $num++;
-                                    // var_dump($row);
                                     $disp="<tr><td>$num</td>
                                     <td>".$row['name']."</td>
                                     <td>".$row['address']."</td>
