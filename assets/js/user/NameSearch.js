@@ -3,7 +3,7 @@ let tableElement=document.querySelector(".student-list table tbody");
 console.log(SearchInput)
 SearchInput.addEventListener("input",()=>{
     let searchvalue=SearchInput.value.trim();
-    fetch(`read.php?name=${searchvalue}`)
+    fetch(`StudentListSearch.php?name=${searchvalue}`)
     .then(response=>response.text())
     .then(response=>{
         tableElement.innerHTML=response;
