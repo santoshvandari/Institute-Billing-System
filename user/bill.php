@@ -15,30 +15,33 @@
             </div>
             <hr>
             
-            <?php            
-                 if(isset($_GET["phone"])){
-                    $phone=trim($_GET["phone"]);
-                    $read="SELECT * FROM StudentInfo, BillInfo WHERE StudentInfo.phone = BillInfo.phone AND StudentInfo.phone ='$phone';";
-                    // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
-                    // var_dump($read);
+            <?php  
+                if($_SERVER["REQUEST_METHOD"]=="GET"){
+                    header("Location: user-dashboard.php");
+                }
+                if($_SERVER['REQUEST_METHOD']=='POST'){
+                    if(isset($_POST["desc"]) && isset($_POST["amount"]) && isset($_POST["phone"])){
+                    $phone=trim($_POST["phone"]);
+                    $desc=trim($_POST["desc"]);
+                    $amount = trim($_POST["amount"]);
+                    $read="SELECT * FROM StudentInfo WHERE phone ='$phone';";
                     if($result=$con->query($read)){
-                    if($result->num_rows>0){
-                        $desctemp="";
-                        $amount=null;
-                        while($row=$result->fetch_assoc()){
-                            $name=$row["name"];
-                            $address=$row["address"];
-                            $phone=$row['phone'];
-                            $desctemp=$desctemp.$row["description"]."|";
-                            $amount+=(int)$row["amount"];
-                        }
-                        $desc=explode("|",$desctemp);
-                        $desc=array_filter($desc);
-                        $desc = array_values($desc);
+                        if($result->num_rows>0){
+                            while($row=$result->fetch_assoc()){
+                                $name=$row["name"];
+                                $address=$row["address"];
+                                $phone=$row['phone'];
+                            }
                         }
                     }
+                    $desc=explode("|",$desc);
+                    $desc=array_filter($desc);
+                    $desc = array_values($desc);
+                        
+        
                 }
-            ?>
+            }          
+           ?>
             
             <div class="details-container">
                 <div class="billerinfo">
@@ -48,8 +51,8 @@
 
                 </div>
                 <div class="billinfo">
-                    <p class="date">Date: 2023-10-23</p>
-                    <p class="time">Time: 10:45 AM</p>
+                    <p class="date">Date: 0000-00-00</p>
+                    <p class="time">Time: 00:00 AM</p>
                 </div>
             </div>
             <div class="billtable">
