@@ -18,7 +18,7 @@
 ?>
     <title>Generate Bill</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/user/generate-bill.css">
+    <link rel="stylesheet" href="../assets/css/generate-bill.css">
 <?php
     include_once "sidebar.php";
 ?>

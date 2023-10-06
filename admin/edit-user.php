@@ -3,7 +3,7 @@
 ?>
     <title>Edit User</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/user/add-student.css">
+    <link rel="stylesheet" href="../assets/css/add-student.css">
     <link rel="stylesheet" href="../assets/css/message.css">
 
 <?php
