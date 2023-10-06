@@ -1,3 +1,6 @@
 # Institute Billing System
 ## Usage
-- Create 
+- Create a Database name with `BillingSystem`;
+```sql
+CREATE DATABASE BillingSystem;
+```
