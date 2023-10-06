@@ -1,4 +1,5 @@
 # Institute Billing System
+!["ScreenShot"](ScreenShot.png)
 ## Introduction
 The Institute Billing System is a software solution designed to streamline the billing process within your institute. This system automates fee calculations, invoice generation, and payment tracking, providing a more efficient and accurate way to manage financial transactions. This README provides an overview of the system, its features, and instructions for getting started.
 
