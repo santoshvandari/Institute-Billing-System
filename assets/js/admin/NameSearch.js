@@ -1,6 +1,6 @@
 let SearchInput=document.getElementById("namesearch");
 let tableElement=document.querySelector(".student-list table tbody");
-console.log(SearchInput)
+// console.log(SearchInput)
 SearchInput.addEventListener("input",()=>{
     let searchvalue=SearchInput.value.trim();
     fetch(`StudentListSearch.php?name=${searchvalue}`)
