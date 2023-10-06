@@ -12,9 +12,9 @@
             <div class="student-list">
                 <h3>Total Students</h3>
                 <div class="search-option">
-                        <form>
+                        <div class="form">
                             <input type="text" name="name" id="namesearch" placeholder="Search by Name" />
-                        </form>
+                        </div>
                     </div>
                 <table border="1">
                     <thead>
