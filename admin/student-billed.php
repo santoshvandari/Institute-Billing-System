@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/student-billed.css">
     <link rel="stylesheet" href="../assets/css/message.css">
+    <script defer src="../assets/js/HideMessage.js"></script>
+
 
 <?php
     include_once "sidebar.php";

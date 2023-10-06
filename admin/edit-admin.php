@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/add-student.css">
     <link rel="stylesheet" href="../assets/css/message.css"/>
+    <script defer src="../assets/js/HideMessage.js"></script>
+
 <?php
     include_once "sidebar.php";
 ?>
@@ -71,10 +73,5 @@
         </div>
     </section>
     </main>
-    <script>
-        setTimeout(() => {
-            const message = document.querySelector('.message').style.display="none";
-        }, 5000);
-    </script>
 </body>
 </html>

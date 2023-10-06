@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets//css/student-list.css">
     <link rel="stylesheet" href="../assets/css/message.css">
+    <script defer src="../assets/js/HideMessage.js"></script>
+
 <style>
 .btn-wrapper{
     margin: 20px 0;
@@ -97,9 +99,4 @@ button a{
         </section>
     </main>
 </body>
-<script>
-        setTimeout(() => {
-            const message = document.querySelector('.message').style.display="none";
-        }, 5000);
-    </script>
 </html>
