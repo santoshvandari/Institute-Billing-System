@@ -16,7 +16,7 @@
                         <td>".$row['email']."</td>
                         <td>".$row['phone']."</td>
                         <td>".$row['parentname']."</td>
-                        <td><a href='student-bill.php?phone=".$row['phone']."'>Bill</a></td>"; 
+                        <td><a href='student-bill.php?phone=".$row['phone']."'>Bill</a> | <a href='delete-student.php?phone=".$row['phone']."'>Delete</a> | <a href='edit-student.php?phone=".$row['phone']."'>Edit</a> </td>"; 
                         echo $disp;
                     }
                 }else{
