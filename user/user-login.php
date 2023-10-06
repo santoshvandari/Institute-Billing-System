@@ -66,8 +66,8 @@
     </div>
     <footer>
         <a href="../admin/admin-login.php">Admin</a>
-        <a href="#">Developers Info</a>
-        <a href="#">FeedBack</a>
+        <!-- <a href="#">Developers Info</a>
+        <a href="#">FeedBack</a> -->
     </footer>
 </body>
 

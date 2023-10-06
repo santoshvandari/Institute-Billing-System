@@ -68,8 +68,8 @@
     </div>
     <footer>
         <a href="../user/user-login.php">User</a>
-        <a href="#">Developers Info</a>
-        <a href="mailto:test@gmail.com">FeedBack</a>
+        <!-- <a href="#">Developers Info</a>
+        <a href="mailto:test@gmail.com">FeedBack</a> -->
     </footer>
 </body>
 
