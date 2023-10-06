@@ -25,6 +25,11 @@
                     }
 
                 ?>
+                    <div class="search-option">
+                        <div class="form">
+                            <input type="text" name="name" id="namesearch" placeholder="Search by Name" />
+                        </div>
+                    </div>
 
                 <table border="1">
                     <thead>
