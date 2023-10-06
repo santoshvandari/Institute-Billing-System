@@ -1,8 +1,5 @@
 <?php
-    include_once "../assets/database/connection.php";
-    if($_SERVER["REQUEST_METHOD"]=="GET"){
-        header("Location: admin-dashboard.php");
-    }
+    include_once "head.php";
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if(isset($_POST["phone"])){
             $name=trim($_POST["name"]);
