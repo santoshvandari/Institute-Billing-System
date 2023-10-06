@@ -77,7 +77,7 @@
                                 <th>Description</th>
                             </thead>
                             <tbody>';
-                        
+                            $desctemp = $desc;
                             $desc=explode("|",$desc);
                             $counter=0;
                             $rows="";
@@ -91,14 +91,22 @@
                             $disp2=$rows.'<tr><td><strong>Amount</strong></td><td><strong>'.$amount.'</strong></td></tr></table>';
 
                             $disp3='<div class="billoptions">
-                                <button><a href="bill.php?phone='.$phone.'">Print</a></button>
+                                <form action="bill.php" method="post">
+                                    <input type="text" name="phone" id="phone" hidden value="'.$phone.'"/>
+                                    <input type="text" name="desc" id="description" hidden value="'.$desctemp.'"/>
+                                    <input type="number" name="amount" id="amount" hidden value="'.$amount.'"/>
+                                    <button type="submit" name="print">Print</button>
+                                </form>
                                 </div>';
                                 echo $disp1."".$disp2."".$disp3;
                     }
-
                     
-
-                ?>
+                    
+                    
+                    ?>
+                    
+                        
+                    </form>
 
         </div>
     </div>
