@@ -4,7 +4,7 @@
     <title>Student List</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/student-list.css">
-    <script src="../assets/js/user/NameSearch.js"></script>
+    <script defer src="../assets/js/user/NameSearch.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -13,7 +13,7 @@
                 <h3>Total Students</h3>
                 <div class="search-option">
                         <form>
-                            <input type="text" name="name" id="name" placeholder="Search by Name" />
+                            <input type="text" name="name" id="namesearch" placeholder="Search by Name" />
                         </form>
                     </div>
                 <table border="1">
