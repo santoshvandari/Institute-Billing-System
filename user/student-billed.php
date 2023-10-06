@@ -41,13 +41,14 @@
             <div class="message">
 
                 <?php
-                    if($flag){
-                        echo '<div class="success"><p>Billing Process is Successful</p></div> ';
+                     if($flag){
+                        echo '<p class="success">Billing Process is Successful</p></div> ';
                     }else if($flag==false){
-                        echo '<div class="failure"><p>Billing Process Failed!!!</p></div> ';
+                        echo '<p class="failure">Billing Process Failed!!!</p> ';
                     }else{
-                        echo '<div class="failure"><p>Internal Server Issue!!!</p></div>';
+                        echo '<p class="failure">Billing Process Failed!!!</p> ';
                     }
+
 
                 ?>
             </div>
