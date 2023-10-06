@@ -3,7 +3,7 @@
 ?>
     <title>Student Bill Form</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/user/studentbillform.css">
+    <link rel="stylesheet" href="../assets/css/studentbillform.css">
 <?php
     include_once "sidebar.php";
 ?>
