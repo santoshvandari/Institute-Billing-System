@@ -42,15 +42,15 @@
     <section class="main-container main-bill-container">
         <div class="bill-wrapper">
             <div class="bill-container">
-                <div class="Message">
+                <div class="message">
                     
                 <?php
                     if($flag){
-                        echo '<p class="success">Billing Process is Successful</p></div> ';
+                        echo '<div class="message"><p class="success">Bill  Updated Successful</p></div> ';
                     }else if($flag==false){
-                        echo '<p class="failure">Billing Process Failed!!!</p> ';
+                        echo '<div class="message"><p class="failure">Failed to Update Bill!!!</p> </div>';
                     }else{
-                        echo '<p class="failure">Billing Process Failed!!!</p> ';
+                        echo '<div class="message"><p class="failure">Failed to Update Bill!!!</p> </div>';
                     }
 
 
