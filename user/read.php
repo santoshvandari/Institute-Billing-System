@@ -23,7 +23,6 @@
                     echo "<tr><td colspan='8'>No record found</td></tr>";
                 }
             }
-            
             echo $read;
         }
     }

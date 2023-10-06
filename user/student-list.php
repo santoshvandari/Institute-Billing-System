@@ -3,7 +3,8 @@
 ?>
     <title>Student List</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets//css/student-list.css">
+    <link rel="stylesheet" href="../assets/css/student-list.css">
+    <script src="../assets/js/user/NameSearch.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
