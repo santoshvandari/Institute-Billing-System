@@ -8,27 +8,18 @@
             $desc=trim($_POST["description"]);
             // $desc="NULL";
             $amount = trim($_POST["amount"]);
-            // $read="SELECT * FROM StudentInfo WHERE phone ='$phone';";
-            // INSERT  INTO BillInfo Values("9806073122","Computer Basic",50000)
+
 
             $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
-            // echo $insert;
+
             $flag=false;
             if($con->query($insert)){
-            // if($insert){
+
                 $flag=true;
             }else{
                 $flag=false;
             }
-            // if($result=$con->query($read)){
-            //     if($result->num_rows>0){
-            //         while($row=$result->fetch_assoc()){
-            //             $name=$row["name"];
-            //             $address = $row["address"];
-            //         }
-            //     }
         }}
-    //  }
 
 ?>
 
