@@ -1,13 +1,12 @@
 let SearchInput=document.getElementById("namesearch");
+let tableElement=document.querySelector(".student-list table tbody");
 console.log(SearchInput)
 SearchInput.addEventListener("input",()=>{
     let searchvalue=SearchInput.value.trim();
-    console.log(searchvalue);
-    console.log("HEllo")
     fetch(`read.php?name=${searchvalue}`)
     .then(response=>response.text())
     .then(response=>{
-        console.log(response);
+        tableElement.innerHTML=response;
     }).catch(e=>{
         console.log(e);
     })
