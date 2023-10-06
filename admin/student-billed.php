@@ -2,30 +2,22 @@
     include_once "head.php";
     if($_SERVER["REQUEST_METHOD"]=="GET"){
         header("Location: student-bill.php");
-
     }
-
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if(isset($_POST["phone"])){
             $name=trim($_POST["name"]);
             $address=trim($_POST["address"]);
             $phone=trim($_POST["phone"]);
             $desc=trim($_POST["description"]);
-            // $desc="NULL";
             $amount = trim($_POST["amount"]);
-
-
             $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
-
             $flag=false;
             if($con->query($insert)){
-
                 $flag=true;
             }else{
                 $flag=false;
             }
         }}
-
 ?>
 
     <title>Student Bill</title>
@@ -34,8 +26,6 @@
     <link rel="stylesheet" href="../assets/css/message.css">
     <script defer src="../assets/js/HideMessage.js"></script>
     <script defer src="../assets/js/DateTime.js"></script>
-
-
 <?php
     include_once "sidebar.php";
 ?>
@@ -52,16 +42,7 @@
                     }else{
                         echo '<div class="message"><p class="failure">Billing Process Failed!!!</p> </div>';
                     }
-
                 ?>
-                    <!-- <div class="successful">
-                        <p>Billing Process is Successful</p>
-                        
-                    </div> -->
-                    <!-- <div class="failure">
-                        <p>Billing Process Failed!!!</p>
-    
-                    </div> -->
                 </div>
                 <hr>
                 <?php
@@ -75,7 +56,6 @@
                             <p class="name">Name:'.$name.'</p>
                             <p class="address">Address: '.$address.'</p>
                             <p class="phone">Number: '.$phone.'</p>
-        
                         </div>
                         <div class="billinfo">
                             <p class="date">Date: 2023-10-23</p>
@@ -97,11 +77,9 @@
                                 $counter++;
                                 if (!empty($value)){
                                     $rows = $rows. '<tr><td>'.$counter.'</td><td>'.$value.'</td></tr>';
-
                                 }
                             }
                             $disp2=$rows.'<tr><td><strong>Amount</strong></td><td><strong>'.$amount.'</strong></td></tr></table>';
-
                             $disp3='<div class="billoptions">
                                 <form action="bill.php" method="post">
                                     <input type="text" name="phone" id="phone" hidden value="'.$phone.'"/>
@@ -112,14 +90,11 @@
                                 </div>';
                                 echo $disp1."".$disp2."".$disp3;
                     }
-
                 ?>
                
             </div>
         </div>
     </section>
    </main>
-   <footer>
-   </footer>
 </body>
 </html>
