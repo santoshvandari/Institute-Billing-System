@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../assets/css/student-list.css">
     <link rel="stylesheet" href="../assets/css/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
-    <script src="../assets/js/admin/NameSearch.js"></script>
+    <script defer src="../assets/js/admin/NameSearch.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
