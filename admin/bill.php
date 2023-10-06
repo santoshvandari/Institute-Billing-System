@@ -4,7 +4,7 @@
     <title>Student Bill</title>
     <link rel="stylesheet" href="../assets/css/bill.css">
     <script defer src="../assets/js/DateTime.js"></script>
-    <script src="../assets/js/BillPrintFunction.js"></script>
+    <script defer src="../assets/js/BillPrintFunction.js"></script>
 </head>
 
 <body>
