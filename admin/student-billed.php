@@ -1,5 +1,10 @@
 <?php
     include_once "head.php";
+    if($_SERVER["REQUEST_METHOD"]=="GET"){
+        header("Location: student-bill.php");
+
+    }
+
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if(isset($_POST["phone"])){
             $name=trim($_POST["name"]);
