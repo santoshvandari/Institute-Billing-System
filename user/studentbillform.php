@@ -3,7 +3,7 @@
 ?>
     <title>Bill Form</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/user/studentbillform.css">
+    <link rel="stylesheet" href="../assets/css/studentbillform.css">
     <script defer src="../assets/js/user/addFieldOnClick.js"></script>
 
 </head>

@@ -22,7 +22,7 @@
     <title>Generate Bill</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/generate-bill.css">
-    <script defer src="../assets/js/user/DateTime.js"></script>
+    <script defer src="../assets/js/DateTime.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
