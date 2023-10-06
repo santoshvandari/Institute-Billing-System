@@ -4,13 +4,22 @@
     <title>Student List</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets//css/student-list.css">
+<style>
+
+</style>
 <?php
     include_once "sidebar.php";
 ?>
 
         <section class="student-list-container main-container">
+            
             <div class="student-list">
                 <h3>Total Students</h3>
+                <div class="search-option">
+                        <form>
+                            <input type="text" name="name" id="name" placeholder="Search by Name" />
+                        </form>
+                    </div>
                 <table border="1">
                     <thead>
                         <tr>
