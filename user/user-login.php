@@ -66,8 +66,8 @@
     </div>
     <footer>
         <a href="../admin/admin-login.php">Admin</a>
-        <!-- <a href="#">Developers Info</a>
-        <a href="#">FeedBack</a> -->
+        <!-- <a href="#">Developers Info</a> -->
+        <a href="mailto:info@bhandari-santosh.com.np">FeedBack</a>
     </footer>
 </body>
 
