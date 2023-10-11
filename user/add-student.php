@@ -24,11 +24,18 @@
                         if(!$email){
                             $email = "NULL";
                         }
-                        $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
-                        if($con->query($insert)){
-                            echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
-                        }else{
-                            echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
+                        $read="SELECT * FROM StudentInfo WHERE phone='$phone'";
+                        if($result=$con->query($read)){
+                            if($result->num_rows>0){
+                                echo "<script>alert('Phone Number Already Added')</script>";
+                            }else{
+                                $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
+                                if($con->query($insert)){
+                                    echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
+                                }else{
+                                    echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
+                                }
+                            }
                         }
                     }
                 }
