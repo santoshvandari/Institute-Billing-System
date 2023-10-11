@@ -54,6 +54,12 @@ main{
     margin: 20px 0;
     gap: 20px;
 }
+.studentform h3{
+    text-align: center;
+    margin: 20px 0;
+    text-decoration: underline;
+    font-size: 25px;
+}
 .studentform form label{
     font-size: 18px;
 }
