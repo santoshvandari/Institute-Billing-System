@@ -27,7 +27,8 @@
                         $read="SELECT * FROM StudentInfo WHERE phone='$phone'";
                         if($result=$con->query($read)){
                             if($result->num_rows>0){
-                                echo "<script>alert('Phone Number Already Added')</script>";
+                                echo '<div class="message"><p class="failure">Phone Number Already Added!!</p></div>';
+                                // echo "<script>alert('Phone Number Already Added')</script>";
                             }else{
                                 $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
                                 if($con->query($insert)){
