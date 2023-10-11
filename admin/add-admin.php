@@ -24,13 +24,14 @@
                         if($result=$con->query($read)){
                             if($result->num_rows>0){
                                 echo '<div class="message"><p class="failure">Failed To Add Admin !!</p></div>';
+                            }else{
+                                $insert = "INSERT  INTO AdminInfo values('$username','$name','$email','$phone','$password');";
+                                if($con->query($insert)){
+                                    echo '<div class="message"><p class="success">Admin Added Successfully!!</p></div>';
+                                }else{
+                                    echo '<div class="message"><p class="failure">Failed To Add Admin !!</p></div>';
+                                }
                             }
-                        }
-                        $insert = "INSERT  INTO AdminInfo values('$username','$name','$email','$phone','$password');";
-                        if($con->query($insert)){
-                            echo '<div class="message"><p class="success">Admin Added Successfully!!</p></div>';
-                        }else{
-                            echo '<div class="message"><p class="failure">Failed To Add Admin !!</p></div>';
                         }
                     }
                 }
