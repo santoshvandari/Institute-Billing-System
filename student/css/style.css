@@ -85,8 +85,13 @@ main{
 .studentinfo{
     text-align: left;
 }
-.studentinfo .infowrapper{
+.studentinfo h3{
+    text-decoration: underline;
+}
+.studentinfo .infowrapper p{
     text-align: left;
+    margin: 10px 0;
+    font-size: 20px;
 }
 .billinfo h3{
     text-align: center;
