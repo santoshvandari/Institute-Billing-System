@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f6f9ff;
+}
+header nav{
+    background: #fff;
+    padding: 0px 20px;
+    height: 70px;
+    filter: drop-shadow(0px 0px 20px #0129701a);
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2c384e;
+}
+nav .logo{
+    color: #012970;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-sizing: border-box;
+    animation: logoanimate 2s linear .5s infinite alternate;
+}
+@keyframes logoanimate {
+    from{
+       padding:0px ;
+    }   
+    to{
+       padding-left: 50px;
+    }
+   }
+.user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user .username{
+    padding: 0px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: -3px;
+}
+.user .user-img img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+main{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.side-option{
+    width: 250px;
+    text-align: center;
+    background: #fff;
+    filter: drop-shadow(0px 0px 20px #0129701a);
+    min-height: calc(100vh - 70px);
+    top: 70px;
+    position: fixed;
+    padding: 20px;
+}
+.side-option-container{
+    padding: 20px 5px;
+   color: #012970;
+
+}
+.side-option-container h4{
+    color: inherit;
+   text-align: left;
+   font-size:21px;
+   text-decoration: underline;
+   padding: 10px 0px 20px 5px ;
+   cursor: pointer;
+   width: 100%;
+}
+.side-option-container h4:hover{
+    color:#4154f1;
+}
+.side-option-list li{
+    list-style-type: none;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 550;
+    cursor: pointer;
+    padding: 10px 10px;
+    border: 5px;
+    transition: all .2s linear;
+}
+.side-option-list li a{
+    text-decoration: none;
+    color: inherit;
+}
+.side-option-list li:hover{
+    color:#4154f1;
+    background: #f6f9ff;
+}
+.main-container{
+    min-height: 100vh;
+    margin: 70px 0 0 260px;
+    padding: 20px;
+    /* width: 100%; */
+}
