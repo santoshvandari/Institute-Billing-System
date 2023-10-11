@@ -77,3 +77,7 @@ main{
 .studentform form button:hover{
     background:#41464b;
 }
+.studentform form button:active{
+    background:transparent;
+    color:#000;
+}
