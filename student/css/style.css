@@ -82,6 +82,12 @@ main{
     background:transparent;
     color:#000;
 }
+.studentinfo{
+    text-align: left;
+}
+.studentinfo .infowrapper{
+    text-align: left;
+}
 .billinfo h3{
     text-align: center;
     padding: 10px 0;
