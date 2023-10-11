@@ -22,19 +22,21 @@
                         $email=trim($_POST['email']);
                         $username=trim($_POST['username']);
                         $password=md5(trim($_POST['password']));
-                        
-                        $insert = "INSERT  INTO UserInfo values('$username','$name','$email','$phone','$password');";
-                        if($con->query($insert)){
-                            echo '<div class="message"><p class="success">User Added Successfully!!</p></div>';
-                        }else{
-                            echo '<div class="message"><p class="failure">Failed To Add User !!</p></div>';
+                        $read="SELECT * FROM UserInfo WHERE username='$username';";
+                        if($result=$con->query($read)){
+                            if($result->num_rows>0){
+                                echo '<div class="message"><p class="failure">Selected Admin Username Already Added !!</p></div>';
+                            }else{
+                                $insert = "INSERT  INTO UserInfo values('$username','$name','$email','$phone','$password');";
+                                if($con->query($insert)){
+                                    echo '<div class="message"><p class="success">User Added Successfully!!</p></div>';
+                                }else{
+                                    echo '<div class="message"><p class="failure">Failed To Add User !!</p></div>';
+                                }
+                            }
                         }
                     }
                 }
-
-
-
-
             ?>
         <form class="form" method="post">
             <h3>Fill the User Information</h3>
