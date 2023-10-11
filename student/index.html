@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institute Billing System</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/student-bill.css">
+    <!-- <link rel="stylesheet" href="../assets/css/common-style.css"> -->
+    <!-- <link rel="stylesheet" href="../assets/css/student-bill.css"> -->
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <p>Billing System</p>
+            </div>
             <ul>
                 <li><a href="#">Admin Login</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="">
-
+        <section class="studentform">
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required/>
+                <label for="phone">Phone: </label>
+                <input type="text" name="phone" id="phone" pattern="[0-9]{10}" required/>
+            </form>
         </section>
     </main>
     <!-- <section class="main-container">
