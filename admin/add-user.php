@@ -25,13 +25,13 @@
                         $read="SELECT * FROM UserInfo WHERE username='$username';";
                         if($result=$con->query($read)){
                             if($result->num_rows>0){
-                                echo '<div class="message"><p class="failure">Selected Admin Username Already Added !!</p></div>';
+                                echo '<div class="message"><p class="failure">Selected User Username Already Added!!</p></div>';
                             }else{
                                 $insert = "INSERT  INTO UserInfo values('$username','$name','$email','$phone','$password');";
                                 if($con->query($insert)){
                                     echo '<div class="message"><p class="success">User Added Successfully!!</p></div>';
                                 }else{
-                                    echo '<div class="message"><p class="failure">Failed To Add User !!</p></div>';
+                                    echo '<div class="message"><p class="failure">Failed To Add User!!</p></div>';
                                 }
                             }
                         }
