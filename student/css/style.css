@@ -82,7 +82,11 @@ main{
     background:transparent;
     color:#000;
 }
-
+.billinfo h3{
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: underline;
+}
 .billinfo table{
     border-collapse: collapse;
 
