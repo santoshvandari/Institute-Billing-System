@@ -87,6 +87,7 @@ main{
     border-collapse: collapse;
 
 }
-.billinfo table tr th td{
+table tr th, table tr td{
     padding: 5px;
+    text-align: center;
 }
