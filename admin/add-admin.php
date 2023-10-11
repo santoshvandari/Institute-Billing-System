@@ -21,6 +21,11 @@
                         $username=trim($_POST['username']);
                         $password=md5(trim($_POST['password']));
                         $read="SELECT * FROM AdminInfo WHERE username='$username';";
+                        if($result=$con->query($read)){
+                            if($result->num_rows>0){
+                                echo '<div class="message"><p class="failure">Failed To Add Admin !!</p></div>';
+                            }
+                        }
                         $insert = "INSERT  INTO AdminInfo values('$username','$name','$email','$phone','$password');";
                         if($con->query($insert)){
                             echo '<div class="message"><p class="success">Admin Added Successfully!!</p></div>';
