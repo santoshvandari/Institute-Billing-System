@@ -5,7 +5,6 @@
 }
 body{
     background-color: #f6f9ff;
-    /* background-color: red; */
 }
 header nav{
     background: #fff;
@@ -51,7 +50,9 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 20px 0;
+    gap: 20px;
 }
 .studentform form label{
     font-size: 18px;
@@ -80,4 +81,12 @@ main{
 .studentform form button:active{
     background:transparent;
     color:#000;
+}
+
+.billinfo table{
+    border-collapse: collapse;
+
+}
+.billinfo table tr th td{
+    padding: 5px;
 }
