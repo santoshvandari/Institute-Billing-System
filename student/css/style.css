@@ -5,6 +5,7 @@
 }
 body{
     background-color: #f6f9ff;
+    /* background-color: red; */
 }
 header nav{
     background: #fff;
@@ -35,21 +36,8 @@ nav .logo{
        padding-left: 50px;
     }
    }
-.user{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.user .username{
-    padding: 0px 20px;
-    font-size: 20px;
-    font-weight: 400;
-    word-spacing: -3px;
-}
-.user .user-img img{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+nav ul li a{
+    text-decoration: none;
 }
 main{
     display: grid;
