@@ -20,7 +20,7 @@
                         $email=trim($_POST['email']);
                         $username=trim($_POST['username']);
                         $password=md5(trim($_POST['password']));
-                        
+                        $read="SELECT * FROM AdminInfo WHERE username='$username';";
                         $insert = "INSERT  INTO AdminInfo values('$username','$name','$email','$phone','$password');";
                         if($con->query($insert)){
                             echo '<div class="message"><p class="success">Admin Added Successfully!!</p></div>';
