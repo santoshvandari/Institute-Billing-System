@@ -13,39 +13,33 @@
     <section class="form-container main-container">
         <div class="form-wrapper">
             <?php
-                //  if ($_SERVER['REQUEST_METHOD']=='POST'){
-                //     if(isset($_POST['submit'])){
-                //         $name=trim($_POST['name']);
-                //         $address=trim($_POST['address']);
-                //         $phone=trim($_POST['phone']);
-                //         $email=trim($_POST['email']);
-                //         $gender=trim($_POST['gender']);
-                //         $parent=trim($_POST['parent']);
-                //         if(!$email){
-                //             $email = "NULL";
-                //         }
-                //         $read="SELECT * FROM StudentInfo WHERE phone='$phone'";
-                //         if($result=$con->query($read)){
-                //             if($result->num_rows>0){
-                //                 echo '<div class="message"><p class="failure">Phone Number Already Added!!</p></div>';
-                //                 // echo "<script>alert('Phone Number Already Added')</script>";
-                //             }else{
-                //                 $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
-                //                 if($con->query($insert)){
-                //                     echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
-                //                 }else{
-                //                     echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
-                //                 }
-                //             }
-                //         }
-                        // $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
-                        // if($con->query($insert)){
-                        //     echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
-                        // }else{
-                        //     echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
-                        // }
-                //     }
-                // }
+                 if ($_SERVER['REQUEST_METHOD']=='POST'){
+                    if(isset($_POST['submit'])){
+                        $cid = trim($_POST['cid']);
+                        $cname = trim($_POST['cname']);
+                        $price= trim($_POST['price']);
+                        $read="SELECT * FROM StudentInfo WHERE phone='$cid';";
+                        if($result=$con->query($read)){
+                            if($result->num_rows>0){
+                                echo '<div class="message"><p class="failure">Phone Number Already Added!!</p></div>';
+                                // echo "<script>alert('Phone Number Already Added')</script>";
+                            }else{
+                                $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
+                                if($con->query($insert)){
+                                    echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
+                                }else{
+                                    echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
+                                }
+                            }
+                        }
+                        $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
+                        if($con->query($insert)){
+                            echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
+                        }else{
+                            echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
+                        }
+                    }
+                }
 
 
 
@@ -57,9 +51,8 @@
             <input type="text" id="cid" name="cid" placeholder="Enter a Course ID" required/>
             <label for="cname">Course Name</label>
             <input type="text" id="cname" name="cname" placeholder="Enter a Course Name" required/>
-            <label for="price">Address</label>
+            <label for="price">Price</label>
             <input type="number" id="price" name="price" placeholder="Enter a Price" required/>
-            <label for="phone">Mobile Number</label>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Submit</button>
