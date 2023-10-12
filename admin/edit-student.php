@@ -28,6 +28,7 @@
                                     $gender=$row['gender'];
                                     $parentname=$row['parentname'];
                                     $course=$row['cname'];
+                                    // $cid=$row["cid"];
                                 }
                             }
                         }else{
@@ -43,6 +44,15 @@
                         $phone=trim($_GET['phone']);
                         $gender=trim($_POST['gender']);
                         $parentname=trim($_POST['parent']);
+                        $course=trim($_POST['course']);
+                        // var_dump($course);
+                        // // echo $cid;
+                        // var_dump($cid);
+                        // if($result=$con->query("SELECT * FROM CourseInfo WHERE cid='$cid';")){
+                        //     while($row=$result->fetch_assoc()){
+                        //         $course=$row['cname'];
+                        //     }
+                        // }
                         if(!$email){
                             $email = "NULL";
                         }
@@ -50,7 +60,7 @@
                         // echo $update;
                         if($con->query($update)){
                             echo '<div class="message"><p class="success">Student Record Updated Successfully!!</p></div>';
-                            // header("refresh:5; url=student-list.php");
+                            header("refresh:5; url=student-list.php");
                         }else{
                             echo '<div class="message"><p class="failure">Failed To Updated Student Record!!</p></div>';
                         }
@@ -89,7 +99,10 @@
             <input type="text" name="parent" id="parent" value='<?=$parentname?>' required/> 
             <label for="course">Course</label>
             <select name="course" id="course" disabled>
-                <option><?=$course?></option>
+                <option value="<?=$course?>" selected="selected"><?=$course?></option>
+            </select>  
+            <select name="course" id="course" hidden>
+                <option value="<?=$course?>" selected="selected"><?=$course?></option>
             </select>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
