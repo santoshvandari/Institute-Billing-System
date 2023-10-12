@@ -24,7 +24,7 @@
                                 $name=trim($row['name']);
                                 $email=trim($row['email']);
                                 $phone=trim($row['phone']);
-                                $password=trim($row['adminpwd']);
+                                // $password=trim($row['adminpwd']);
                             };
                             
                         };
@@ -37,7 +37,7 @@
                         $phone=trim($_POST['phone']);
                         $email=trim($_POST['email']);
                         $username=trim($_GET['username']);
-                        $password=trim($_POST['password']);
+                        $password=md5(trim($_POST['password']));
                         $update= "UPDATE AdminInfo SET name = '$name', email = '$email', phone = '$phone', adminpwd = '$password' WHERE username = '$username';";
                         
                         if($con->query($update)){
