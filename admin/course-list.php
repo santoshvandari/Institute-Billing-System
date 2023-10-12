@@ -37,36 +37,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <tr>
-                            <td>1</td>
-                            <td>Computer Basic</td>
-                            <td>5000</td>
-                            <td>Edit | Delete</td>
-                        </tr> 
-                        <tr>
-                            <td>1</td>
-                            <td>Computer Basic</td>
-                            <td>5000</td>
-                            <td>Edit | Delete</td>
-                        </tr>
-                         <tr>
-                            <td>1</td>
-                            <td>Computer Basic</td>
-                            <td>5000</td>
-                            <td>Edit | Delete</td>
-                        </tr> 
-                        <tr>
-                            <td>1</td>
-                            <td>Computer Basic</td>
-                            <td>5000</td>
-                            <td>Edit | Delete</td>
-                        </tr> 
-                        <tr>
-                            <td>1</td>
-                            <td>Computer Basic</td>
-                            <td>5000</td>
-                            <td>Edit | Delete</td>
-                        </tr> -->
                         <?php
                             
                             $read= "SELECT * FROM CourseInfo ORDER BY cid;";
@@ -80,8 +50,7 @@
                                     <td>".$row['cid']."</td>
                                     <td>".$row['name']."</td>
                                     <td>".$row['price']."</td>
-                                    <td> Edit | Delete</td>
-                                    ";
+                                    <td><a href='#'> Edit</a> | <a href='delete-course.php?cid=".$row['cid']."'>Delete</a></td>";
                                     echo $disp;
                                     // <td><a href='edit-course.php?username=".$row['username']."'>Edit</a> | <a href='delete-admin.php?username=".$row['username']."'>Delete</a></td>"; 
                                 }
