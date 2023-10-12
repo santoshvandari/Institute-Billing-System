@@ -64,7 +64,7 @@
             <label for="username">Username</label>
             <input type="text" name="username" id="username" value="<?=$username?>" disabled required/> 
             <label for="adminpassword">Password</label>
-            <input type="text" name="password" id="adminpassword" value="<?=$password?>"/>
+            <input type="text" name="password" id="adminpassword"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Update</button>
