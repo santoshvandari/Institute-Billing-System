@@ -15,122 +15,106 @@
                     <button type="submit" name='search'>Search</button>
                 </form>
             </div>
-          
-                    <?php
-                                if($_SERVER['REQUEST_METHOD']=='POST' || $_SERVER['REQUEST_METHOD']=='GET'){
-                
-                                    if($_SERVER['REQUEST_METHOD']=='GET'){
-                                        if(isset($_GET["phone"])){
-                                            $phone=trim($_GET["phone"]);
-                                        }else{
-                                            $phone=null;
+               <?php
+                   if($_SERVER['REQUEST_METHOD']=='POST' || $_SERVER['REQUEST_METHOD']=='GET'){
+                        $phone=null;
+                        if(isset($_GET["phone"])){
+                            $phone=$_GET["phone"];
+                        }
+                        if(isset($_POST['search'])){
+                            if(isset($_POST['phone'])){
+                                $phone=$_POST['phone'];
+                            }
+                        }
+                        $read="SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid AND  phone='$phone'";
+                            if($result=$con->query($read)){
+                                if($result->num_rows>0){
+                                    while($row=$result->fetch_assoc()){
+                                        echo ' <div class="userinfo-container">
+                                        <div class="userinfo-wrapper">
+                                            <div class="userinfo">
+                                            <p> Name: '.$row['name'].'</p>
+                                            <p> Address: '.$row['phone'].'</p>
+                                            <p> Course: '.$row['cname'].'</p>
+                                            </div>
+                                            <div class="billinfo">
+                                            <table border="1">
+                                                <tr>
+                                                    <th>S.N.</th>
+                                                    <th>Course</th>
+                                                    <th>Paid</th>
+                                                    <th>DateTime</th>
+                                                    <th>Action</th>
+                                                </tr>';
+                                        
+                                    }
+                                    $readbill="SELECT * FROM BillInfo,CourseInfo WHERE BillInfo.cid=CourseInfo.cid AND  phone='$phone'";
+                                    if($result=$con->query($readbill)){
+                                        if($result->num_rows>0){
+                                            $num=0;
+                                            while($row=$result->fetch_assoc()){
+                                                $num++;
+                                                echo "<tr><td>$num</td>
+                                                <td>{$row['cname']}</td>
+                                                <td>{$row['amount']}</td>
+                                                <td>{$row['tdate']}</td>
+                                                <td><a href='#'>View</a></td>";
+                                            }
+                                            
                                         }
                                     }
-
-                                    if($_SERVER['REQUEST_METHOD']=='POST')
-                                        $phone=trim($_POST["phone"]);
-                                    if (empty($phone))
-                                        $phone=Null;
-                                    $read="SELECT * FROM StudentInfo, BillInfo WHERE StudentInfo.phone = BillInfo.phone AND StudentInfo.phone ='$phone';";
-                                    // select * from StudentInfo,BillInfo WHERE StudentInfo.phone = BillInfo.phone;
-                                    // var_dump($read);
-                                    if($result=$con->query($read)){
-                                        if($result->num_rows>0){
-                                            $desctemp="";
-                                            $amount=null;
-                                            while($row=$result->fetch_assoc()){
-                                                $name=$row["name"];
-                                                $address=$row["address"];
-                                                $phone=$row['phone'];
-                                                $desctemp=$desctemp.$row["description"]."|";
-                                                $amount+=(int)$row["amount"];
-                                            }
-                                            $desc=explode("|",$desctemp);
-                                            $disp1=' <div class="userinfo-container">
-                                            <div class="userinfo-wrapper">
-                                                            <div class="userinfo">
-                                                            
-                                                            <p>Name: '.$name.'</p>
-                                                            <p>Address: '.$address.'</p>
-                                                            <p>Number: '.$phone.'</p>
-                                                        </div>
-                                                        <div class="billinfo">
-                                                            <table border="1">
-                                                                <tr>
-                                                                    <th>S.N.</th>
-                                                                    <th>Description</th>
-                                                                </tr>';
-                                                $counter=0;
-                                                $rows="";
-                                               
-                                                    
-                                                    foreach($desc as $value){
-                                                        if (!empty($value)){
-                                                            $counter++;
-                                                            $rows = $rows. '<tr><td>'.$counter.'</td><td>'.$value.'</td></tr>';
-
-                                                        }
-                                                    }
-                                                $disp2=$rows.'<tr><td><strong>Amount</strong></td><td><strong>'.$amount.'</strong></td></tr>';
-                                                  
-                                                $disp3='</table>
-                                                        </div>
-                                                        </div>
-                                                        <div class="btn">
-                                                            <button><a href="edit-bill.php?phone='.$phone.'">Edit Bill</a></button>
-                                                            <button><a href="studentbillform.php?phone='.$phone.'">Add Bill</a></button>
-                                                            </div>
-                                                        </div>';
-                                                echo $disp1."".$disp2."".$disp3;
-
-                                        } else{
-                                            $read="SELECT * FROM StudentInfo WHERE StudentInfo.phone ='$phone';";
-                                            if($result=$con->query($read)){
-                                                if($result->num_rows>0){
-                                                    $desctemp="";
-                                                    $amount=null;
-                                                    while($row=$result->fetch_assoc()){
-                                                        $name=$row["name"];
-                                                        $address=$row["address"];
-                                                        $phone=$row['phone'];
-                                                        $disp=' <div class="userinfo-container">
-                                                            <div class="userinfo-wrapper">
-                                                                            <div class="userinfo">
-                                                                            
-                                                            <p>Name: '.$name.'</p>
-                                                            <p>Address: '.$address.'</p>
-                                                            <p>Number: '.$phone.'</p>
-                                                        </div>
-                                                        <div class="billinfo">
-                                                            <table border="1">
-                                                                <tr>
-                                                                    <th>S.N.</th>
-                                                                    <th>Description</th>
-                                                                </tr>
-                                                                </table>
-                                                        </div>
-                                                        </div>
-                                                        <div class="btn">
-                                                            <button><a href="studentbillform.php?phone='.$phone.'">Add Bill</a></button>
-                                                            </div>
-                                                        </div>
-                                                                ';
-                                                    
-                                                    }
-                                                    echo $disp;
-                                                }else{     
-                                                    echo ' <div class="userinfo-container">
+                                    echo "</table></div>";
+                                }else{
+                                    echo ' <div class="userinfo-container">
                                                     <div class="userinfo-wrapper">
                                                     <div class="userinfo">
                                                     <p> Soryy! No Record Found</p>
                                                     </div>
                                                     </div>
                                                     </div>';
-                                                }
-                                        }
-                                    }
                                 }
-                                }
+                            }
+
+                          
+
+
+                            // echo '<div class="billinfo">
+                            //                 <table border="1">
+                            //                     <tr>
+                            //                         <th>S.N.</th>
+                            //                         <th>Course</th>
+                            //                         <th>Paid</th>
+                            //                         <th>Date</th>
+                            //                         <th>Action</th>
+                            //                     </tr>
+                            //                     </table>
+                            //                 </div>';
+
+
+
+                            // if($result=mysqli_query($conn,$sql);
+                            // if(mysqli_num_rows($result)>0){
+                            //     while($row=mysqli_fetch_assoc($result)){
+                            //         echo ' <div class="userinfo-container">
+                            //         <div class="userinfo-wrapper">
+                            //         <div class="userinfo">
+                            //         <p> Name: '.$row['name'].'</p>
+                            //         <p> Phone: '.$row['phone'].'</p>
+                            //         <p> Bill: '.$row['bill'].'</p>
+                            //         </div>
+                            //         </div>
+                            //         </div>';
+                            //     }
+                            // }
+                        }
+                    // }
+                                                    // echo ' <div class="userinfo-container">
+                                                    // <div class="userinfo-wrapper">
+                                                    // <div class="userinfo">
+                                                    // <p> Soryy! No Record Found</p>
+                                                    // </div>
+                                                    // </div>
+                                                    // </div>';
                             ?>
                        
         </section>

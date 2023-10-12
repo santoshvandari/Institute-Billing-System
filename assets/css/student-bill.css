@@ -13,7 +13,7 @@
 .search-option form input{
     font-size: 16px;
     padding: 2px 5px;
-    width: 150px;
+    /* width: 300px; */
     border-radius: 5px;
     outline: none;
 }
@@ -57,12 +57,12 @@
     text-align: left;
 }
 .billinfo{
-    width: 80%;
+    width: 100%;
     padding: 20px 0;
 }
 .billinfo table{
     border-collapse: collapse;
-    width: 100%;
+    /* width: 100%; */
 }
 .billinfo table tr td,th{
     padding: 2px 5px;
