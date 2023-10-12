@@ -48,22 +48,21 @@
                     </thead>
                     <tbody>
                         <?php
-                            $read= "SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid ORDER BY StudentInfo.name;";
+                            // $read= "SELECT StudentInfo.name,StudentInfo.address,StudentInfo.gender,StudentInfo.email,StudentInfo.phone,StudentInfo.parentname,CourseInfo.name  FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid ORDER BY StudentInfo.name;";
+                            $read = "SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid ORDER BY StudentInfo.name;";
                             // $result=$con->query($read)
                             if ($result=$con->query($read)) {
                                 $num=0;
                                 while ($row=$result->fetch_assoc()){
                                     $num++;
-                                    // var_dump($row);
                                     $disp="<tr><td>$num</td>
-                                    <td>".$row['StudentInfo.name']."</td>
-                                    <td>".$row['StudentInfo.address']."</td>
-                                    <td>".$row['StudentInfo.gender']."</td>
-                                    <td>".$row['StudentInfo.email']."</td>
-                                    <td>".$row['StudentInfo.phone']."</td>
-                                    <td>".$row['StudentInfo.parentname']."</td>
-                                    <td>".$row['StudentInfo.parentname']."</td>
-                                    <td>".$row['CourseInfo.course']."</td>
+                                    <td>".$row['name']."</td>
+                                    <td>".$row['address']."</td>
+                                    <td>".$row['gender']."</td>
+                                    <td>".$row['email']."</td>
+                                    <td>".$row['phone']."</td>
+                                    <td>".$row['parentname']."</td>
+                                    <td>".$row['cname']."</td>
                                     <td><a href='#'>Bill</a> | <a href='#'>Delete</a> | <a href='#'>Edit</a> </td>"; 
                                     echo $disp;
                                 }
