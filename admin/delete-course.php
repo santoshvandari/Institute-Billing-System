@@ -4,16 +4,21 @@
     if($_SERVER["REQUEST_METHOD"]=="GET"){
         if(isset($_GET["cid"])){
             $cid=trim($_GET["cid"]);
-            $delete="DELETE FROM CourseInfo WHERE cid='$cid';";
-            if($con->query($delete)){
+            $deletecourse="DELETE FROM CourseInfo WHERE cid='$cid';";
+            $deletestudent="DELETE FROM StudentInfo WHERE cid='$cid';";
+            if($con->query($deletestudent)){
+                if($con->query($deletecourse)){
+                    header("Location: course-list.php?coursesuccess=success");
+                }else{
+                    header("Location: course-list.php?coursefailure=failure");
+                }
                 // echo "Success";
-                header("Location: admin-list.php?adminsuccess=success");
             }else{
                 // echo "Error";
-                header("Location: admin-list.php?adminfailure=failure");
+                header("Location: course-list.php?coursefailure=failure");
             }
         }else{
-            header("Location: admin-list.php?adminfailure=failure");
+            header("Location: course-list.php?coursefailure=failure");
         }
     }
     // echo "Record Deleted Successfully"
