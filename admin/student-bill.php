@@ -67,7 +67,10 @@
                                             
                                         }
                                     }
-                                    echo "</table></div>";
+                                    echo "</table></div></div>";
+                                    echo '<div class="btn">
+                                    <button><a href="studentbillform.php?phone='.$phone.'">Add Bill</a></button>
+                                    </div>';
                                 }else{
                                     echo ' <div class="userinfo-container">
                                                     <div class="userinfo-wrapper">
