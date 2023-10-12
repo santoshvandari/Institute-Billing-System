@@ -18,15 +18,16 @@
                         $cid = trim($_POST['cid']);
                         $cname = trim($_POST['cname']);
                         $price= trim($_POST['price']);
-                        $read="SELECT * FROM StudentInfo WHERE phone='$cid';";
+                        $read="SELECT * FROM CourseInfo WHERE cid='$cid';";
                         if($result=$con->query($read)){
                             if($result->num_rows>0){
-                                echo '<div class="message"><p class="failure">Phone Number Already Added!!</p></div>';
+                                echo '<div class="message"><p class="failure">Course Already Added!!</p></div>';
                                 // echo "<script>alert('Phone Number Already Added')</script>";
                             }else{
-                                $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
+                                $insert = "INSERT  INTO CourseInfo values('$cid','$cname',$price);";
                                 if($con->query($insert)){
                                     echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
+                                    header("Location: course-list.php");
                                 }else{
                                     echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
                                 }
