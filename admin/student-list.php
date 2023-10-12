@@ -4,6 +4,7 @@
     <title>Student List</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/student-list.css">
+    <link rel="stylesheet" href="../assets/css/admin/ButtonDesign.css">
     <link rel="stylesheet" href="../assets/css/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
     <script defer src="../assets/js/admin/NameSearch.js"></script>
@@ -47,7 +48,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $read= "SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid ORDER BY name;";
+                            $read= "SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid ORDER BY StudentInfo.name;";
                             // $result=$con->query($read)
                             if ($result=$con->query($read)) {
                                 $num=0;
@@ -75,6 +76,9 @@
                         ?>
                     </tbody>
                 </table>
+                <div class="btn-wrapper">
+                    <button><a href="add-student.php">Add Student</a></button>
+                </div>
             </div>
         </section>
     </main>
