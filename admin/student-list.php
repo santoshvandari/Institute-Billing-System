@@ -15,21 +15,21 @@
             <div class="student-list">
                 <h3>Total Students</h3>
                 <?php
-                    //    if($_SERVER["REQUEST_METHOD"]=="GET"){
-                    //     if(isset($_GET["studentsuccess"])){
-                    //         echo '<div class="message"><p class="success">Student Deleted Successfully!!</p></div>';
-                    //     }
-                    //     if(isset($_GET["studentfailure"])){
-                    //         echo '<div class="message"><p class="failure">Failed To Delete Student !!</p></div>';
-                    //     }
-                    // }
+                       if($_SERVER["REQUEST_METHOD"]=="GET"){
+                        if(isset($_GET["studentsuccess"])){
+                            echo '<div class="message"><p class="success">Student Deleted Successfully!!</p></div>';
+                        }
+                        if(isset($_GET["studentfailure"])){
+                            echo '<div class="message"><p class="failure">Failed To Delete Student !!</p></div>';
+                        }
+                    }
 
                 ?>
-                    <!-- <div class="search-option">
+                    <div class="search-option">
                         <div class="form">
                             <input type="text" name="name" id="namesearch" placeholder="Search by Name" />
                         </div>
-                    </div> -->
+                    </div>
                 <table border="1">
                     <thead>
                         <tr>
@@ -41,13 +41,12 @@
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Parent Name</th>
-                            <th>Course</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            $read= "SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid ORDER BY name;";
+                            $read= "SELECT * FROM StudentInfo ORDER BY name;";
                             // $result=$con->query($read)
                             if ($result=$con->query($read)) {
                                 $num=0;
@@ -55,15 +54,13 @@
                                     $num++;
                                     // var_dump($row);
                                     $disp="<tr><td>$num</td>
-                                    <td>".$row['StudentInfo.name']."</td>
-                                    <td>".$row['StudentInfo.address']."</td>
-                                    <td>".$row['StudentInfo.gender']."</td>
-                                    <td>".$row['StudentInfo.email']."</td>
-                                    <td>".$row['StudentInfo.phone']."</td>
-                                    <td>".$row['StudentInfo.parentname']."</td>
-                                    <td>".$row['StudentInfo.parentname']."</td>
-                                    <td>".$row['CourseInfo.course']."</td>
-                                    <td><a href='#'>Bill</a> | <a href='#'>Delete</a> | <a href='#'>Edit</a> </td>"; 
+                                    <td>".$row['name']."</td>
+                                    <td>".$row['address']."</td>
+                                    <td>".$row['gender']."</td>
+                                    <td>".$row['email']."</td>
+                                    <td>".$row['phone']."</td>
+                                    <td>".$row['parentname']."</td>
+                                    <td><a href='student-bill.php?phone=".$row['phone']."'>Bill</a> | <a href='delete-student.php?phone=".$row['phone']."'>Delete</a> | <a href='edit-student.php?phone=".$row['phone']."'>Edit</a> </td>"; 
                                     echo $disp;
                                 }
                             }else{
