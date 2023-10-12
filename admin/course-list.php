@@ -70,7 +70,7 @@
                         <?php
                             
                             $read= "SELECT * FROM CourseInfo ORDER BY cid;";
-                            $result=$con->query($read)
+                            // $result=$con->query($read)
                             if ($result=$con->query($read)) {
                                 $num=0;
                                 while ($row=$result->fetch_assoc()){
@@ -78,7 +78,7 @@
                                     // var_dump($row);
                                     $disp="<tr><td>$num</td>
                                     <td>".$row['cid']."</td>
-                                    <td>".$row['cname']."</td>
+                                    <td>".$row['name']."</td>
                                     <td>".$row['price']."</td>
                                     <td> Edit | Delete</td>
                                     ";
