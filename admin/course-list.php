@@ -78,13 +78,6 @@
             }
         
         }
-        // document.getElementById("delete").addEventListener("click", function(e){
-        //     if(confirm("Record Of Student Who are Enrolled in this course are also deleted.\nAre you sure to delete this course??")){
-        //        location.href=this.href;
-        //     }else{
-        //         location.href="course-list.php"
-        //     }
-        // })
     </script>
 </body>
 </html>
