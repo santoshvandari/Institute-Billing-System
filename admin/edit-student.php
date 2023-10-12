@@ -42,15 +42,15 @@
                         $email=trim($_POST['email']);
                         $phone=trim($_GET['phone']);
                         $gender=trim($_POST['gender']);
-                        $parent=trim($_POST['parent']);
+                        $parentname=trim($_POST['parent']);
                         if(!$email){
                             $email = "NULL";
                         }
-                        $update = "UPDATE  StudentInfo SET name = '$name', address = '$address', email = '$email', gender = '$gender', parentname = '$parent' WHERE phone = '$phone';";
+                        $update = "UPDATE  StudentInfo SET name = '$name', address = '$address', email = '$email', gender = '$gender', parentname = '$parentname' WHERE phone = '$phone';";
                         // echo $update;
                         if($con->query($update)){
                             echo '<div class="message"><p class="success">Student Record Updated Successfully!!</p></div>';
-                            header("refresh:5; url=student-list.php");
+                            // header("refresh:5; url=student-list.php");
                         }else{
                             echo '<div class="message"><p class="failure">Failed To Updated Student Record!!</p></div>';
                         }
@@ -93,7 +93,7 @@
             </select>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
-                <button type="submit" name="submit">Submit</button>
+                <button type="submit" name="submit">Update</button>
             </div>
         </form>
         </div>
