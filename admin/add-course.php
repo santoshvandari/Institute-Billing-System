@@ -26,25 +26,16 @@
                             }else{
                                 $insert = "INSERT  INTO CourseInfo values('$cid','$cname',$price);";
                                 if($con->query($insert)){
-                                    echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
-                                    header("Location: course-list.php");
+                                    echo '<div class="message"><p class="success">Course Added Successfully!!</p></div>';
+                                    // header("Location: course-list.php");
+                                    header("Refresh: 10; URL=course-list.php");
                                 }else{
-                                    echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
+                                    echo '<div class="message"><p class="failure">Failed To Add Course!!</p></div>';
                                 }
                             }
                         }
-                        $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
-                        if($con->query($insert)){
-                            echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
-                        }else{
-                            echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
-                        }
                     }
                 }
-
-
-
-
             ?>
         <form class="form" method="post">
             <h3>Fill Course Information</h3>
