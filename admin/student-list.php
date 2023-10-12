@@ -16,14 +16,14 @@
             <div class="student-list">
                 <h3>Total Students</h3>
                 <?php
-                    //    if($_SERVER["REQUEST_METHOD"]=="GET"){
-                    //     if(isset($_GET["studentsuccess"])){
-                    //         echo '<div class="message"><p class="success">Student Deleted Successfully!!</p></div>';
-                    //     }
-                    //     if(isset($_GET["studentfailure"])){
-                    //         echo '<div class="message"><p class="failure">Failed To Delete Student !!</p></div>';
-                    //     }
-                    // }
+                       if($_SERVER["REQUEST_METHOD"]=="GET"){
+                        if(isset($_GET["studentsuccess"])){
+                            echo '<div class="message"><p class="success">Student Deleted Successfully!!</p></div>';
+                        }
+                        if(isset($_GET["studentfailure"])){
+                            echo '<div class="message"><p class="failure">Failed To Delete Student !!</p></div>';
+                        }
+                    }
 
                 ?>
                     <!-- <div class="search-option">
@@ -63,7 +63,7 @@
                                     <td>".$row['phone']."</td>
                                     <td>".$row['parentname']."</td>
                                     <td>".$row['cname']."</td>
-                                    <td><a href='#'>Bill</a> | <a href='delete-student.php?phone=".$row['phone']."' onclick='return Check()>Delete</a> | <a href='#'>Edit</a> </td>"; 
+                                    <td><a href='#'>Bill</a> | <a href='#'>Edit</a> | <a href='delete-student.php?phone=".$row['phone']."' onclick='return Check()'>Delete</a></td>"; 
                                     echo $disp;
                                 }
                             }else{
@@ -84,7 +84,7 @@
 </body>
 <script>
         function Check(){
-            if(confirm("Bill Record of this Student are also deleted.\nAre you sure to delete this course?")){
+            if(confirm("Bill Record of this Student are also deleted.\nAre you sure to delete this Student Record?")){
                 return true;
             }else{
                 return false;

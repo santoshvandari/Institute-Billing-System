@@ -48,7 +48,7 @@
                                     // var_dump($row);
                                     $disp="<tr><td>$num</td>
                                     <td>".$row['cid']."</td>
-                                    <td>".$row['name']."</td>
+                                    <td>".$row['cname']."</td>
                                     <td>".$row['price']."</td>
                                     <td><a href='edit-course.php?cid=".$row['cid']."'> Edit </a> | <a href='delete-course.php?cid=".$row['cid']."' onclick='return Check()'>Delete</a></td>";
                                     echo $disp;

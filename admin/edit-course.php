@@ -19,7 +19,7 @@
                         $cname = trim($_POST['cname']);
                         $price= trim($_POST['price']);
                         // $update= "UPDATE AdminInfo SET name = '$name', email = '$email', phone = '$phone', adminpwd = '$password' WHERE username = '$username';";
-                        $update="UPDATE CourseInfo SET name='$cname',price=$price WHERE cid='$cid';";
+                        $update="UPDATE CourseInfo SET cname='$cname',price=$price WHERE cid='$cid';";
                         if($result=$con->query($update)){
                             echo '<div class="message"><p class="success">Course Updated Successfully!!</p></div>';
                             header("Refresh: 5; URL=course-list.php");
@@ -34,7 +34,7 @@
                         $read="SELECT * FROM CourseInfo WHERE cid='$cid';";
                         if($result=$con->query($read)){
                             while($row=$result->fetch_assoc()){
-                                $cname=$row['name'];
+                                $cname=$row['cname'];
                                 $price=$row['price'];
                             }
                         }

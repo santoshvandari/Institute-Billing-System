@@ -79,7 +79,7 @@
                         if($result->num_rows>0){
                             while($row=$result->fetch_assoc()){
                                 // echo "{$row['cid']} and {$row['name']}";
-                                echo "<option value='{$row['cid']}'>{$row['name']}</option>";
+                                echo "<option value='{$row['cid']}'>{$row['cname']}</option>";
                             }
                         }else{
                             echo "<script>alert('Please Add Course First');
