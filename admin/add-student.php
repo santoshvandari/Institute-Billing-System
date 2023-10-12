@@ -71,6 +71,7 @@
             <input type="text" name="parent" id="parent" placeholder="Enter a Parent Name" required/> 
             <label for="course">Course</label>
             <select name="course" id="course" required>
+                <option value="">Select a Course</option>
                 <?php
                     $read="SELECT * FROM CourseInfo";
                     if($result=$con->query($read)){
