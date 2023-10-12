@@ -44,14 +44,14 @@
         <form class="form" method="post">
             <h3>Update Course Information</h3>
             <label for="cid">Course ID</label>
-            <input type="text" id="cid" name="cid" value=<?=$cid?> required disabled/>
+            <input type="text" id="cid" name="cid" value='<?=$cid?>' required disabled/>
             <label for="cname">Course Name</label>
-            <input type="text" id="cname" name="cname" value=<?=$cname?> required/>
+            <input type="text" id="cname" name="cname" value='<?=$cname?>' required/>
             <label for="price">Price</label>
-            <input type="number" id="price" name="price" vaue=<?=$price?> required/>
+            <input type="number" id="price" name="price" value='<?=$price?>' required/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
-                <button type="submit" name="submit">Submit</button>
+                <button type="submit" name="submit">Update</button>
             </div>
         </form>
         </div>

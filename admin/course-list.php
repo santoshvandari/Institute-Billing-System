@@ -50,7 +50,7 @@
                                     <td>".$row['cid']."</td>
                                     <td>".$row['name']."</td>
                                     <td>".$row['price']."</td>
-                                    <td><a href='#'> Edit</a> | <a href='delete-course.php?cid=".$row['cid']."' onclick='return Check()'>Delete</a></td>";
+                                    <td><a href='edit-course.php?cid=".$row['cid']."'> Edit </a> | <a href='delete-course.php?cid=".$row['cid']."' onclick='return Check()'>Delete</a></td>";
                                     echo $disp;
                                     // <td><a href='edit-course.php?username=".$row['username']."'>Edit</a> | <a href='delete-admin.php?username=".$row['username']."'>Delete</a></td>"; 
                                 }
