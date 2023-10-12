@@ -71,7 +71,7 @@
     </main>
     <script>
         function Check(){
-            if(confirm("Record Of Student Who are Enrolled in this course are also deleted.\nAre you sure to delete this course?")){
+            if(confirm("Record Of Student & Bill Who are Enrolled in this course are also deleted.\nAre you sure to delete this course?")){
                 return true;
             }else{
                 return false;
