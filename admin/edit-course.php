@@ -15,7 +15,7 @@
             <?php
                  if ($_SERVER['REQUEST_METHOD']=='POST'){
                     if(isset($_POST['submit'])){
-                        $cid = trim($_POST['cid']);
+                        $cid = trim($_GET['cid']);
                         $cname = trim($_POST['cname']);
                         $price= trim($_POST['price']);
                         // $update= "UPDATE AdminInfo SET name = '$name', email = '$email', phone = '$phone', adminpwd = '$password' WHERE username = '$username';";
@@ -30,7 +30,7 @@
                 }
                 if($_SERVER['REQUEST_METHOD']=='GET'){
                     if(isset($_GET['cid'])){
-                        $cid=$_GET["cid"];
+                        $cid=trim($_GET["cid"]);
                         $read="SELECT * FROM CourseInfo WHERE cid='$cid';";
                         if($result=$con->query($read)){
                             while($row=$result->fetch_assoc()){
@@ -38,6 +38,8 @@
                                 $price=$row['price'];
                             }
                         }
+                    }else{
+                        header("Location:course-list.php");
                     }
                 }
             ?>
