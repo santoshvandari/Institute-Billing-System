@@ -21,6 +21,7 @@
                         $email=trim($_POST['email']);
                         $gender=trim($_POST['gender']);
                         $parent=trim($_POST['parent']);
+                        $cid=trim($_POST['course']);
                         if(!$email){
                             $email = "NULL";
                         }
@@ -30,7 +31,7 @@
                                 echo '<div class="message"><p class="failure">Phone Number Already Added!!</p></div>';
                                 // echo "<script>alert('Phone Number Already Added')</script>";
                             }else{
-                                $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
+                                $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent','$cid');";
                                 if($con->query($insert)){
                                     echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
                                 }else{
@@ -69,11 +70,23 @@
             <label for="parent">Parent Name</label>
             <input type="text" name="parent" id="parent" placeholder="Enter a Parent Name" required/> 
             <label for="course">Course</label>
-            <select name="select" id="course" required>
-                <option value="rid">Computer Basic</option>
-                <option value="rid">Computer Basic</option>
-                <option value="rid">Computer Basic</option>
-                <option value="rid">Computer Basic</option>
+            <select name="course" id="course" required>
+                <?php
+                    $read="SELECT * FROM CourseInfo";
+                    if($result=$con->query($read)){
+                        var_dump($result);
+                        if($result->num_rows>0){
+                            while($row=$result->fetch_assoc()){
+                                // echo "{$row['cid']} and {$row['name']}";
+                                echo "<option value='{$row['cid']}'>{$row['name']}</option>";
+                            }
+                        }else{
+                            echo "<script>alert('Please Add Course First');
+                             location.href='course-list.php';</script>";
+                           
+                        }
+                    }
+                ?>
             </select>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
