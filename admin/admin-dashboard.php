@@ -48,11 +48,11 @@
             <hr>
             <p><?=$totalamount?></p>
         </div>
-        <div class="card">
+        <!-- <div class="card">
             <h2>Total Users</h2>
             <hr>
             <p><?=$totaluser?></p>
-        </div>
+        </div> -->
         <div class="card">
             <h2>Total Admin</h2>
             <hr>
