@@ -2,29 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+        <link rel="stylesheet" href="../assets/css/common-style.css">
+        <link rel="stylesheet" href="../assets//css/student-list.css">
+        <link rel="stylesheet" href="../assets/css/message.css">
+        <link rel="stylesheet" href="../assets/css/admin/ButtonDesign.css">
+        <script defer src="../assets/js/HideMessage.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course</title>
 </head>
-<body>
-    
-    <?php
-    include_once "head.php";
-?>
-    <title>Admin List</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets//css/student-list.css">
-    <link rel="stylesheet" href="../assets/css/message.css">
-    <link rel="stylesheet" href="../assets/css/admin/ButtonDesign.css">
-    <script defer src="../assets/js/HideMessage.js"></script>
-
-<?php
-    include_once "sidebar.php";
-?>
 
         <section class="student-list-container main-container">
             <div class="student-list">
                 <h3>Total Admins</h3>
-                <?php
+                <!-- <?php
                        if($_SERVER["REQUEST_METHOD"]=="GET"){
                         if(isset($_GET["adminsuccess"])){
                             echo '<div class="message"><p class="success">Admin Deleted Successfully!!</p></div>';
@@ -34,7 +24,7 @@
                         }
                     }
 
-                ?>
+                ?> -->
                 <table border="1">
                     <thead>
                         <tr>
@@ -48,7 +38,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
+                        <!-- <?php
                             
                             $read= "SELECT * FROM AdminInfo ORDER BY name;";
                             // $result=$con->query($read)
@@ -71,7 +61,7 @@
                         
                         
                         
-                        ?>
+                        ?> -->
                     </tbody>
                 </table>
                 <div class="btn-wrapper">
