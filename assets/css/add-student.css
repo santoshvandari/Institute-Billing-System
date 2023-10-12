@@ -22,7 +22,7 @@
     font-size: 18px;
     margin: 20px 0 3px;
 }
-.form input:not(input[type='radio']){
+.form input:not(input[type='radio']),.form select{
     height: 30px;
     border-radius: 5px;
     outline: none;
@@ -42,6 +42,10 @@
     font-size: 18px;
     margin: 5px;
 }
+/* .form select option{
+    font-size: 18px;
+
+} */
 .btn-wrapper{
     margin: 20px 0;
 }
