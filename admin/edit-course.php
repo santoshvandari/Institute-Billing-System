@@ -13,29 +13,18 @@
     <section class="form-container main-container">
         <div class="form-wrapper">
             <?php
-
-
-
                  if ($_SERVER['REQUEST_METHOD']=='POST'){
                     if(isset($_POST['submit'])){
                         $cid = trim($_POST['cid']);
                         $cname = trim($_POST['cname']);
                         $price= trim($_POST['price']);
-                        $update=""
-                        if($result=$con->query($read)){
-                            if($result->num_rows>0){
-                                echo '<div class="message"><p class="failure">Course Already Added!!</p></div>';
-                                // echo "<script>alert('Phone Number Already Added')</script>";
-                            }else{
-                                $insert = "INSERT  INTO CourseInfo values('$cid','$cname',$price);";
-                                if($con->query($insert)){
-                                    echo '<div class="message"><p class="success">Course Updated Successfully!!</p></div>';
-                                    // header("Location: course-list.php");
-                                    header("Refresh: 5; URL=course-list.php");
-                                }else{
-                                    echo '<div class="message"><p class="failure">Failed To Update Course!!</p></div>';
-                                }
-                            }
+                        // $update= "UPDATE AdminInfo SET name = '$name', email = '$email', phone = '$phone', adminpwd = '$password' WHERE username = '$username';";
+                        $update="UPDATE CourseInfo SET name='$cname',price=$price WHERE cid='$cid';";
+                        if($result=$con->query($update)){
+                            echo '<div class="message"><p class="success">Course Updated Successfully!!</p></div>';
+                            header("Refresh: 5; URL=course-list.php");
+                        }else{
+                            echo '<div class="message"><p class="failure">Failed To Update Course!!</p></div>';
                         }
                     }
                 }
@@ -43,11 +32,11 @@
         <form class="form" method="post">
             <h3>Update Course Information</h3>
             <label for="cid">Course ID</label>
-            <input type="text" id="cid" name="cid" placeholder="Enter a Course ID" required/>
+            <input type="text" id="cid" name="cid" value=<?=$cid?> required disabled/>
             <label for="cname">Course Name</label>
-            <input type="text" id="cname" name="cname" placeholder="Enter a Course Name" required/>
+            <input type="text" id="cname" name="cname" value=<?=$cname?> required/>
             <label for="price">Price</label>
-            <input type="number" id="price" name="price" placeholder="Enter a Price" required/>
+            <input type="number" id="price" name="price" vaue=<?=$price?> required/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Submit</button>
