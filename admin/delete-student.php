@@ -6,10 +6,8 @@
             $deleteBill="DELETE FROM BillInfo WHERE phone='$phone';";
             $deleteStudent="DELETE FROM StudentInfo WHERE phone='$phone';";
             if($con->query($deleteBill) && $con->query($deleteStudent)){
-                echo "Success";
                 header("Location: student-list.php?studentsuccess=success");
             }else{
-                echo "Error";
                 header("Location: student-list.php?studentfailure=failure");
             }
         }else{
