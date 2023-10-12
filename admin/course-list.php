@@ -15,14 +15,14 @@
             <div class="student-list">
                 <h3>Total Course</h3>
                 <?php
-                    //    if($_SERVER["REQUEST_METHOD"]=="GET"){
-                    //     if(isset($_GET["adminsuccess"])){
-                    //         echo '<div class="message"><p class="success">Admin Deleted Successfully!!</p></div>';
-                    //     }
-                    //     if(isset($_GET["adminfailure"])){
-                    //         echo '<div class="message"><p class="failure">Failed To Delete Admin !!</p></div>';
-                    //     }
-                    // }
+                       if($_SERVER["REQUEST_METHOD"]=="GET"){
+                        if(isset($_GET["coursesuccess"])){
+                            echo '<div class="message"><p class="success">Course Deleted Successfully!!</p></div>';
+                        }
+                        if(isset($_GET["coursefailure"])){
+                            echo '<div class="message"><p class="failure">Failed To Delete Course !!</p></div>';
+                        }
+                    }
 
                 ?>
                 <table border="1">
@@ -50,7 +50,7 @@
                                     <td>".$row['cid']."</td>
                                     <td>".$row['name']."</td>
                                     <td>".$row['price']."</td>
-                                    <td><a href='#'> Edit</a> | <a href='delete-course.php?cid=".$row['cid']."'>Delete</a></td>";
+                                    <td><a href='#'> Edit</a> | <a href='delete-course.php?cid=".$row['cid']."' id='delete'>Delete</a></td>";
                                     echo $disp;
                                     // <td><a href='edit-course.php?username=".$row['username']."'>Edit</a> | <a href='delete-admin.php?username=".$row['username']."'>Delete</a></td>"; 
                                 }
@@ -69,9 +69,14 @@
             </div>
         </section>
     </main>
-</body>
-</html>
-
-
+    <script>
+        document.getElementById("delete").addEventListener("click", function(e){
+            if(confirm("Record Of Student Who are Enrolled in this course are also deleted.\nAre you sure to delete this course??")){
+               location.href=this.href;
+            }else{
+                location.href="course-list.php";
+            }
+        })
+    </script>
 </body>
 </html>
