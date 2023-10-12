@@ -18,12 +18,16 @@
                <?php
                    if($_SERVER['REQUEST_METHOD']=='POST' || $_SERVER['REQUEST_METHOD']=='GET'){
                         $phone=null;
-                        if(isset($_GET["phone"])){
-                            $phone=$_GET["phone"];
+                        if($_SERVER["REQUEST_METHOD"]=="GET"){
+                            if(isset($_GET["phone"])){
+                                $phone=$_GET["phone"];
+                            }
                         }
-                        if(isset($_POST['search'])){
-                            if(isset($_POST['phone'])){
-                                $phone=$_POST['phone'];
+                        if($_SERVER["REQUEST_METHOD"]=="POST"){
+                            if(isset($_POST['search'])){
+                                if(isset($_POST['phone'])){
+                                    $phone=$_POST['phone'];
+                                }
                             }
                         }
                         $read="SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid AND  phone='$phone'";

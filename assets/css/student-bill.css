@@ -13,7 +13,7 @@
 .search-option form input{
     font-size: 16px;
     padding: 2px 5px;
-    /* width: 300px; */
+    width: 150px;
     border-radius: 5px;
     outline: none;
 }
@@ -46,7 +46,8 @@
     text-align: left;
 }
 .userinfo-wrapper{
-    width: 50%;
+    /* width: 80%; */
+    text-align: center;
 }
 .userinfo{
     margin: 10px 0;

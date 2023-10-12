@@ -63,15 +63,12 @@
                                     <td>".$row['phone']."</td>
                                     <td>".$row['parentname']."</td>
                                     <td>".$row['cname']."</td>
-                                    <td><a href='#'>Bill</a> | <a href='edit-student.php?phone=".$row['phone']."'>Edit</a> | <a href='delete-student.php?phone=".$row['phone']."' onclick='return Check()'>Delete</a></td>"; 
+                                    <td><a href='student-bill.php?phone=".$row['phone']."'>Bill</a> | <a href='edit-student.php?phone=".$row['phone']."'>Edit</a> | <a href='delete-student.php?phone=".$row['phone']."' onclick='return Check()'>Delete</a></td>"; 
                                     echo $disp;
                                 }
                             }else{
                                 echo "Error";
                             }
-                        
-                        
-                        
                         ?>
                     </tbody>
                 </table>
