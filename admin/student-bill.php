@@ -62,9 +62,8 @@
                                                 <td>{$row['cname']}</td>
                                                 <td>{$row['amount']}</td>
                                                 <td>{$row['tdate']}</td>
-                                                <td><a href='#'>View</a></td>";
+                                                <td><a href='#'>Edit</a> | <a href='#'>Delete</a> | <a href='#'>View</a></td>";
                                             }
-                                            
                                         }
                                     }
                                     echo "</table></div></div>";
@@ -81,10 +80,6 @@
                                                     </div>';
                                 }
                             }
-
-                          
-
-
                             // echo '<div class="billinfo">
                             //                 <table border="1">
                             //                     <tr>
