@@ -63,7 +63,7 @@
                                     <td>".$row['phone']."</td>
                                     <td>".$row['parentname']."</td>
                                     <td>".$row['cname']."</td>
-                                    <td><a href='#'>Bill</a> | <a href='#'>Delete</a> | <a href='#'>Edit</a> </td>"; 
+                                    <td><a href='#'>Bill</a> | <a href='delete-student.php?phone=".$row['phone']."' onclick='return Check()>Delete</a> | <a href='#'>Edit</a> </td>"; 
                                     echo $disp;
                                 }
                             }else{
@@ -82,4 +82,14 @@
         </section>
     </main>
 </body>
+<script>
+        function Check(){
+            if(confirm("Bill Record of this Student are also deleted.\nAre you sure to delete this course?")){
+                return true;
+            }else{
+                return false;
+            }
+        
+        }
+    </script>
 </html>
