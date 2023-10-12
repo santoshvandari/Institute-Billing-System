@@ -50,7 +50,7 @@
                                     <td>".$row['cid']."</td>
                                     <td>".$row['name']."</td>
                                     <td>".$row['price']."</td>
-                                    <td><a href='#'> Edit</a> | <a href='delete-course.php?cid=".$row['cid']."' id='delete'>Delete</a></td>";
+                                    <td><a href='#'> Edit</a> | <a href='delete-course.php?cid=".$row['cid']."' onclick='return Check()'>Delete</a></td>";
                                     echo $disp;
                                     // <td><a href='edit-course.php?username=".$row['username']."'>Edit</a> | <a href='delete-admin.php?username=".$row['username']."'>Delete</a></td>"; 
                                 }
@@ -70,13 +70,21 @@
         </section>
     </main>
     <script>
-        document.getElementById("delete").addEventListener("click", function(e){
-            if(confirm("Record Of Student Who are Enrolled in this course are also deleted.\nAre you sure to delete this course??")){
-               location.href=this.href;
+        function Check(){
+            if(confirm("Record Of Student Who are Enrolled in this course are also deleted.\nAre you sure to delete this course?")){
+                return true;
             }else{
-                location.href="course-list.php";
+                return false;
             }
-        })
+        
+        }
+        // document.getElementById("delete").addEventListener("click", function(e){
+        //     if(confirm("Record Of Student Who are Enrolled in this course are also deleted.\nAre you sure to delete this course??")){
+        //        location.href=this.href;
+        //     }else{
+        //         location.href="course-list.php"
+        //     }
+        // })
     </script>
 </body>
 </html>
