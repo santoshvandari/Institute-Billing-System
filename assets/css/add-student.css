@@ -29,6 +29,7 @@
     padding: 0px 5px;
     font-size: 18px;
     border: 1px solid #000;
+    background: transparent;
 }
 .gender-wrapper{
     margin: 10px 0;
