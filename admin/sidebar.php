@@ -16,7 +16,7 @@
         <h4>Admin</h4>
         <ul class="side-option-list">
             <li><a href="admin-dashboard.php">Home</a></li>
-            <li><a href="#">Course</a></li>
+            <li><a href="course-list.php">Course</a></li>
             <li><a href="#">Student</a></li>
             <!-- <li><a href="#">Add Student</a></li> -->
             <li><a href="#">Bill</a></li>
