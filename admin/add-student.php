@@ -68,6 +68,13 @@
             </div>
             <label for="parent">Parent Name</label>
             <input type="text" name="parent" id="parent" placeholder="Enter a Parent Name" required/> 
+            <label for="course">Course</label>
+            <select name="select" id="course" required>
+                <option value="rid">Computer Basic</option>
+                <option value="rid">Computer Basic</option>
+                <option value="rid">Computer Basic</option>
+                <option value="rid">Computer Basic</option>
+            </select>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Submit</button>
