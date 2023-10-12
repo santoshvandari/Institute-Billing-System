@@ -24,10 +24,10 @@
                 }
                 $result->free();
             }
-            if($result=$con->query($userread)){
-                $totaluser=$result->num_rows;
-                $result->free();
-            }
+            // if($result=$con->query($userread)){
+            //     $totaluser=$result->num_rows;
+            //     $result->free();
+            // }
             if($result=$con->query($adminread)){
                 $totaladmin=$result->num_rows;
                 $result->free();
