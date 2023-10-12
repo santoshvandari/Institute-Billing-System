@@ -49,9 +49,6 @@
                     }
                 }
 
-
-
-
             ?>
         <form class="form" method="post">
             <h3>Update the Admin Information</h3>
