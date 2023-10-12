@@ -67,7 +67,7 @@
         </form>
     </div>
     <footer>
-        <a href="../user/user-login.php">User</a>
+        <a href="../student/">Home</a>
         <!-- <a href="#">Developers Info</a> -->
         <!-- <a href="mailto:test@gmail.com">FeedBack</a> -->
         <a href="mailto:info@bhandari-santosh.com.np">FeedBack</a>
