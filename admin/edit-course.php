@@ -28,6 +28,18 @@
                         }
                     }
                 }
+                if($_SERVER['REQUEST_METHOD']=='GET'){
+                    if(isset($_GET['cid'])){
+                        $cid=$_GET["cid"];
+                        $read="SELECT * FROM CourseInfo WHERE cid='$cid';";
+                        if($result=$con->query($read)){
+                            while($row=$result->fetch_assoc()){
+                                $cname=$row['name'];
+                                $price=$row['price'];
+                            }
+                        }
+                    }
+                }
             ?>
         <form class="form" method="post">
             <h3>Update Course Information</h3>
