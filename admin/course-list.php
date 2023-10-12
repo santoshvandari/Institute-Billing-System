@@ -93,7 +93,7 @@
                     </tbody>
                 </table>
                 <div class="btn-wrapper">
-                    <button><a href="#">Add Course</a></button>
+                    <button><a href="add-course.php">Add Course</a></button>
                 </div>
             </div>
         </section>

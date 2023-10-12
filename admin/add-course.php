@@ -52,22 +52,14 @@
 
             ?>
         <form class="form" method="post">
-            <h3>Fill the Student Information</h3>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
-            <label for="add">Address</label>
-            <input type="text" id="add" name="address" placeholder="Enter a Address" required/>
+            <h3>Fill Course Information</h3>
+            <label for="cid">Course ID</label>
+            <input type="text" id="cid" name="cid" placeholder="Enter a Course ID" required/>
+            <label for="cname">Course Name</label>
+            <input type="text" id="cname" name="cname" placeholder="Enter a Course Name" required/>
+            <label for="price">Address</label>
+            <input type="number" id="price" name="price" placeholder="Enter a Price" required/>
             <label for="phone">Mobile Number</label>
-            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Enter a Email"/>
-            <div class="gender-wrapper">
-                <label>Gender</label>
-                <input type="radio" name="gender" value="male" checked/>Male
-                <input type="radio" name="gender" value="female"/>Female
-            </div>
-            <label for="parent">Parent Name</label>
-            <input type="text" name="parent" id="parent" placeholder="Enter a Parent Name" required/> 
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Submit</button>
