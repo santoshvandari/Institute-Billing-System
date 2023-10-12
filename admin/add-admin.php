@@ -1,12 +1,11 @@
 <?php
     include_once "head.php";
 ?>
-    <title>Edit Admin</title>
+    <title>Add Student</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/add-student.css">
     <link rel="stylesheet" href="../assets/css/message.css"/>
-    <script defer src="../assets/js/HideMessage.js"></script>
-
+    <script src="../assets/js/HideMessage.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -14,57 +13,44 @@
     <section class="form-container main-container">
         <div class="form-wrapper">
             <?php
-                if($_SERVER['REQUEST_METHOD']=='GET'){
-                    if(isset($_GET["username"])){
-                        $username = trim($_GET['username']);
-                        $select = "SELECT * FROM AdminInfo WHERE username = '$username';";
-                        if($result = $con->query($select)){
-                            while($row = $result->fetch_assoc()){
-                                $username=trim($row['username']);
-                                $name=trim($row['name']);
-                                $email=trim($row['email']);
-                                $phone=trim($row['phone']);
-                                // $password=trim($row['adminpwd']);
-                            };
-                            
-                        };
-                    }
-                }
-                //        
                  if ($_SERVER['REQUEST_METHOD']=='POST'){
                     if(isset($_POST['submit'])){
                         $name=trim($_POST['name']);
                         $phone=trim($_POST['phone']);
                         $email=trim($_POST['email']);
-                        $username=trim($_GET['username']);
+                        $username=trim($_POST['username']);
                         $password=md5(trim($_POST['password']));
-                        $update= "UPDATE AdminInfo SET name = '$name', email = '$email', phone = '$phone', adminpwd = '$password' WHERE username = '$username';";
-                        
-                        if($con->query($update)){
-                            echo '<div class="message"><p class="success">Admin Updated Successfully!!</p></div>';
-                            header("refresh:5; url=admin-list.php");
-                        }else{
-                            echo '<div class="message"><p class="failure">Failed To Update  Admin !!</p></div>';
+                        $read="SELECT * FROM AdminInfo WHERE username='$username';";
+                        if($result=$con->query($read)){
+                            if($result->num_rows>0){
+                                echo '<div class="message"><p class="failure">Selected Admin Username Already Added !!</p></div>';
+                            }else{
+                                $insert = "INSERT  INTO AdminInfo values('$username','$name','$email','$phone','$password');";
+                                if($con->query($insert)){
+                                    echo '<div class="message"><p class="success">Admin Added Successfully!!</p></div>';
+                                }else{
+                                    echo '<div class="message"><p class="failure">Failed To Add Admin !!</p></div>';
+                                }
+                            }
                         }
                     }
                 }
-
             ?>
         <form class="form" method="post">
-            <h3>Update the Admin Information</h3>
+            <h3>Fill the Admin Information</h3>
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" value="<?=$name?>" required/>
+            <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" value="<?=$email?>" required/>
+            <input type="email" name="email" id="email" placeholder="Enter a Email" required/>
             <label for="phone">Mobile Number</label>
-            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" value="<?=$phone?>" required/>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" value="<?=$username?>" disabled required/> 
+            <input type="text" name="username" id="username" placeholder="Enter a Username" required/> 
             <label for="adminpassword">Password</label>
-            <input type="text" name="password" id="adminpassword"/>
+            <input type="text" name="password" id="adminpassword" placeholder="Enter a Password"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
-                <button type="submit" name="submit">Update</button>
+                <button type="submit" name="submit">Submit</button>
             </div>
         </form>
         </div>
