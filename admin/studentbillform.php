@@ -53,7 +53,7 @@
                 <label for="totalfee">Total Fee</label>
                 <input type="number" id="totalfee" name="totalfee" value='<?=$price?>' required disabled/>
                 <label for="dueamount">Due Amount</label>
-                <input type="number" id="dueamount" name="dueamount" value='<?=($price-$amount)?>' required/>
+                <input type="number" id="dueamount" name="dueamount" value='<?=($price-$amount)?>' required disabled/>
                 <div class="errormessage"></div>
                 <label for="amount">Amount To Pay</label>
                 <input type="number" id="amount" name="amount" placeholder="Enter a Amount" required/>
@@ -65,7 +65,24 @@
             </div>
     </section>
    </main>
-   <footer>
-   </footer>
 </body>
+<script>
+    let totalfee = document.getElementById("totalfee").value;
+    let dueamount = document.getElementById("dueamount").value;
+    let errorMessage= document.querySelector(".errormessage");
+    let submitBtn= document.querySelector("button[type='submit']");
+    document.getElementById("amount").addEventListener("input",(e)=>{
+        let amount = e.targetInput;
+        if(amount>dueamount){
+            errorMessage.innerHTML="<p>* Amount cannot be greater than Due Amount</p>";
+            submitBtn.disabled=true;
+        }else if(amount<0 || amount==0){
+            errorMessage.innerHTML="<p>* Amount cannot be less than or Equal to 0</p>";
+            submitBtn.disabled=true;
+        }else{
+            errorMessage.innerHTML="";
+            submitBtn.disabled=false;
+        }
+    });
+</script>
 </html>
