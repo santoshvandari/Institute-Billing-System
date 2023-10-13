@@ -2,8 +2,8 @@
     include_once "head.php";
 ?>
     <title>Student Bill Form</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/studentbillform.css">
+    <link rel="stylesheet" href="../assets/css/admin/common-style.css">
+    <link rel="stylesheet" href="../assets/css/admin/studentbillform.css">
     <script defer src="../assets/js/admin/StudentBillFormValidation.js"></script>
 <?php
     include_once "sidebar.php";
