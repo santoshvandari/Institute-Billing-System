@@ -18,7 +18,6 @@
                 }
             }
             $amount = trim($_POST["amount"]);
-            // $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
             $insert="INSERT INTO BillInfo VALUES('$phone','$cid','$amount',NOW());";
             $flag=true;
             if($con->query($insert)){
