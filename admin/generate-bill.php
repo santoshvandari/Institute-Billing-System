@@ -22,8 +22,8 @@
 
 ?>
     <title>Generate Bill</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/generate-bill.css">
+    <link rel="stylesheet" href="../assets/css/admin/common-style.css">
+    <link rel="stylesheet" href="../assets/css/admin/generate-bill.css">
     <script defer src="../assets/js/DateTime.js"></script>
     
 <?php
