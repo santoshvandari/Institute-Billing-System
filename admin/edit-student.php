@@ -28,14 +28,12 @@
                                     $gender=$row['gender'];
                                     $parentname=$row['parentname'];
                                     $course=$row['cname'];
-                                    // $cid=$row["cid"];
                                 }
                             }
                         }else{
                             header("location:student-list.php");
                         }
                 }
-
                    if ($_SERVER['REQUEST_METHOD']=='POST'){
                     if(isset($_POST['submit'])){
                         $name=trim($_POST['name']);
@@ -45,14 +43,7 @@
                         $gender=trim($_POST['gender']);
                         $parentname=trim($_POST['parent']);
                         $course=trim($_POST['course']);
-                        // var_dump($course);
-                        // // echo $cid;
-                        // var_dump($cid);
-                        // if($result=$con->query("SELECT * FROM CourseInfo WHERE cid='$cid';")){
-                        //     while($row=$result->fetch_assoc()){
-                        //         $course=$row['cname'];
-                        //     }
-                        // }
+                        
                         if(!$email){
                             $email = "NULL";
                         }
@@ -66,12 +57,6 @@
                         }
                     }
                 }
-
-
-                
-               
-
-
             ?>
         <form class="form" method="post">
             <h3>Fill the Student Information</h3>
