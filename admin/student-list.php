@@ -48,9 +48,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            // $read= "SELECT StudentInfo.name,StudentInfo.address,StudentInfo.gender,StudentInfo.email,StudentInfo.phone,StudentInfo.parentname,CourseInfo.name  FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid ORDER BY StudentInfo.name;";
                             $read = "SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid ORDER BY StudentInfo.name;";
-                            // $result=$con->query($read)
                             if ($result=$con->query($read)) {
                                 $num=0;
                                 while ($row=$result->fetch_assoc()){
