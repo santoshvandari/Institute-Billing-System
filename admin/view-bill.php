@@ -70,7 +70,7 @@
                         </tbody>
                     </table>
                 <div class="billoptions">
-                    <button id='home'><a href="student-bill.php">Home</a></button>
+                    <button id='home'><a href="student-bill.php?phone=<?=$phone?>">Home</a></button>
                     <button id="print">Print</button>
                 </div>
             </div>
