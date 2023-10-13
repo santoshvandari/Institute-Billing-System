@@ -36,20 +36,12 @@ body {
   border-collapse: collapse;
 }
 table tr th,
-td {
+table tr td {
   padding: 5px;
   text-align: left;
   border: 1px solid #000;
 }
-table thead tr th:first-child {
-  width: 50px;
-}
-table thead tr th:last-child {
-  width: 100px;
-}
-.subtotal td,
-.discount td,
-.total td {
+table tr.total td {
   text-align: center;
   font-weight: bold;
   border: 2px solid #000;

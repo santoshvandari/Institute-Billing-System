@@ -44,7 +44,7 @@
                         <p class="name">Name: <?=$name?></p>
                         <p class="address">Address:<?=$address?></p>
                         <p class="phone">Number: <?=$phone?></p>
-                        <p class="course">Number: <?=$course?></p>
+                        <p class="course">Course: <?=$course?></p>
     
                     </div>
                     <div class="billinfo">
