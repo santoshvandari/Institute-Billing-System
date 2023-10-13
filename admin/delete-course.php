@@ -1,4 +1,3 @@
-</script>
 <?php
     include_once "../assets/database/connection.php";
     if($_SERVER["REQUEST_METHOD"]=="GET"){

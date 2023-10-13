@@ -24,7 +24,6 @@
                                 $name=trim($row['name']);
                                 $email=trim($row['email']);
                                 $phone=trim($row['phone']);
-                                // $password=trim($row['adminpwd']);
                             };
                             
                         };
