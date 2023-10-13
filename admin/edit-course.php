@@ -18,7 +18,6 @@
                         $cid = trim($_GET['cid']);
                         $cname = trim($_POST['cname']);
                         $price= trim($_POST['price']);
-                        // $update= "UPDATE AdminInfo SET name = '$name', email = '$email', phone = '$phone', adminpwd = '$password' WHERE username = '$username';";
                         $update="UPDATE CourseInfo SET cname='$cname',price=$price WHERE cid='$cid';";
                         if($result=$con->query($update)){
                             echo '<div class="message"><p class="success">Course Updated Successfully!!</p></div>';
