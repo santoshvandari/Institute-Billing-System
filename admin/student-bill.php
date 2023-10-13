@@ -2,8 +2,8 @@
     include "head.php";
 ?>
     <title>Student Bill</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/student-bill.css">
+    <link rel="stylesheet" href="../assets/css/admin/common-style.css">
+    <link rel="stylesheet" href="../assets/css/admin/student-bill.css">
 <?php
     include_once "sidebar.php";
 ?>
