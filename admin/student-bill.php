@@ -63,11 +63,12 @@
                                                 $num++;
                                                 $totalpaid+=(int)$row['amount'];
                                                 $courseprice=(int)$row['price'];
+                                                $date=$row['tdate'];
                                                 echo "<tr><td>$num</td>
                                                 <td>{$row['cname']}</td>
                                                 <td>{$row['amount']}</td>
                                                 <td>{$row['tdate']}</td>
-                                                <td><a href='#'>Edit</a> | <a href='#'>Delete</a> | <a href='#'>View</a></td>";
+                                                <td><a href='#'>Edit</a> | <a href='#'>Delete</a> | <a href='view-bill.php?phone={$phone}&date={$date}'>View</a></td>";
                                             }
                                            
                                         }
@@ -104,43 +105,8 @@
                                                     </div>';
                                 }
                             }
-                            // echo '<div class="billinfo">
-                            //                 <table border="1">
-                            //                     <tr>
-                            //                         <th>S.N.</th>
-                            //                         <th>Course</th>
-                            //                         <th>Paid</th>
-                            //                         <th>Date</th>
-                            //                         <th>Action</th>
-                            //                     </tr>
-                            //                     </table>
-                            //                 </div>';
-
-
-
-                            // if($result=mysqli_query($conn,$sql);
-                            // if(mysqli_num_rows($result)>0){
-                            //     while($row=mysqli_fetch_assoc($result)){
-                            //         echo ' <div class="userinfo-container">
-                            //         <div class="userinfo-wrapper">
-                            //         <div class="userinfo">
-                            //         <p> Name: '.$row['name'].'</p>
-                            //         <p> Phone: '.$row['phone'].'</p>
-                            //         <p> Bill: '.$row['bill'].'</p>
-                            //         </div>
-                            //         </div>
-                            //         </div>';
-                            //     }
-                            // }
+                            
                         }
-                    // }
-                                                    // echo ' <div class="userinfo-container">
-                                                    // <div class="userinfo-wrapper">
-                                                    // <div class="userinfo">
-                                                    // <p> Soryy! No Record Found</p>
-                                                    // </div>
-                                                    // </div>
-                                                    // </div>';
                             ?>
                        
         </section>
