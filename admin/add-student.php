@@ -29,7 +29,6 @@
                         if($result=$con->query($read)){
                             if($result->num_rows>0){
                                 echo '<div class="message"><p class="failure">Phone Number Already Added!!</p></div>';
-                                // echo "<script>alert('Phone Number Already Added')</script>";
                             }else{
                                 $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent','$cid');";
                                 if($con->query($insert)){
@@ -39,12 +38,6 @@
                                 }
                             }
                         }
-                        // $insert = "INSERT  INTO StudentInfo values('$phone','$name','$address','$email','$gender','$parent');";
-                        // if($con->query($insert)){
-                        //     echo '<div class="message"><p class="success">Student Record Added Successfully!!</p></div>';
-                        // }else{
-                        //     echo '<div class="message"><p class="failure">Failed To Add Student Record!!</p></div>';
-                        // }
                     }
                 }
             ?>
@@ -74,7 +67,6 @@
                         var_dump($result);
                         if($result->num_rows>0){
                             while($row=$result->fetch_assoc()){
-                                // echo "{$row['cid']} and {$row['name']}";
                                 echo "<option value='{$row['cid']}'>{$row['cname']}</option>";
                             }
                         }else{
