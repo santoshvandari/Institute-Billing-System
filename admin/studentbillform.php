@@ -16,15 +16,26 @@
                 if($_SERVER['REQUEST_METHOD']=='POST' || $_SERVER['REQUEST_METHOD']=='GET'){
                    if(isset($_GET["phone"])){
                        $phone=trim($_GET["phone"]);
-                    $read="SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid AND phone ='$phone';";
+                    $read="SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid AND StudentInfo.phone ='$phone';";
                     if($result=$con->query($read)){
+                        $amount=0;
                         if($result->num_rows>0){
                             while($row=$result->fetch_assoc()){
-                                $name=$row["name"];
+                                $price=$row["price"];
+                                // $amount=$row["amount"];
+                                $course=$row["cname"];
                                 echo "<p class='name'>Name: ".$row["name"]."</p>";
                                 echo "<p class='address'>Address: ".$row["address"]."</p>";
                                 echo "<p class='phone'>Phone: ".$row["phone"]."</p>";
                                 echo "<p class='phone'>Course: ".$row["cname"]."</p>";
+                            }
+                            $read="SELECT * FROM BillInfo WHERE phone='$phone';";
+                            if($result=$con->query($read)){
+                                if($result->num_rows>0){
+                                    while($row=$result->fetch_assoc()){
+                                        $amount+=(float)$row["amount"];
+                                    }
+                                }
                             }
                         }
                     }
@@ -36,13 +47,14 @@
             </div>
             <form class="form" action="generate-bill.php" method="post">
                 <h3>Fill the Bill Information</h3>
-                <input type="phone" name="phone" hidden value="<?=$phone;?>">
-                <label for="desc">Course</label>
-                <input type="text" id="desc" name="desc0" required placeholder="Enter a Bill title"/>
+                <input type="phone" name="phone" hidden value="<?=$phone?>">
+                <label for="course">Course</label>
+                <input type="text" id="course" name="course" required value='<?=$course?>' disabled/>
                 <label for="totalfee">Total Fee</label>
-                <input type="number" id="totalfee" name="totalfee" placeholder="Enter a Amount" required/>
+                <input type="number" id="totalfee" name="totalfee" value='<?=$price?>' required disabled/>
                 <label for="dueamount">Due Amount</label>
-                <input type="number" id="dueamount" name="dueamount" placeholder="Enter a Amount" required/>
+                <input type="number" id="dueamount" name="dueamount" value='<?=($price-$amount)?>' required/>
+                <div class="errormessage"></div>
                 <label for="amount">Amount To Pay</label>
                 <input type="number" id="amount" name="amount" placeholder="Enter a Amount" required/>
                 <div class="btn-wrapper">

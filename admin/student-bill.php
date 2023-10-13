@@ -42,6 +42,7 @@
                                             <p> Course: '.$row['cname'].'</p>
                                             </div>
                                             <div class="billinfo">
+                                            <h3>Payment Statement</h3>
                                             <table border="1">
                                                 <tr>
                                                     <th>S.N.</th>
