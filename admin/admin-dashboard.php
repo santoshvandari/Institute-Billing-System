@@ -24,10 +24,7 @@
                 }
                 $result->free();
             }
-            // if($result=$con->query($userread)){
-            //     $totaluser=$result->num_rows;
-            //     $result->free();
-            // }
+      
             if($result=$con->query($adminread)){
                 $totaladmin=$result->num_rows;
                 $result->free();
@@ -48,11 +45,6 @@
             <hr>
             <p><?=$totalamount?></p>
         </div>
-        <!-- <div class="card">
-            <h2>Total Users</h2>
-            <hr>
-            <p><?=$totaluser?></p>
-        </div> -->
         <div class="card">
             <h2>Total Admin</h2>
             <hr>
