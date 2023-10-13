@@ -2,7 +2,6 @@
     include_once "head.php";
 ?>
     <link rel="stylesheet" href="../assets/css/bill.css">
-    <!-- <script defer src="../assets/js/DateTime.js"></script> -->
     <script defer src="../assets/js/BillPrint.js"></script>
     <title>Student Bill</title>
 </head>
@@ -20,7 +19,6 @@
                         $phone=trim($_GET["phone"]);
                         $tdate=trim($_GET['date']);
                         $read="SELECT name,address,StudentInfo.phone,cname,amount,DATE(tdate) as date, TIME(tdate) as time FROM StudentInfo,CourseInfo,BillInfo WHERE CourseInfo.cid=StudentInfo.cid AND BillInfo.phone=StudentInfo.phone AND StudentInfo.phone ='$phone' AND tdate='$tdate';";
-                        // echo $read;
                         if($result=$con->query($read)){
                             if($result->num_rows>0){
                                 while($row=$result->fetch_assoc()){

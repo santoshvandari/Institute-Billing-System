@@ -47,10 +47,6 @@
                         // }
                     }
                 }
-
-
-
-
             ?>
         <form class="form" method="post">
             <h3>Fill the Student Information</h3>
