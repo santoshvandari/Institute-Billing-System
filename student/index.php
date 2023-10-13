@@ -37,11 +37,17 @@
         </section>
         <?php
             $flag="Temp";
-            if($_SERVER["REQUEST_METHOD"]=="POST"){
-                if(isset($_POST["name"]) && isset($_POST['phone']) ){
+            if($_SERVER["REQUEST_METHOD"]=="POST" || $_SERVER['REQUEST_METHOD']=='GET'){
+                if((isset($_GET['name']) && isset($_GET['phone'])) || (isset($_POST["name"]) && isset($_POST['phone']))){
                     $flag=false;
-                    $name=trim($_POST["name"]);
-                    $phone=trim($_POST["phone"]);
+                    if($_SERVER["REQUEST_METHOD"]=="POST"){
+                        $name=trim($_POST["name"]);
+                        $phone=trim($_POST["phone"]);
+                    }
+                    if($_SERVER['REQUEST_METHOD']=='GET'){
+                        $name=trim($_GET['name']);
+                        $phone=trim($_GET['phone']);
+                    }
                     $read="SELECT * FROM StudentInfo,CourseInfo WHERE StudentInfo.cid=CourseInfo.cid AND name='$name' AND phone='$phone'";
                     if($result=$con->query($read)){
                         if($result->num_rows>0){
