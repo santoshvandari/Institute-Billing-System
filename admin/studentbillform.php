@@ -72,7 +72,8 @@
     let errorMessage= document.querySelector(".errormessage");
     let submitBtn= document.querySelector("button[type='submit']");
     document.getElementById("amount").addEventListener("input",(e)=>{
-        let amount = e.targetInput;
+        let amount = Number(e.target.value);
+        console.log(amount)
         if(amount>dueamount){
             errorMessage.innerHTML="<p>* Amount cannot be greater than Due Amount</p>";
             submitBtn.disabled=true;
