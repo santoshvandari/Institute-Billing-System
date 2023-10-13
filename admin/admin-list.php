@@ -2,9 +2,9 @@
     include_once "head.php";
 ?>
     <title>Admin List</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets//css/student-list.css">
-    <link rel="stylesheet" href="../assets/css/message.css">
+    <link rel="stylesheet" href="../assets/css/admin/common-style.css">
+    <link rel="stylesheet" href="../assets//css/admin/student-list.css">
+    <link rel="stylesheet" href="../assets/css/admin/message.css">
     <link rel="stylesheet" href="../assets/css/admin/ButtonDesign.css">
     <script defer src="../assets/js/HideMessage.js"></script>
 
