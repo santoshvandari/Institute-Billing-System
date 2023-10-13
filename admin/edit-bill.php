@@ -36,18 +36,15 @@
                                         }
                                     }
                                 }
-
                             }
                         }
                     }
                 }
-      
                 if($_SERVER['REQUEST_METHOD']=='POST' ){
                     if(isset($_GET["phone"]) && isset($_GET['date'])){
                         $phone=trim($_GET["phone"]);
                         $tdate=trim($_GET['date']);
                         $amount=trim($_POST['amount']);
-                        // $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
                         $update="UPDATE BillInfo SET amount=$amount WHERE phone='$phone' AND tdate='$tdate';";
                         if($con->query($update)){
                             echo "<script>
@@ -61,9 +58,6 @@
                             </script>";
                         }
                     }}
-
-
-
                 ?>
                 <p class='name'>Name: <?=$name?></p>
                 <p class='address'>Address: <?=$address?></p>
