@@ -1,8 +1,9 @@
 <?php
            include_once "../assets/database/connection.php";
 ?>
-    <link rel="stylesheet" href="../assets/css/bill.css">
     <title>Student Bill</title>
+    <link rel="stylesheet" href="../assets/css/bill.css">
+    <script defer src="BillPrint.js"></script>
 </head>
 <body>
     <div class="bill-wrapper">
@@ -78,12 +79,6 @@
     </div>
 </body>
 <script>
-let printbtn=document.getElementById("print");
-let btndiv = document.querySelector(".billoptions");
-printbtn.addEventListener('click',function(e){
-    btndiv.style.display="none";
-    window.print()
-    btndiv.style.display="block";
-})
+
 </script>
 </html>
