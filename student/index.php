@@ -131,14 +131,5 @@
             ?>
         </section>
     </main>
-    <!-- <section class="main-container">
-                <div class="search-option">
-                    <form method="POST">
-                        <label for="phone">Phone Number:</label>
-                        <input type="text" name="phone" id="phone" pattern="[0-9]{10}" required />
-                        <button type="submit" name='search'>Search</button>
-                    </form>
-                </div> -->
 </body>
-
 </html>
