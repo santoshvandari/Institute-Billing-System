@@ -13,7 +13,6 @@
                 <p>ABC Institute</p>
             </div>
             <hr>
-            
             <?php  
                 if($_SERVER['REQUEST_METHOD']=='GET'){
                     if(isset($_GET["date"]) && isset($_GET["phone"])){
@@ -38,7 +37,6 @@
                         header("Location:index.php");
                     }
                 }
-
             ?>
             
               <div class="details-container">
