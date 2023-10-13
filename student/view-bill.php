@@ -3,7 +3,7 @@
 ?>
     <title>Student Bill</title>
     <link rel="stylesheet" href="../assets/css/bill.css">
-    <script defer src="BillPrint.js"></script>
+    <script defer src="../assets/js/BillPrint.js"></script>
 </head>
 <body>
     <div class="bill-wrapper">
