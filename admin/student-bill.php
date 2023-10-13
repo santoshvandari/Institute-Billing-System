@@ -68,7 +68,7 @@
                                                 <td>{$row['cname']}</td>
                                                 <td>{$row['amount']}</td>
                                                 <td>{$row['tdate']}</td>
-                                                <td><a href='#'>Edit</a> | <a href='delete-bill.php?phone={$phone}&date={$date}'>Delete</a> | <a href='view-bill.php?phone={$phone}&date={$date}'>View</a></td>";
+                                                <td><a href='edit-bill.php?phone={$phone}&date={$date}'>Edit</a> | <a href='delete-bill.php?phone={$phone}&date={$date}'>Delete</a> | <a href='view-bill.php?phone={$phone}&date={$date}'>View</a></td>";
                                             }
                                            
                                         }

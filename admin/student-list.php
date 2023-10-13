@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/admin/ButtonDesign.css">
     <link rel="stylesheet" href="../assets/css/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
-    <script defer src="../assets/js/admin/NameSearch.js"></script>
+    <!-- <script defer src="../assets/js/admin/NameSearch.js"></script> -->
 <?php
     include_once "sidebar.php";
 ?>
