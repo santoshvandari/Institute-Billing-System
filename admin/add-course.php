@@ -2,9 +2,9 @@
     include_once "head.php";
 ?>
     <title>Add Course</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/add-student.css">
-    <link rel="stylesheet" href="../assets/css/message.css"/>
+    <link rel="stylesheet" href="../assets/css/admin/common-style.css">
+    <link rel="stylesheet" href="../assets/css/admin/add-student.css">
+    <link rel="stylesheet" href="../assets/css/admin/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
 <?php
     include_once "sidebar.php";

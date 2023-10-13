@@ -2,8 +2,8 @@
     include_once "head.php";
 ?>
    <title>Dashboard</title>
-    <link rel="stylesheet" href="../assets/css/common-style.css">
-    <link rel="stylesheet" href="../assets/css/dashboard.css"/>
+    <link rel="stylesheet" href="../assets/css/admin/common-style.css">
+    <link rel="stylesheet" href="../assets/css/admin/dashboard.css"/>
 <?php
     include_once "sidebar.php";
 ?>
