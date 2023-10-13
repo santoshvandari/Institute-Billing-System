@@ -43,13 +43,13 @@
                 }
       
                 if($_SERVER['REQUEST_METHOD']=='POST' ){
-                    if(isset($_GET["phone"]) && isset($_GET['date']){
+                    if(isset($_GET["phone"]) && isset($_GET['date'])){
                         $phone=trim($_GET["phone"]);
-                        $tdate=triim($_GET['date']);
+                        $tdate=trim($_GET['date']);
                         $amount=trim($_POST['amount']);
                         // $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
-                        $udpate="UPDATE BillInfo SET amount=$amount WHERE phone='$phone' AND tdate='$tdate';";
-                        if($con->query($insert)){
+                        $update="UPDATE BillInfo SET amount=$amount WHERE phone='$phone' AND tdate='$tdate';";
+                        if($con->query($update)){
                             echo "<script>
                             alert('Record Updated Successfully');
                             location.href='student-bill.php?phone={$phone}&date={$date}';
@@ -80,7 +80,7 @@
                 <input type="number" id="dueamount" name="dueamount" value='<?=($courseprice-$totalpaidamount)?>' required disabled/>
                 <div class="errormessage"></div>
                 <label for="amount">Amount To Pay</label>
-                <input type="number" id="amount" name="amount" value='<?=$amount?>' required/>
+                <input type="number" id="amount" name="amount" value='<?=(int)$amount?>' required/>
                 <div class="btn-wrapper">
                     <button type="reset">Clear</button>
                     <button type="submit">Update</button>
@@ -91,17 +91,20 @@
    </main>
 </body>
 <script>
-    let totalfee = document.getElementById("totalfee").value;
     let dueamountEl = document.getElementById("dueamount");
     let dueamountold=Number(dueamountEl.value);
     let errorMessage= document.querySelector(".errormessage");
     let submitBtn= document.querySelector("button[type='submit']");
     let paidamountEl=document.getElementById("amount");
-    let paidamount=paidamountEl.value;
+    let paidamount=Number(paidamountEl.value);
+    let flag=true;
     paidamountEl.addEventListener("input",(e)=>{
         let amount = Number(e.target.value);
-        dueamount=dueamountold+(paidamount-amount);
-        dueamountEl.value=dueamount;
+        dueamount=Number(dueamountEl.value);
+        if(flag){
+            dueamountEl.value=dueamountold+paidamount;
+            flag=false;
+        }
         if(amount>dueamount){
             errorMessage.innerHTML="<p>* Amount cannot be greater than Due Amount</p>";
             submitBtn.disabled=true;
