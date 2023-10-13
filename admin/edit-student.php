@@ -48,7 +48,6 @@
                             $email = "NULL";
                         }
                         $update = "UPDATE  StudentInfo SET name = '$name', address = '$address', email = '$email', gender = '$gender', parentname = '$parentname' WHERE phone = '$phone';";
-                        // echo $update;
                         if($con->query($update)){
                             echo '<div class="message"><p class="success">Student Record Updated Successfully!!</p></div>';
                             header("refresh:5; url=student-list.php");
