@@ -4,7 +4,6 @@
     <title>Student Bill Form</title>
     <link rel="stylesheet" href="../assets/css/common-style.css">
     <link rel="stylesheet" href="../assets/css/studentbillform.css">
-    <!-- <script defer src="../assets/js/user/addFieldOnClick.js"></script> -->
 <?php
     include_once "sidebar.php";
 ?>
@@ -22,7 +21,6 @@
                         if($result->num_rows>0){
                             while($row=$result->fetch_assoc()){
                                 $price=$row["price"];
-                                // $amount=$row["amount"];
                                 $course=$row["cname"];
                                 echo "<p class='name'>Name: ".$row["name"]."</p>";
                                 echo "<p class='address'>Address: ".$row["address"]."</p>";

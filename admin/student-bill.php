@@ -34,6 +34,7 @@
                             if($result=$con->query($read)){
                                 if($result->num_rows>0){
                                     while($row=$result->fetch_assoc()){
+                                        $courseprice=(int)$row['price'];
                                         echo ' <div class="userinfo-container">
                                         <div class="userinfo-wrapper">
                                             <div class="userinfo">
@@ -54,19 +55,41 @@
                                         
                                     }
                                     $readbill="SELECT * FROM BillInfo,CourseInfo WHERE BillInfo.cid=CourseInfo.cid AND  phone='$phone'";
+                                    $totalpaid=0;
                                     if($result=$con->query($readbill)){
                                         if($result->num_rows>0){
                                             $num=0;
                                             while($row=$result->fetch_assoc()){
                                                 $num++;
+                                                $totalpaid+=(int)$row['amount'];
+                                                $courseprice=(int)$row['price'];
                                                 echo "<tr><td>$num</td>
                                                 <td>{$row['cname']}</td>
                                                 <td>{$row['amount']}</td>
                                                 <td>{$row['tdate']}</td>
                                                 <td><a href='#'>Edit</a> | <a href='#'>Delete</a> | <a href='#'>View</a></td>";
                                             }
+                                           
                                         }
                                     }
+                                        $dueamount=$courseprice-$totalpaid;
+                                        echo "
+                                        <tr>
+                                        <td colspan='4'><strong>Total Fee</strong></td>
+                                        <td><strong>{$courseprice}</strong></td>
+
+                                        </tr>
+                                        <tr>
+                                        <td colspan='4'><strong>Due Amount</strong></td>
+                                        <td><strong>{$dueamount}</strong></td>
+                                        
+                                        </tr>
+                                        <tr>
+                                        <td colspan='4'><strong>Total Paid</strong></td>
+                                        <td><strong>{$totalpaid}</strong></td>
+                                        
+                                        </tr>
+                                        ";
                                     echo "</table></div></div>";
                                     echo '<div class="btn">
                                     <button><a href="studentbillform.php?phone='.$phone.'">Add Bill</a></button>
