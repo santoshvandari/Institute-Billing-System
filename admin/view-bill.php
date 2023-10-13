@@ -3,7 +3,7 @@
 ?>
     <link rel="stylesheet" href="../assets/css/bill.css">
     <!-- <script defer src="../assets/js/DateTime.js"></script> -->
-    <!-- <script defer src="../assets/js/BillPrintFunction.js"></script> -->
+    <script defer src="../assets/js/BillPrint.js"></script>
     <title>Student Bill</title>
 </head>
 <body>
@@ -77,13 +77,4 @@
         </div>
     </div>
 </body>
-<script>
-let printbtn=document.getElementById("print");
-let btndiv = document.querySelector(".billoptions");
-printbtn.addEventListener('click',function(e){
-    btndiv.style.display="none";
-    window.print()
-    btndiv.style.display="block";
-})
-</script>
 </html>
