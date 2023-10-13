@@ -37,12 +37,14 @@
             <form class="form" action="generate-bill.php" method="post">
                 <h3>Fill the Bill Information</h3>
                 <input type="phone" name="phone" hidden value="<?=$phone;?>">
-
                 <label for="desc">Course</label>
                 <input type="text" id="desc" name="desc0" required placeholder="Enter a Bill title"/>
-                <label for="amt">Amount</label>
-                <input type="number" id="amt" name="amount" placeholder="Enter a Amount" required/>
-                <input type="number" name="counter" id="counter" value="0" hidden>
+                <label for="totalfee">Total Fee</label>
+                <input type="number" id="totalfee" name="totalfee" placeholder="Enter a Amount" required/>
+                <label for="dueamount">Due Amount</label>
+                <input type="number" id="dueamount" name="dueamount" placeholder="Enter a Amount" required/>
+                <label for="amount">Amount To Pay</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter a Amount" required/>
                 <div class="btn-wrapper">
                     <button type="reset">Clear</button>
                     <button type="submit">Generate</button>
