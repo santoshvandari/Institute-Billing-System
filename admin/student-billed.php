@@ -17,19 +17,15 @@
                     }
                 }
             }
-            // $name=trim($_POST["name"]);
-            // $address=trim($_POST["address"]);
-            // $phone=trim($_POST["phone"]);
-            // $desc=trim($_POST["description"]);
             $amount = trim($_POST["amount"]);
             // $insert= 'INSERT INTO BillInfo VALUES("'.$phone.'","'.$desc.'",'.$amount.');';
             $insert="INSERT INTO BillInfo VALUES('$phone','$cid','$amount',NOW());";
             $flag=true;
-            // if($con->query($insert)){
-                // $flag=true;
-            // }else{
-                // $flag=false;
-            // }
+            if($con->query($insert)){
+                $flag=true;
+            }else{
+                $flag=false;
+            }
         }}
 ?>
 
