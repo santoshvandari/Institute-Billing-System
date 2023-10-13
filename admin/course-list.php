@@ -40,19 +40,16 @@
                         <?php
                             
                             $read= "SELECT * FROM CourseInfo ORDER BY cid;";
-                            // $result=$con->query($read)
                             if ($result=$con->query($read)) {
                                 $num=0;
                                 while ($row=$result->fetch_assoc()){
                                     $num++;
-                                    // var_dump($row);
                                     $disp="<tr><td>$num</td>
                                     <td>".$row['cid']."</td>
                                     <td>".$row['cname']."</td>
                                     <td>".$row['price']."</td>
                                     <td><a href='edit-course.php?cid=".$row['cid']."'> Edit </a> | <a href='delete-course.php?cid=".$row['cid']."' onclick='return Check()'>Delete</a></td>";
                                     echo $disp;
-                                    // <td><a href='edit-course.php?username=".$row['username']."'>Edit</a> | <a href='delete-admin.php?username=".$row['username']."'>Delete</a></td>"; 
                                 }
                             }else{
                                 echo "Error";
