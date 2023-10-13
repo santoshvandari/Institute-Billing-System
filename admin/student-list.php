@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/admin/ButtonDesign.css">
     <link rel="stylesheet" href="../assets/css/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
-    <!-- <script defer src="../assets/js/admin/NameSearch.js"></script> -->
+    <script defer src="../assets/js/admin/NameSearch.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -26,11 +26,11 @@
                     }
 
                 ?>
-                    <!-- <div class="search-option">
+                    <div class="search-option">
                         <div class="form">
                             <input type="text" name="name" id="namesearch" placeholder="Search by Name" />
                         </div>
-                    </div> -->
+                    </div>
                 <table border="1">
                     <thead>
                         <tr>
