@@ -36,7 +36,10 @@ CREATE  USER 'user'@'localhost' IDENTIFIED BY "user";
 GRANT ALL PRIVILEGES ON BillingSystem.* TO 'user'@'localhost';
 ```
 - Execute all the Command of `assets/database/BillingSystem.sql` from `localhost/phpmyadmin`
-- Now Open the project in your local system. 
+- Now, Open the project in your local system.
+```url
+http://localhost/Institute-Billing-System
+ ```
 
 ### Login Details
 - Admin User/Super User
