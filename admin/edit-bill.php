@@ -1,7 +1,7 @@
 <?php
     include_once "head.php";
 ?>
-    <title>Student Bill Form</title>
+    <title>Update Student Bill</title>
     <link rel="stylesheet" href="../assets/css/admin/common-style.css">
     <link rel="stylesheet" href="../assets/css/admin/studentbillform.css">
     <script defer src="../assets/js/admin/EditBillFormValidation.js"></script>
