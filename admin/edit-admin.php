@@ -1,7 +1,7 @@
 <?php
     include_once "head.php";
 ?>
-    <title>Edit Admin</title>
+    <title>Update Admin</title>
     <link rel="stylesheet" href="../assets/css/admin/common-style.css">
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
