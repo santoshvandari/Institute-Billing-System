@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../assets/css/admin/message.css">
         <link rel="stylesheet" href="../assets/css/admin/ButtonDesign.css">
         <script defer src="../assets/js/HideMessage.js"></script>
-    <title>Course</title>
+    <title>Course List</title>
 </head>
 <?php
     include_once "sidebar.php";
