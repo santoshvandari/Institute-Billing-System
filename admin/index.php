@@ -1,3 +1,3 @@
 <?php
-    inclu
+header("Location: admin-dashboard.php")
 ?>
