@@ -7,6 +7,7 @@ The Institute Billing System is a software solution designed to streamline the b
 - Automated fee calculations based on predefined fee structures.
 - Invoice generation and delivery to students and parents.
 - Comprehensive reporting and analytics for financial management.
+- Tracking of Fee Payment.
 - User-friendly interface for easy navigation and use.
 
 ## Getting Started
