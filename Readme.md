@@ -19,7 +19,8 @@ Before you begin, ensure you have met the following requirements:
 - Must Have MacOS/Windows OS/Linux OS
 - Must Installed PHP
 - Must Installed mySQL Database and Apache Server
-Note: If you have Installed XAMPP in your local Machine. It will Automatically Contains PHP, mySQL Database and Apache Server.
+
+  Note: If you have Installed XAMPP in your local Machine. It will Automatically Contains PHP, mySQL Database and Apache Server.
 
 
 ### Usage
