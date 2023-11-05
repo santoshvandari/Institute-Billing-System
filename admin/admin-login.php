@@ -18,9 +18,9 @@
         <?php
                 include_once "../assets/database/connection.php";
                 session_start();
-                        if(!empty($_SESSION['adminname'])){
-                            header("Location: admin-dashboard.php");
-                        }
+                if(!empty($_SESSION['adminname'])){
+                    header("Location: admin-dashboard.php");
+                }
                           
 
         ?>
