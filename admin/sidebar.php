@@ -5,7 +5,7 @@
         <div class="logo">Billing System</div>
         <div class="user-info">
             <div class="user">
-                <div class="username"><strong><?=$_SESSION['adminname']?></strong></div>
+                <div class="username"><strong><?=$_SESSION['adminfullname']?></strong></div>
             </div>
         </div>
     </nav>
