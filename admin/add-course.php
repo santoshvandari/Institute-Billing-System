@@ -26,7 +26,7 @@
                                 $insert = "INSERT  INTO CourseInfo values('$cid','$cname',$price);";
                                 if($con->query($insert)){
                                     echo '<div class="message"><p class="success">Course Added Successfully!!</p></div>';
-                                    header("Refresh: 5; URL=course-list.php");
+                                    // header("Refresh: 5; URL=course-list.php");
                                 }else{
                                     echo '<div class="message"><p class="failure">Failed To Add Course!!</p></div>';
                                 }
