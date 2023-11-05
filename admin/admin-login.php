@@ -46,6 +46,9 @@
                                 if($result->num_rows>0){
                                     $_SESSION["adminname"] = $username;
                                     $_SESSION["adminfullname"] = $result->fetch_assoc()['name'];
+                                    if(empty($_SESSION['adminfullname']))
+                                        $_SESSION['adminfullname']='Admin';
+                                    header("Location: admin-dashboard.php");
                                 }else{
                                     echo "<p>* Invalid username or password.</p>";
                                 }
