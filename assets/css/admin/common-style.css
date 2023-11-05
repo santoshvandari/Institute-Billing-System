@@ -71,13 +71,13 @@ main {
 }
 .side-option-container h4{
     text-align: left;
+    cursor: pointer;
+    padding: 10px 0px 20px 5px;
+    font-size: 21px;
+    width: 100%;
 }
 .side-option-container h4 a {
-  font-size: 21px;
   text-decoration: underline;
-  padding: 10px 0px 20px 5px;
-  cursor: pointer;
-  width: 100%;
   color: inherit;
 }
 
