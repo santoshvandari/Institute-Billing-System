@@ -45,7 +45,7 @@
                             if($result=$con->query($read)){
                                 if($result->num_rows>0){
                                     $_SESSION["adminname"] = $username;
-                                    header("Location: admin-dashboard.php");
+                                    $_SESSION["adminfullname"] = $result->fetch_assoc()['name'];
                                 }else{
                                     echo "<p>* Invalid username or password.</p>";
                                 }
