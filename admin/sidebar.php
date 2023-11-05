@@ -13,7 +13,7 @@
    <main>
     <section class="side-option">
        <div class="side-option-container">
-        <h4> Admin<a href="admin-dashboard.php">Admin</a></h4>
+        <h4><a href="admin-dashboard.php">Admin</a></h4>
         <ul class="side-option-list">
             <li><a href="admin-dashboard.php">Home</a></li>
             <li><a href="course-list.php">Course</a></li>
