@@ -84,7 +84,10 @@
 .billinfo table tr td a:hover{
     background:#41464b;
 }
-
+.billinfo table tr td a:active{
+    background:transparent;
+    color:#000;
+}
 /* .billinfo table td:first-child{
     width: 50px;
 }
