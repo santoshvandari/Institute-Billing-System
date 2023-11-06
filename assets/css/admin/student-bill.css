@@ -1,92 +1,92 @@
-.main-container{
-    width: 100%;
+.main-container {
+  width: 100%;
 }
-.search-option{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.search-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.search-option form label{
-    font-size: 18px;
+.search-option form label {
+  font-size: 18px;
 }
-.search-option form input{
-    font-size: 16px;
-    padding: 2px 5px;
-    width: 150px;
-    border-radius: 5px;
-    outline: none;
+.search-option form input {
+  font-size: 16px;
+  padding: 2px 5px;
+  width: 150px;
+  border-radius: 5px;
+  outline: none;
 }
-.search-option form button{
-    margin: 0 5px;
-    background: #0d6efd;
-    color:#fff;
-    font-size: 18px;
-    font-weight: 400;
-    padding: 5px 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
+.search-option form button {
+  margin: 0 5px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
 }
-.search-option form button:Hover{
-        background:#41464b;
-    }
-.search-option form button:active{
-        background:transparent;
-        color:#000;
+.search-option form button:hover {
+  background: #41464b;
 }
-.userinfo-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 50;
-    width: 100%;
-    padding: 50px;
-    text-align: left;
+.search-option form button:active {
+  background: transparent;
+  color: #000;
 }
-.userinfo-wrapper{
-    /* width: 80%; */
-    text-align: center;
+.userinfo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50;
+  width: 100%;
+  padding: 50px;
+  text-align: left;
 }
-.userinfo{
-    margin: 10px 0;
-    
+.userinfo-wrapper {
+  /* width: 80%; */
+  text-align: center;
 }
-.userinfo p{
-    font-size: 20px;
-    text-align: left;
+.userinfo {
+  margin: 10px 0;
 }
-.billinfo{
-    width: 100%;
-    padding: 20px 0;
+.userinfo p {
+  font-size: 20px;
+  text-align: left;
 }
-.billinfo h3{
-    margin: 10px 0;
-    text-decoration: underline;
+.billinfo {
+  width: 100%;
+  padding: 20px 0;
 }
-.billinfo table{
-    border-collapse: collapse;
-    /* width: 100%; */
+.billinfo h3 {
+  margin: 10px 0;
+  text-decoration: underline;
 }
-.billinfo table tr td,th{
-    padding: 2px 5px;
-    font-size: 20px;
+.billinfo table {
+  border-collapse: collapse;
+  /* width: 100%; */
 }
-.billinfo table tr td a{
-    font-size: 16px;
-    text-decoration: none;
-    background: #0d6efd;
-    color:#fff;
-    padding: 2px 8px;
-    border-radius: 10px;
+.billinfo table tr td,
+th {
+  padding: 2px 5px;
+  font-size: 20px;
 }
-.billinfo table tr td a:hover{
-    background:#41464b;
+.billinfo table tr td a {
+  font-size: 16px;
+  text-decoration: none;
+  background: #0d6efd;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
 }
-.billinfo table tr td a:active{
-    background:transparent;
-    color:#000;
+.billinfo table tr td a:hover {
+  background: #41464b;
+}
+.billinfo table tr td a:active {
+  background: transparent;
+  color: #000;
 }
 /* .billinfo table td:first-child{
     width: 50px;
@@ -94,26 +94,26 @@
 .billinfo table td:last-child{
     width: 150px;
 } */
-.btn button{
-    margin: 0 5px;
-    background: #0d6efd;
-    font-size: 20px;
-    font-weight: 400;
-    padding: 8px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
+.btn button {
+  margin: 0 5px;
+  background: #0d6efd;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
 }
-.btn button a{
-    text-decoration: none;
-    color:#fff;
+.btn button a {
+  text-decoration: none;
+  color: #fff;
 }
-.btn button:Hover{
-    background:#41464b;
+.btn button:hover {
+  background: #41464b;
 }
-.btn button:active{
-    background:transparent;
+.btn button:active {
+  background: transparent;
 }
-.btn button:active a{
-    color:#000;
+.btn button:active a {
+  color: #000;
 }
