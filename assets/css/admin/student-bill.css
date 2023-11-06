@@ -81,8 +81,8 @@
     padding: 2px 8px;
     border-radius: 10px;
 }
-.billinfo table tr td a{
-
+.billinfo table tr td a:hover{
+    background:#41464b;
 }
 
 /* .billinfo table td:first-child{
