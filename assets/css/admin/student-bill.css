@@ -81,6 +81,10 @@
     padding: 2px 8px;
     border-radius: 10px;
 }
+.billinfo table tr td a{
+
+}
+
 /* .billinfo table td:first-child{
     width: 50px;
 }
