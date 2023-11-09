@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
+    <script defer src='../assets/js/admin/CourseFormValidation.js'></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -35,9 +36,10 @@
                     }
                 }
             ?>
-        <form class="form" method="post">
+        <form class="form" method="post" id='courseform'>
             <h3>Fill Course Information</h3>
             <label for="cid">Course ID</label>
+            <!-- <p class="message">* cannot be empty</p> -->
             <input type="text" id="cid" name="cid" placeholder="Enter a Course ID" required/>
             <label for="cname">Course Name</label>
             <input type="text" id="cname" name="cname" placeholder="Enter a Course Name" required/>
