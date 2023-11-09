@@ -2,7 +2,7 @@ const displayerrormsg = (el, msg) => {
     document.querySelector(`.${el}-error`).textContent = msg;
 }
 let validateForm=()=>{
-    let ValidationStatus = false;
+    let ValidationStatus = true;
     let courseId = document.getElementById('cid').value.trim();
     let courseName = document.getElementById('cname').value.trim();
     let price = document.getElementById('price').value.trim();
@@ -13,7 +13,6 @@ let validateForm=()=>{
         ValidationStatus = false;
     } else {
         displayerrormsg('courseid', "");
-        ValidationStatus = true;
     }
     //Validate Course Name
     if (!/^[a-zA-Z\s]+$/.test(courseName)) {
@@ -21,7 +20,6 @@ let validateForm=()=>{
         ValidationStatus = false;
     } else {
         displayerrormsg('coursename', "");
-        ValidationStatus = true;
     }
     // Validate Price
     if (price <= 0) {
@@ -29,12 +27,7 @@ let validateForm=()=>{
         ValidationStatus = false;
     } else {
         displayerrormsg('courseprice', "");
-        ValidationStatus = true;
     }
     // Validation Successful and Failure Check
-    if (ValidationStatus) {
-        return true;
-    } else {
-        return false;
-    }
+    return ValidationStatus;
 }

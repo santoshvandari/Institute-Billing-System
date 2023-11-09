@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
+    <script defer src='../assets/js/admin/CourseFormValidation.js'></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -15,7 +16,7 @@
             <?php
                  if ($_SERVER['REQUEST_METHOD']=='POST'){
                     if(isset($_POST['submit'])){
-                        $cid = trim($_GET['cid']);
+                        $cid = trim($_POST['cid']);
                         $cname = trim($_POST['cname']);
                         $price= trim($_POST['price']);
                         $update="UPDATE CourseInfo SET cname='$cname',price=$price WHERE cid='$cid';";
@@ -45,7 +46,8 @@
         <form class="form" method="post" onsubmit='return validateForm()'>
             <h3>Update Course Information</h3>
             <label for="cid">Course ID</label>
-            <input type="text" id="cid" name="cid" value='<?=$cid?>' required disabled/>
+            <p class="errormsg courseid-error"></p>
+            <input type="text" id="cid" name="cid" value='<?=$cid?>' readonly/>
             <label for="cname">Course Name</label>
             <p class="errormsg coursename-error"></p>
             <input type="text" id="cname" name="cname" value='<?=$cname?>'/>
