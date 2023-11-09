@@ -15,7 +15,7 @@
         <div class="form-wrapper">
             <?php
                  if ($_SERVER['REQUEST_METHOD']=='POST'){
-                    if(isset($_POST['submit'])){
+                    if(isset($_POST['submitform'])){
                         $cid = trim($_POST['cid']);
                         $cname = trim($_POST['cname']);
                         $price= trim($_POST['price']);
@@ -36,7 +36,7 @@
                     }
                 }
             ?>
-        <form class="form" method="post" id='courseform'>
+        <form class="form" method="post" onsubmit='return validateForm()'>
             <h3>Fill Course Information</h3>
             <label for="cid">Course ID</label>
             <p class="errormsg courseid-error"></p>
@@ -49,7 +49,7 @@
             <input type="number" id="price" name="price" placeholder="Enter a Price"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
-                <button type="submit" name="submit">Submit</button>
+                <button type="submit" name="submitform" id='formSubmit'>Submit</button>
             </div>
         </form>
         </div>
