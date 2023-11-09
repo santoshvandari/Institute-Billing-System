@@ -42,14 +42,16 @@
                     }
                 }
             ?>
-        <form class="form" method="post">
+        <form class="form" method="post" onsubmit='return validateForm()'>
             <h3>Update Course Information</h3>
             <label for="cid">Course ID</label>
             <input type="text" id="cid" name="cid" value='<?=$cid?>' required disabled/>
             <label for="cname">Course Name</label>
-            <input type="text" id="cname" name="cname" value='<?=$cname?>' required/>
+            <p class="errormsg coursename-error"></p>
+            <input type="text" id="cname" name="cname" value='<?=$cname?>'/>
             <label for="price">Price</label>
-            <input type="number" id="price" name="price" value='<?=$price?>' required/>
+            <p class="errormsg courseprice-error"></p>
+            <input type="number" id="price" name="price" value='<?=$price?>'/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Update</button>
