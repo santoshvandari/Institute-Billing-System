@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
+    <script defer src='../assets/js/admin/CourseFormValidation.js'></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -14,7 +15,7 @@
         <div class="form-wrapper">
             <?php
                  if ($_SERVER['REQUEST_METHOD']=='POST'){
-                    if(isset($_POST['submit'])){
+                    if(isset($_POST['submitform'])){
                         $cid = trim($_POST['cid']);
                         $cname = trim($_POST['cname']);
                         $price= trim($_POST['price']);
@@ -35,17 +36,20 @@
                     }
                 }
             ?>
-        <form class="form" method="post">
+        <form class="form" method="post" onsubmit='return validateForm()'>
             <h3>Fill Course Information</h3>
             <label for="cid">Course ID</label>
-            <input type="text" id="cid" name="cid" placeholder="Enter a Course ID" required/>
+            <p class="errormsg courseid-error"></p>
+            <input type="text" id="cid" name="cid" placeholder="Enter a Course ID"/>
             <label for="cname">Course Name</label>
-            <input type="text" id="cname" name="cname" placeholder="Enter a Course Name" required/>
+            <p class="errormsg coursename-error"></p>
+            <input type="text" id="cname" name="cname" placeholder="Enter a Course Name"/>
             <label for="price">Price</label>
-            <input type="number" id="price" name="price" placeholder="Enter a Price" required/>
+            <p class="errormsg courseprice-error"></p>
+            <input type="number" id="price" name="price" placeholder="Enter a Price"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
-                <button type="submit" name="submit">Submit</button>
+                <button type="submit" name="submitform" id='formSubmit'>Submit</button>
             </div>
         </form>
         </div>
