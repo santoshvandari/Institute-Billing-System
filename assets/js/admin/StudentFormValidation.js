@@ -1,0 +1,1 @@
+let nameEl=document.getElementById("name");
