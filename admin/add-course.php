@@ -39,12 +39,14 @@
         <form class="form" method="post" id='courseform'>
             <h3>Fill Course Information</h3>
             <label for="cid">Course ID</label>
-            <!-- <p class="message">* cannot be empty</p> -->
-            <input type="text" id="cid" name="cid" placeholder="Enter a Course ID" required/>
+            <p class="errormsg courseid-error"></p>
+            <input type="text" id="cid" name="cid" placeholder="Enter a Course ID"/>
             <label for="cname">Course Name</label>
-            <input type="text" id="cname" name="cname" placeholder="Enter a Course Name" required/>
+            <p class="errormsg coursename-error"></p>
+            <input type="text" id="cname" name="cname" placeholder="Enter a Course Name"/>
             <label for="price">Price</label>
-            <input type="number" id="price" name="price" placeholder="Enter a Price" required/>
+            <p class="errormsg courseprice-error"></p>
+            <input type="number" id="price" name="price" placeholder="Enter a Price"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
                 <button type="submit" name="submit">Submit</button>

@@ -65,3 +65,7 @@
     background:transparent;
     color:#000;
 }
+.errormsg{
+    color: #ff0000;
+    font-size: 16;
+}
