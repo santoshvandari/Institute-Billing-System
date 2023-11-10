@@ -39,6 +39,7 @@
         <form class="form" method="post">
             <h3>Fill the Admin Information</h3>
             <label for="name">Full Name</label>
+            <p class="errormsg name-error">* Name Cannot Be Empty</p>
             <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Enter a Email" required/>
