@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="../assets/css/admin/common-style.css">
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
-    <script src="../assets/js/HideMessage.js"></script>
+    <script defer ></script>
+    <script defer src="../assets/js/HideMessage.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
