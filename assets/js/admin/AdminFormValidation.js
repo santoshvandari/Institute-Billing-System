@@ -45,8 +45,11 @@ const validateForm=()=>{
     }
 
     // Validate Password
-    if (password.length < 5) {
+    if (password.length < 8) {
         displayErrorMsg('password', "* Password must be at least 5 characters long");
+        validationStatus = false;
+    }else if(!isValidPassword(password)){
+        displayErrorMsg('password', "* Password must contain at least one uppercase letter, one lowercase letter, one number and one special character");
         validationStatus = false;
     } else {
         displayErrorMsg('password', "");
@@ -67,6 +70,6 @@ function isValidPhoneNumber(phoneNumber) {
 }
 
 const isValidPassword = (password) => {
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
     return passwordRegex.test(password);
 }
