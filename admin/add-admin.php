@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="../assets/css/admin/common-style.css">
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
-    <script src="../assets/js/HideMessage.js"></script>
+    <script defer src="../assets/js/admin/AdminFormValidation.js"></script>
+    <script defer src="../assets/js/HideMessage.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -39,14 +40,19 @@
         <form class="form" method="post">
             <h3>Fill the Admin Information</h3>
             <label for="name">Full Name</label>
+            <p class="errormsg name-error">* Name Cannot Be Empty</p>
             <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
             <label for="email">Email</label>
+            <p class="errormsg email-error">* Name Cannot Be Empty</p>
             <input type="email" name="email" id="email" placeholder="Enter a Email" required/>
             <label for="phone">Mobile Number</label>
+            <p class="errormsg phone-error">* Name Cannot Be Empty</p>
             <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
             <label for="username">Username</label>
+            <p class="errormsg username-error">* Name Cannot Be Empty</p>
             <input type="text" name="username" id="username" placeholder="Enter a Username" required/> 
             <label for="adminpassword">Password</label>
+            <p class="errormsg password-error">* Name Cannot Be Empty</p>
             <input type="text" name="password" id="adminpassword" placeholder="Enter a Password"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
