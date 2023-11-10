@@ -37,7 +37,7 @@
                     }
                 }
             ?>
-        <form class="form" method="post">
+        <form class="form" method="post" onsubmit='return validateForm()'>
             <h3>Fill the Admin Information</h3>
             <label for="name">Full Name</label>
             <p class="errormsg name-error"></p>
