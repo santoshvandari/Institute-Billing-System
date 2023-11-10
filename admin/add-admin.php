@@ -42,12 +42,16 @@
             <p class="errormsg name-error">* Name Cannot Be Empty</p>
             <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
             <label for="email">Email</label>
+            <p class="errormsg name-error">* Name Cannot Be Empty</p>
             <input type="email" name="email" id="email" placeholder="Enter a Email" required/>
             <label for="phone">Mobile Number</label>
+            <p class="errormsg name-error">* Name Cannot Be Empty</p>
             <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
             <label for="username">Username</label>
+            <p class="errormsg name-error">* Name Cannot Be Empty</p>
             <input type="text" name="username" id="username" placeholder="Enter a Username" required/> 
             <label for="adminpassword">Password</label>
+            <p class="errormsg name-error">* Name Cannot Be Empty</p>
             <input type="text" name="password" id="adminpassword" placeholder="Enter a Password"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
