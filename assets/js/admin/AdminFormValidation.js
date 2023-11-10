@@ -62,7 +62,7 @@ function isValidEmail(email) {
 }
 
 function isValidPhoneNumber(phoneNumber) {
-    const phoneRegex = /^[0-9]{10}$/;
+    const phoneRegex = /^98\d{8}$/;
     return phoneRegex.test(phoneNumber);
 }
 
