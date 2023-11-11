@@ -75,7 +75,7 @@ const validateForm=()=>{
         displayErrorMsg('password', "* Password must contains at least 8 characters");
         validationStatus = false;
     }else if(!isValidPassword(password)){
-        displayErrorMsg('password', "* Password must contain at least one uppercase,lowercase, number and special character");
+        displayErrorMsg('password', "* Password must contain uppercase,lowercase, number and special character");
         validationStatus = false;
     } else {
         displayErrorMsg('password', "");
