@@ -37,22 +37,22 @@
                     }
                 }
             ?>
-        <form class="form" method="post">
+        <form class="form" method="post" onsubmit='return validateForm()'>
             <h3>Fill the Admin Information</h3>
             <label for="name">Full Name</label>
-            <p class="errormsg name-error">* Name Cannot Be Empty</p>
-            <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
+            <p class="errormsg name-error"></p>
+            <input type="text" id="name" name="name" placeholder="Enter a Full Name"/>
             <label for="email">Email</label>
-            <p class="errormsg email-error">* Name Cannot Be Empty</p>
-            <input type="email" name="email" id="email" placeholder="Enter a Email" required/>
+            <p class="errormsg email-error"></p>
+            <input type="email" name="email" id="email" placeholder="Enter a Email"/>
             <label for="phone">Mobile Number</label>
-            <p class="errormsg phone-error">* Name Cannot Be Empty</p>
-            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
+            <p class="errormsg phone-error"></p>
+            <input type="tel" name="phone" id="phone" placeholder="Enter a Phone Number"/>
             <label for="username">Username</label>
-            <p class="errormsg username-error">* Name Cannot Be Empty</p>
-            <input type="text" name="username" id="username" placeholder="Enter a Username" required/> 
+            <p class="errormsg username-error"></p>
+            <input type="text" name="username" id="username" placeholder="Enter a Username"/> 
             <label for="adminpassword">Password</label>
-            <p class="errormsg password-error">* Name Cannot Be Empty</p>
+            <p class="errormsg password-error"></p>
             <input type="text" name="password" id="adminpassword" placeholder="Enter a Password"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>

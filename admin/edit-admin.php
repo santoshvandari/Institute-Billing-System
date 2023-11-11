@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
+    <script defer src="../assets/js/admin/AdminFormValidation.js"></script>
 
 <?php
     include_once "sidebar.php";
@@ -49,17 +50,22 @@
                 }
 
             ?>
-        <form class="form" method="post">
+        <form class="form" method="post" onsubmit="return validateForm()">
             <h3>Update the Admin Information</h3>
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" value="<?=$name?>" required/>
+            <p class="errormsg name-error"></p>
+            <input type="text" id="name" name="name" value="<?=$name?>"/>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" value="<?=$email?>" required/>
+            <p class="errormsg email-error"></p>
+            <input type="email" name="email" id="email" value="<?=$email?>"/>
             <label for="phone">Mobile Number</label>
-            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" value="<?=$phone?>" required/>
+            <p class="errormsg phone-error"></p>
+            <input type="tel" name="phone" id="phone" value="<?=$phone?>"/>
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" value="<?=$username?>" disabled required/> 
+            <p class="errormsg username-error"></p>
+            <input type="text" name="username" id="username" value="<?=$username?>" disabled/> 
             <label for="adminpassword">Password</label>
+            <p class="errormsg password-error"></p>
             <input type="text" name="password" id="adminpassword"/>
             <div class="btn-wrapper">
                 <button type="reset">Clear</button>
