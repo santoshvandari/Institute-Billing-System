@@ -16,7 +16,7 @@ const validateForm=()=>{
         // Regular expression for a 10-digit phone number
         const phoneRegex = /^98\d{8}$/;;
         const nameRegex = /^[a-zA-Z ]{2,}$/;
-        const emailRegex = /^[^\s@]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        const emailRegex = /^[^\s@]+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/;
         const addressRegex = /^[a-zA-Z0-9\s,'-]*$/;
         // Validate Name
         if (!nameRegex.test(name)) {
@@ -27,7 +27,7 @@ const validateForm=()=>{
         }
 
         // Validate Address
-        if (address.length < 3 && !addressRegex.test(address)) {
+        if (address.length < 3 || !addressRegex.test(address)) {
             displayErrorMsg('address', "* Enter a Valid Address");
             validationStatus=false;
         }else{
@@ -36,7 +36,7 @@ const validateForm=()=>{
 
         // Validate Phone Number
         if (!phoneRegex.test(phone)) {
-            displayErrorMsg('phone', "* Name must contains characters only");
+            displayErrorMsg('phone', "* Enter a Valid Phone Number");
             validationStatus=false;
         }else{
             displayErrorMsg('phone', "");
@@ -53,7 +53,7 @@ const validateForm=()=>{
         }
 
         // Validate Parent Name
-        if (nameRegex.test(parentName)) {
+        if (!nameRegex.test(parentName)) {
             displayErrorMsg('parentname', "* Name must contains characters only");
             validationStatus = false;
         } else {
