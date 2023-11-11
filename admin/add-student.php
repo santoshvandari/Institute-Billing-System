@@ -45,12 +45,16 @@
         <form class="form" method="post">
             <h3>Fill the Student Information</h3>
             <label for="name">Full Name</label>
+            <p class="errormsg name-error"></p>
             <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
             <label for="add">Address</label>
+            <p class="errormsg address-error"></p>
             <input type="text" id="add" name="address" placeholder="Enter a Address" required/>
             <label for="phone">Mobile Number</label>
+            <p class="errormsg phone-error"></p>
             <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
             <label for="email">Email</label>
+            <p class="errormsg phone-error"></p>
             <input type="email" name="email" id="email" placeholder="Enter a Email"/>
             <div class="gender-wrapper">
                 <label>Gender</label>
@@ -58,8 +62,10 @@
                 <input type="radio" name="gender" value="female"/>Female
             </div>
             <label for="parent">Parent Name</label>
+            <p class="errormsg parentname-error"></p>
             <input type="text" name="parent" id="parent" placeholder="Enter a Parent Name" required/> 
             <label for="course">Course</label>
+            <p class="errormsg course-error"></p>
             <select name="course" id="course" required>
                 <option value="">Select a Course</option>
                 <?php

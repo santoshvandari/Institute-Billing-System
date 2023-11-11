@@ -9,43 +9,66 @@ const validateForm=()=>{
         let name = document.getElementById('name').value.trim();
         let address = document.getElementById('add').value.trim();
         let phone = document.getElementById('phone').value.trim();
+        let email = document.getElementById('email').value.trim();
         let parentName = document.getElementById('parent').value.trim();
         let course = document.getElementById('course').value;
 
         // Regular expression for a 10-digit phone number
-        const phoneRegex = /^[0-9]{10}$/;
+        const phoneRegex = /^98\d{8}$/;;
         const nameRegex = /^[a-zA-Z ]{2,}$/;
-        const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+        const emailRegex = /^[^\s@]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        const addressRegex = /^[a-zA-Z0-9\s,'-]*$/;
         // Validate Name
         if (!nameRegex.test(name)) {
-            alert('Full Name cannot be empty');
-            return false;
+            displayErrorMsg('name', "* Name must contains characters only");
+            validationStatus = false;
+        } else {
+            displayErrorMsg('name', "");
         }
 
         // Validate Address
-        if (address === "") {
-            alert('Address cannot be empty');
-            return false;
+        if (address.length < 3 && !addressRegex.test(address)) {
+            displayErrorMsg('address', "* Enter a Valid Address");
+            validationStatus=false;
+        }else{
+            displayErrorMsg('address', "");
         }
 
         // Validate Phone Number
         if (!phoneRegex.test(phone)) {
-            alert('Invalid Phone Number');
-            return false;
+            displayErrorMsg('phone', "* Name must contains characters only");
+            validationStatus=false;
+        }else{
+            displayErrorMsg('phone', "");
+        }
+        
+        // Validate Email Address 
+        if(email===""){
+            displayErrorMsg('email', "");
+        }else if(!emailRegex.test(email)){
+            displayErrorMsg('email', "* Enter a valid Email");
+            validationStatus=false;
+        }else{
+            displayErrorMsg('email', "");
         }
 
         // Validate Parent Name
-        if (parentName === "") {
-            alert('Parent Name cannot be empty');
-            return false;
+        if (nameRegex.test(parentName)) {
+            displayErrorMsg('parentname', "* Name must contains characters only");
+            validationStatus = false;
+        } else {
+            displayErrorMsg('parentname', "");
         }
+
 
         // Validate Course Selection
         if (course === "") {
-            alert('Please select a Course');
-            return false;
+            displayErrorMsg('course', "* Please Select a Course");
+            validationStatus = false;
+        } else {
+            displayErrorMsg('course', "");
         }
 
         // If all validations pass
-        return true;
+        return validationStatus;
     }
