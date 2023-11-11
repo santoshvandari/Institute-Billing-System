@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../assets/css/admin/common-style.css">
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
+    <script defer src="../assets/js/admin/StudentFormValidation.js"></script>
     <script defer src="../assets/js/HideMessage.js"></script>
 <?php
     include_once "sidebar.php";
@@ -57,15 +58,21 @@
                     }
                 }
             ?>
-        <form class="form" method="post">
+        <form class="form" method="post" onsubmit='return validateForm()'>
             <h3>Fill the Student Information</h3>
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" value='<?=$name?>' required/>
+            <p class="errormsg name-error"></p>
+            <input type="text" id="name" name="name" value='<?=$name?>'/>
             <label for="add">Address</label>
-            <input type="text" id="add" name="address"  value='<?=$address?>' required/>
+            <p class="errormsg address-error"></p>
+
+            <input type="text" id="add" name="address"  value='<?=$address?>'/>
             <label for="phone">Mobile Number</label>
+            <p class="errormsg phone-error"></p>
+
             <input type="tel" name="phone" id="phone" value='<?=$phone?>' disabled/>
             <label for="email">Email</label>
+            <p class="errormsg email-error"></p>
             <input type="email" name="email" id="email" value='<?=$email?>'/>
             <div class="gender-wrapper">
                 <label>Gender</label>
@@ -80,8 +87,10 @@
                 ?>
             </div>
             <label for="parent">Parent Name</label>
-            <input type="text" name="parent" id="parent" value='<?=$parentname?>' required/> 
+            <p class="errormsg parentname-error"></p>
+            <input type="text" name="parent" id="parent" value='<?=$parentname?>'/> 
             <label for="course">Course</label>
+            <p class="errormsg course-error"></p>
             <select name="course" id="course" disabled>
                 <option value="<?=$course?>" selected="selected"><?=$course?></option>
             </select>  
