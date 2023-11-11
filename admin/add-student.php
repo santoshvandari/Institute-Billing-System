@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
+    <script defer src="../assets/js/admin/StudentFormValidation.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
