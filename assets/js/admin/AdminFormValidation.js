@@ -1,7 +1,25 @@
-
 const displayErrorMsg=(el, msg)=>{
     document.querySelector(`.${el}-error`).textContent = msg;
 }
+
+const isValidEmail=(email)=>{
+    const emailRegex = /^[^\s@]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    return emailRegex.test(email);
+}
+
+const isValidPhoneNumber=(phoneNumber)=>{
+    const phoneRegex = /^98\d{8}$/;
+    return phoneRegex.test(phoneNumber);
+}
+
+const isValidPassword = (password) => {
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
+    return passwordRegex.test(password);
+}
+
+
+
+
 const validateForm=()=>{
     let validationStatus = true;
     const fullName = document.getElementById('name').value.trim();
@@ -46,7 +64,7 @@ const validateForm=()=>{
 
     // Validate Password
     if (password.length < 8) {
-        displayErrorMsg('password', "* Password must be at least 5 characters long");
+        displayErrorMsg('password', "* Password must contains at least 8 characters");
         validationStatus = false;
     }else if(!isValidPassword(password)){
         displayErrorMsg('password', "* Password must contain at least one uppercase letter, one lowercase letter, one number and one special character");
@@ -59,17 +77,3 @@ const validateForm=()=>{
 }
 
 
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-    return emailRegex.test(email);
-}
-
-function isValidPhoneNumber(phoneNumber) {
-    const phoneRegex = /^98\d{8}$/;
-    return phoneRegex.test(phoneNumber);
-}
-
-const isValidPassword = (password) => {
-    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
-    return passwordRegex.test(password);
-}
