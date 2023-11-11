@@ -41,16 +41,16 @@
             <h3>Fill the Admin Information</h3>
             <label for="name">Full Name</label>
             <p class="errormsg name-error"></p>
-            <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
+            <input type="text" id="name" name="name" placeholder="Enter a Full Name"/>
             <label for="email">Email</label>
             <p class="errormsg email-error"></p>
-            <input type="email" name="email" id="email" placeholder="Enter a Email" required/>
+            <input type="email" name="email" id="email" placeholder="Enter a Email"/>
             <label for="phone">Mobile Number</label>
             <p class="errormsg phone-error"></p>
-            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
+            <input type="tel" name="phone" id="phone" placeholder="Enter a Phone Number"/>
             <label for="username">Username</label>
             <p class="errormsg username-error"></p>
-            <input type="text" name="username" id="username" placeholder="Enter a Username" required/> 
+            <input type="text" name="username" id="username" placeholder="Enter a Username"/> 
             <label for="adminpassword">Password</label>
             <p class="errormsg password-error"></p>
             <input type="text" name="password" id="adminpassword" placeholder="Enter a Password"/>

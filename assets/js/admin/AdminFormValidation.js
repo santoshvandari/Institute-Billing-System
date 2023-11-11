@@ -17,7 +17,15 @@ const isValidPassword = (password) => {
     return passwordRegex.test(password);
 }
 
-
+const isValidName = (name) => {
+    const nameRegex = /^[a-zA-Z ]{2,}$/;
+    return nameRegex.test(name);
+}
+const isValidUsername=(username)=>{
+    // const usernameRegex=/^[a-zA-Z]/;
+    const usernameRegex=/^[a-zA-Z][a-zA-Z0-9_]*$/;;
+    return usernameRegex.test(username);
+}
 
 
 const validateForm=()=>{
@@ -31,15 +39,15 @@ const validateForm=()=>{
 
 
     // Validate Full Name
-    if (fullName === "") {
-        displayErrorMsg('name', "* Name cannot be empty");
+    if (!isValidName(fullName)) {
+        displayErrorMsg('name', "* Name must contains characters only");
         validationStatus = false;
     } else {
         displayErrorMsg('name', "");
     }
 
     // Validate Email
-    if (!validationStatusEmail(email)) {
+    if (!isValidEmail(email)) {
         displayErrorMsg('email', "* Enter a valid Email");
         validationStatus = false;
     } else {
@@ -47,7 +55,7 @@ const validateForm=()=>{
     }
 
     // Validate Phone Number
-    if (!validationStatusPhoneNumber(phoneNumber)) {
+    if (!isValidPhoneNumber(phoneNumber)) {
         displayErrorMsg('phone', "* Enter a valid Phone Number");
         validationStatus = false;
     } else {
@@ -55,8 +63,8 @@ const validateForm=()=>{
     }
 
     // Validate Username
-    if (username === "") {
-        displayErrorMsg('username', "* Username cannot be empty");
+    if (!isValidUsername(username)) {
+        displayErrorMsg('username', "* Enter a Valid Username");
         validationStatus = false;
     } else {
         displayErrorMsg('username', "");
@@ -67,7 +75,7 @@ const validateForm=()=>{
         displayErrorMsg('password', "* Password must contains at least 8 characters");
         validationStatus = false;
     }else if(!isValidPassword(password)){
-        displayErrorMsg('password', "* Password must contain at least one uppercase letter, one lowercase letter, one number and one special character");
+        displayErrorMsg('password', "* Password must contain at least one uppercase,lowercase, number and special character");
         validationStatus = false;
     } else {
         displayErrorMsg('password', "");
