@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../assets/css/admin/add-student.css">
     <link rel="stylesheet" href="../assets/css/admin/message.css"/>
     <script defer src="../assets/js/HideMessage.js"></script>
+    <script defer src="../assets/js/admin/StudentFormValidation.js"></script>
 <?php
     include_once "sidebar.php";
 ?>
@@ -41,15 +42,19 @@
                     }
                 }
             ?>
-        <form class="form" method="post">
+        <form class="form" method="post" onsubmit="return validateForm()">
             <h3>Fill the Student Information</h3>
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter a Full Name" required/>
+            <p class="errormsg name-error"></p>
+            <input type="text" id="name" name="name" placeholder="Enter a Full Name"/>
             <label for="add">Address</label>
-            <input type="text" id="add" name="address" placeholder="Enter a Address" required/>
+            <p class="errormsg address-error"></p>
+            <input type="text" id="add" name="address" placeholder="Enter a Address"/>
             <label for="phone">Mobile Number</label>
-            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter a Phone Number" required/>
+            <p class="errormsg phone-error"></p>
+            <input type="tel" name="phone" id="phone" placeholder="Enter a Phone Number"/>
             <label for="email">Email</label>
+            <p class="errormsg email-error"></p>
             <input type="email" name="email" id="email" placeholder="Enter a Email"/>
             <div class="gender-wrapper">
                 <label>Gender</label>
@@ -57,9 +62,11 @@
                 <input type="radio" name="gender" value="female"/>Female
             </div>
             <label for="parent">Parent Name</label>
-            <input type="text" name="parent" id="parent" placeholder="Enter a Parent Name" required/> 
+            <p class="errormsg parentname-error"></p>
+            <input type="text" name="parent" id="parent" placeholder="Enter a Parent Name"/> 
             <label for="course">Course</label>
-            <select name="course" id="course" required>
+            <p class="errormsg course-error"></p>
+            <select name="course" id="course">
                 <option value="">Select a Course</option>
                 <?php
                     $read="SELECT * FROM CourseInfo";

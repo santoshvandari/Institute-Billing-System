@@ -3,7 +3,7 @@ const displayErrorMsg=(el, msg)=>{
 }
 
 const isValidEmail=(email)=>{
-    const emailRegex = /^[^\s@]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    const emailRegex = /^[^\s@]+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/;
     return emailRegex.test(email);
 }
 
