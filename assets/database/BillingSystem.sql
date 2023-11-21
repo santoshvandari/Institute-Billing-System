@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 06, 2023 at 03:07 AM
+-- Generation Time: Nov 21, 2023 at 05:01 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -121,29 +121,6 @@ INSERT INTO `StudentInfo` (`phone`, `name`, `address`, `email`, `gender`, `paren
 ('9824988945', 'Santosh Bhandari', 'kanakai-07', 'santoshvandari100@gmail.com', 'male', 'Nanda Kumar Bhandari', 'CA102'),
 ('9824988946', 'Kiran Dahal', 'kanakai-03', 'kiran@gmail.com', 'male', 'Hari Bhadur Dahal', 'CA101');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `UserInfo`
---
-
-CREATE TABLE `UserInfo` (
-  `username` varchar(25) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `phone` varchar(15) NOT NULL,
-  `userpwd` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `UserInfo`
---
-
-INSERT INTO `UserInfo` (`username`, `name`, `email`, `phone`, `userpwd`) VALUES
-('santoshvandari', 'Santosh Bhandari', 'santosh@santosh.com', '9824980000', '7709788ffbf21370dbeb27acff1fa383'),
-('temp', 'temp', 'temp@gmail.com', '9800000000', '3d801aa532c1cec3ee82d87a99fdf63f'),
-('user', 'User', 'user@user.com', '9800000000', 'ee11cbb19052e40b07aac0ca060c23ee');
-
 --
 -- Indexes for dumped tables
 --
@@ -173,12 +150,6 @@ ALTER TABLE `CourseInfo`
 ALTER TABLE `StudentInfo`
   ADD PRIMARY KEY (`phone`),
   ADD KEY `cid` (`cid`);
-
---
--- Indexes for table `UserInfo`
---
-ALTER TABLE `UserInfo`
-  ADD PRIMARY KEY (`username`);
 
 --
 -- Constraints for dumped tables
