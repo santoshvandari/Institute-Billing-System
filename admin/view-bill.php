@@ -35,8 +35,7 @@
                     }
                 }
 
-            ?>
-            
+            ?>           
               <div class="details-container">
                     <div class="billerinfo">
                         <p class="name">Name: <?=$name?></p>
